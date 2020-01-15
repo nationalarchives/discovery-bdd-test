@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BaseStep.cs" />
+    <Compile Remove="FeatureFiles\AS_AutoLookUp_OtherArchives.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_ClosureStatus_close_SpecificDate.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_ClosureStatus_Open_SpecificDate.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_ClosureStatus_PartiallyOpen_AnyTime.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_ClosureStatus_Retained_AnyTime.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_RecordCreator_CreatorType_CheckBox_Years.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_RecordCreator_CreatorType_DateRange.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Records_DateRange_SearchAll.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Records_SearchTNA_CatalogueLevel.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Records_SearchTNA_Reference_IncludeContent.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Records_SearchTNA_Taxonomy_Witchcraft.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Records_SpecificDate_SearchAll.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Reference_SearchAll.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_SearchOtherArchives.feature.cs" />
+    <Compile Remove="FeatureFiles\AS_Search_Find_DontFindWord.feature.cs" />
+    <Compile Remove="FeatureFiles\SearchWithExamples.feature.cs" />
+    <Compile Remove="SignOn.cs" />
+    <Compile Remove="StepDefinitions\AdvancedSearchhooks.cs" />
+    <Compile Remove="StepDefinitions\AS_AutoLookUp_OtherArchivesSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_ClosureStatus_Close_SpecificDateSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_ClosureStatus_Open_SpecificDateSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_ClosureStatus_PartiallyOpen_AnyTimeSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_ClosureStatus_Retained_AnyTimeSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_RecordCreator_CreatorType_CheckBox_YearsSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_RecordCreator_CreatorType_DateRangeSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_Records_DateRange_SearchAll.cs" />
+    <Compile Remove="StepDefinitions\AS_Records_SearchTNA_CatalogueLevelSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_Records_SearchTNA_Reference_IncludeContentSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_Records_SearchTNA_Taxonomy_WitchcraftSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_Records_SpecificDate_SearchAllSteps.cs" />
+    <Compile Remove="StepDefinitions\AS_Reference_SearchAllSteps.cs" />
+    <Compile Remove="StepDefinitions\SearchWithExamplesSteps.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_AutoLookUp_OtherArchives.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_ClosureStatus_close_SpecificDate.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_ClosureStatus_Open_SpecificDate.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_ClosureStatus_PartiallyOpen_AnyTime.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_ClosureStatus_Retained_AnyTime.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_RecordCreator_CreatorType_CheckBox_Years.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_RecordCreator_CreatorType_DateRange.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Records_DateRange_SearchAll.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Records_SearchTNA_CatalogueLevel.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Records_SearchTNA_Reference_IncludeContent.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Records_SearchTNA_Taxonomy_Witchcraft.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Records_SpecificDate_SearchAll.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Reference_SearchAll.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_SearchOtherArchives.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\AS_Search_Find_DontFindWord.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\SearchWithExamples.feature" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="79.0.3945.3600" />
+    <PackageReference Include="Selenium.WebDriverBackedSelenium" Version="3.141.0" />
+    <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="SpecFlow" Version="3.0.225" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.0.225" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="specflow.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
