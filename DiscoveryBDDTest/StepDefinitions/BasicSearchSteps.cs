@@ -44,6 +44,7 @@ namespace Nunit_NetCore.StepDefinitions
         {
             _driver.FindElement(By.Id("search-for")).SendKeys(word);
             _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
+            Thread.Sleep(2000);
             _driver.FindElement(By.LinkText("The National Archives")).Click();
 
         }
@@ -56,7 +57,9 @@ namespace Nunit_NetCore.StepDefinitions
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1100)");
             _driver.FindElement(By.XPath("//input[@id='"+ collectionModule +"']")).Click();
+            Thread.Sleep(2000);
             _driver.FindElement(By.XPath("//li[@id='department']/form/div/input")).Click();
+            Thread.Sleep(2000);
             string numberOfRecords = _driver.FindElement(By.Id("records-tab")).Text;
             Assert.AreNotEqual(numberOfRecords, "Records 0");
             // Remove filter
@@ -159,6 +162,7 @@ namespace Nunit_NetCore.StepDefinitions
         {
             _driver.FindElement(By.Id("search-for")).SendKeys(keyword);
             _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
+            Thread.Sleep(1000);
             _driver.FindElement(By.LinkText(numberOfItemsPerPage)).Click();
         }
 
@@ -194,7 +198,9 @@ namespace Nunit_NetCore.StepDefinitions
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1700)");
-            _driver.FindElement(By.LinkText("Record opening date")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("opening-date-filters")).Click();
+            Thread.Sleep(2000);
            // _driver.FindElement(By.Id("opening-date-filters")).Click();
             // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
             _driver.FindElement(By.Id("rod183")).Click();
@@ -221,7 +227,9 @@ namespace Nunit_NetCore.StepDefinitions
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1700)");
+            Thread.Sleep(2000);
             _driver.FindElement(By.Id("opening-date-filters")).Click();
+            Thread.Sleep(2000);
             //_driver.FindElement(By.Id("records-opening-date")).Click();
             // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
             _driver.FindElement(By.Id("rod365")).Click();
@@ -243,28 +251,33 @@ namespace Nunit_NetCore.StepDefinitions
             Assert.IsTrue((recordDate >= twelveMonthsAgo) && (recordDate <= nowDate));
             _driver.Quit();
         }
+
         [When(@"click on opened in the last week under Record opening date")]
         public void WhenClickOnOpenedInTheLastWeekUnderRecordOpeningDate()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1700)");
+            Thread.Sleep(2000);
             _driver.FindElement(By.Id("opening-date-filters")).Click();
-           // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
+            //_driver.FindElement(By.Id("records-opening-date")).Click();
+            // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
             _driver.FindElement(By.Id("rod7")).Click();
             _driver.FindElement(By.Name("Refine record opening date")).Click();
+           
         }
 
         [Then(@"click on the first record and check the record opening date should be in the last week")]
         public void ThenClickOnTheFirstRecordAndCheckTheRecordOpeningDateShouldBeInTheLastWeek()
         {
             _driver.FindElement(By.XPath("//*[@id='search-results']/li[1]/a")).Click();
+            Thread.Sleep(2000);
             var trRecordOpeningDate = _driver.FindElements(By.XPath("//table[@class='asset-details']/tbody/tr")).FirstOrDefault(x => x.Text.Contains("Record opening date:"));
             var actualOpeningDate = trRecordOpeningDate.FindElement(By.TagName("td")).Text;
 
             DateTime recordDate = DateTime.Parse(actualOpeningDate);
 
             DateTime nowDate = DateTime.Now;
-            DateTime oneWeekAgo = nowDate.AddDays(-7);
+            DateTime oneWeekAgo = nowDate.AddDays(-8);
 
             Assert.IsTrue((recordDate >= oneWeekAgo) && (recordDate <= nowDate));
             _driver.Quit();
@@ -272,8 +285,10 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"click on opened during the last day under Record opening date")]
         public void WhenClickOnOpenedDuringTheLastDayUnderRecordOpeningDate()
         {
+            Thread.Sleep(2000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1700)");
+            Thread.Sleep(2000);
             _driver.FindElement(By.Id("opening-date-filters")).Click();
            // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
             _driver.FindElement(By.Id("rod1")).Click();
@@ -290,7 +305,7 @@ namespace Nunit_NetCore.StepDefinitions
             DateTime recordDate = DateTime.Parse(actualOpeningDate);
 
             DateTime nowDate = DateTime.Now;
-            DateTime yesterday = nowDate.AddDays(-1);
+            DateTime yesterday = nowDate.AddDays(-1.5);
 
             Assert.IsTrue((recordDate >= yesterday) && (recordDate <= nowDate));
             _driver.Quit();
@@ -298,11 +313,14 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"enter ""(.*)"" under Record opening date")]
         public void WhenEnterUnderRecordOpeningDate(string specificDate)
         {
+            Thread.Sleep(2000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1700)");
+            Thread.Sleep(2000);
             _driver.FindElement(By.Id("opening-date-filters")).Click();
             // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
             _driver.FindElement(By.XPath("//*[@id='recordOpeningDate']/label")).Click();
+            Thread.Sleep(1000);
             _driver.FindElement(By.XPath("//*[@id='rodDate']")).SendKeys(specificDate);
             _driver.FindElement(By.Name("Refine record opening date")).Click();
         }
@@ -328,6 +346,7 @@ namespace Nunit_NetCore.StepDefinitions
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1700)");
+            Thread.Sleep(2000);
             _driver.FindElement(By.Id("opening-date-filters")).Click();
             // _driver.FindElement(By.XPath("//a[contains(text(),'Record opening date')]")).Click();
             _driver.FindElement(By.XPath("//*[@id='recordOpeningDateRange']/label[1]")).Click();
@@ -348,7 +367,7 @@ namespace Nunit_NetCore.StepDefinitions
             DateTime fromDateFormat = DateTime.Parse(fromDate);
             DateTime toDateFormat = DateTime.Parse(toDate);
 
-            Assert.IsTrue((recordDate >= toDateFormat) && (recordDate <= fromDateFormat));
+            Assert.IsTrue((recordDate <= toDateFormat) && (recordDate >= fromDateFormat));
             _driver.Quit();
         }
         [When(@"enter ""(.*)"", I am under Records tab check for the filter Dates unknown")]

@@ -18,8 +18,8 @@ namespace DiscoveryBDDTest.FeatureFiles
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DetailPageOnTest")]
-    public partial class DetailPageOnTestFeature
+    [NUnit.Framework.DescriptionAttribute("DetailPage And WhatToExpectGuide")]
+    public partial class DetailPageAndWhatToExpectGuideFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace DiscoveryBDDTest.FeatureFiles
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-GB"), "DetailPageOnTest", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-GB"), "DetailPage And WhatToExpectGuide", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,12 +70,12 @@ namespace DiscoveryBDDTest.FeatureFiles
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DetailPage_CouldThisPageBeImproved_NO")]
+        [NUnit.Framework.DescriptionAttribute("DetailPage_Feedback_NO")]
         [NUnit.Framework.TestCaseAttribute("D32670", null)]
         [NUnit.Framework.TestCaseAttribute("N13780091", null)]
-        public virtual void DetailPage_CouldThisPageBeImproved_NO(string iaId, string[] exampleTags)
+        public virtual void DetailPage_Feedback_NO(string iaId, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_CouldThisPageBeImproved_NO", null, exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_Feedback_NO", null, exampleTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -95,13 +95,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DetailPage_CouldThisPageBeImproved_Yes")]
+        [NUnit.Framework.DescriptionAttribute("DetailPage_Feedback_Yes")]
         [NUnit.Framework.TestCaseAttribute("N13959850", "did-not-understand", null)]
         [NUnit.Framework.TestCaseAttribute("N13780091", "too-much-information", null)]
         [NUnit.Framework.TestCaseAttribute("N13759454", "expected-the-record", null)]
-        public virtual void DetailPage_CouldThisPageBeImproved_Yes(string iaId, string checkBox, string[] exampleTags)
+        public virtual void DetailPage_Feedback_Yes(string iaId, string checkBox, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_CouldThisPageBeImproved_Yes", null, exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_Feedback_Yes", null, exampleTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -120,12 +120,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DetailPage_ErrorOnRecordDescription")]
+        [NUnit.Framework.DescriptionAttribute("DetailPage_letUsKnow")]
         [NUnit.Framework.TestCaseAttribute("N13780091", "Creator", null)]
         [NUnit.Framework.TestCaseAttribute("C3091668", "Physical description", null)]
-        public virtual void DetailPage_ErrorOnRecordDescription(string iaId, string fieldContainsError, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("D6343342", "Former references", null)]
+        public virtual void DetailPage_LetUsKnow(string iaId, string fieldContainsError, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_ErrorOnRecordDescription", null, exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_letUsKnow", null, exampleTags);
 #line 28
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -161,14 +162,14 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void DetailPage_ShowImages_Offsite(string iaId, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_ShowImages_Offsite", null, exampleTags);
-#line 43
+#line 44
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 44
- testRunner.Given(string.Format("I am on details page for offsite \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 45
- testRunner.When("click on preview an image of this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I am on details page for offsite \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 46
+ testRunner.When("click on preview an image of this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 47
  testRunner.Then("check for the title To download this record without a watermark please add it to " +
                     "your basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -182,14 +183,14 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void DetailPage_ShowImages_Staffin(string iaId, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DetailPage_ShowImages_staffin", null, exampleTags);
-#line 53
+#line 54
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 54
- testRunner.Given(string.Format("I am on details page for staffin \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 55
- testRunner.When("click on preview an image of this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I am on details page for staffin \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 56
+ testRunner.When("click on preview an image of this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 57
  testRunner.Then("I shouldn\'t see the message To download this recordwithout watermark please add i" +
                     "t to your basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -202,22 +203,22 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void Verify_DetailPage_OnAllLevels(string iaId, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify_DetailPage_OnAllLevels", null, exampleTags);
-#line 63
+#line 64
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 64
- testRunner.Given(string.Format("I am on details page for offsite \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 65
- testRunner.When("verify the reference On Department level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I am on details page for offsite \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 66
- testRunner.And("verify the reference on Division level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("verify the reference On Department level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 67
- testRunner.And("verify series level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("verify the reference on Division level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 68
- testRunner.And("verify Subseries level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("verify series level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 69
- testRunner.And("verify subsubseries level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("verify Subseries level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 70
+ testRunner.And("verify subsubseries level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 71
  testRunner.Then("I shouls verify Piece level and item level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -227,19 +228,18 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Verify_DetailPage_OnSeriesLevel")]
         [NUnit.Framework.TestCaseAttribute("C12122", "John", "Taylor", "PROB 11", null)]
         [NUnit.Framework.TestCaseAttribute("C1848", "George", "William", "ADM 139", null)]
-        [NUnit.Framework.TestCaseAttribute("C15459", "Richard", "William", "BT 377", null)]
         [NUnit.Framework.TestCaseAttribute("C14576", "Thomas", "Allen", "WO 372", null)]
         public virtual void Verify_DetailPage_OnSeriesLevel(string iaId, string firstName, string lastName, string filter, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify_DetailPage_OnSeriesLevel", null, exampleTags);
-#line 76
+#line 77
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 77
- testRunner.Given(string.Format("I am on details page for offsite \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 78
- testRunner.When(string.Format("I enter all these \"{0}\", \"{1}\"", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I am on details page for offsite \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 79
+ testRunner.When(string.Format("I enter all these \"{0}\", \"{1}\"", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 80
  testRunner.Then(string.Format("check for \"{0}\",\"{1}\" from the first record and check \"{2}\"", firstName, lastName, filter), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

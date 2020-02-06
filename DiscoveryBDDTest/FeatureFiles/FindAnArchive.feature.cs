@@ -177,21 +177,24 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Home nation")]
-        [NUnit.Framework.TestCaseAttribute("", null)]
-        public virtual void HomeNation(string homeNation, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("England", "Special", "Local", "University", "Private", "National", null)]
+        [NUnit.Framework.TestCaseAttribute("Northern Ireland", "Special", "Local", "University", "Private", "National", null)]
+        [NUnit.Framework.TestCaseAttribute("Scotland", "Special", "Local", "University", "Private", "National", null)]
+        [NUnit.Framework.TestCaseAttribute("Wales", "Special", "Local", "University", "Private", "National", null)]
+        public virtual void HomeNation(string homeNation, string special, string local, string university, string typeOfArchiveprivate, string national, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home nation", null, exampleTags);
 #line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 58
-testRunner.Given("I am on find an archive page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on find an archive page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 59
-testRunner.When(string.Format("I choose a \"{0}\"", homeNation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I choose a \"{0}\"", homeNation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 60
-testRunner.And("check for the filters \"Special\", \"National\",\"Local\",\"University\",\"Private\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("check for the filters \"{0}\", \"{1}\",\"{2}\",\"{3}\",\"{4}\"", special, local, university, typeOfArchiveprivate, national), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 61
-testRunner.Then(string.Format("Location should have \"{0}\"", homeNation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Location should have \"{0}\"", homeNation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

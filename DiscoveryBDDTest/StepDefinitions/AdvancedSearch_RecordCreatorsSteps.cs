@@ -53,7 +53,7 @@ namespace Nunit_NetCore.StepDefinitions
             Assert.IsTrue((yourfilters.Contains(CreatorType))&&(yourfilters.Contains(Category))&& (yourfilters.Contains(SubCategory)));
             string recordCreators = _driver.FindElement(By.Id("name-authorities-tab")).Text;
             Assert.AreNotEqual(recordCreators, "Record creators 0");
-            
+           
         }
         [When(@"enter ""(.*)"" and ""(.*)"" for search a date range")]
         public void WhenEnterAndForSearchADateRange(string FromDate, string ToDate)

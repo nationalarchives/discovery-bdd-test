@@ -55,10 +55,15 @@ Scenario Outline: Export all records as CSV
 		| England    |
 
 Scenario Outline: Home nation
-Given I am on find an archive page
-When I choose a "<homeNation>"
-And check for the filters "Special", "National","Local","University","Private"
-Then Location should have "<homeNation>"
-Examples: 
-| homeNation |
-|            |
+	Given I am on find an archive page
+	When I choose a "<homeNation>"
+	And check for the filters "<special>", "<local>","<university>","<typeOfArchiveprivate>","<national>"
+	Then Location should have "<homeNation>"
+
+	Examples:
+		| homeNation       | special | local | university | typeOfArchiveprivate | national | 
+		| England          | Special | Local | University | Private              | National | 
+		| Northern Ireland | Special | Local | University | Private              | National | 
+		| Scotland         | Special | Local | University | Private              | National | 
+		| Wales            | Special | Local | University | Private              | National | 
+

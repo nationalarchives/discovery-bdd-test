@@ -5,13 +5,13 @@ Background:
 
 Scenario Outline: CabinetPapers_Date_descriptionOnly
 	When enter "*", click on "<documentType>", "<fromDate>", "<toDate>" and select document description only
-	Then check for the filters "<documentType>", "<fromDate>" and "<toDate>"
+	Then check for the filters "<fromDate>" and "<toDate>"
 
 	Examples:
 		| documentType | fromDate | toDate |
 		| conclusions  | 1915     | 1980   |
 		| memoranda    | 1870     | 1910   |
-		| notebooks    | 1800     | 1850   |
+		| notebooks    | 1600     | 2000   |
 
 Scenario Outline: CabinetPapers_NoDate_Document_descriptionOnly
 	When enter "*", click on "<documentType>" and select Document description only
@@ -34,12 +34,12 @@ Scenario Outline: CabinetPapers_Educationresources
 		| CAB 24  |
 
 Scenario Outline: CabinetPapers_FilterByDifferentDocument_EntireDocument
-	When enter "*" , "<filterByDocumentType>" and click on entire document
+	When enter "<word>" , "<filterByDocumentType>" and click on entire document
 	Then check for the title Return to cabinet papers website
 
 	Examples:
-		| filterByDocumentType |
-		| all                  |
-		| memoranda            |
-		| precedentbooks       |
-		| notebooks            |
+		| word | filterByDocumentType |
+		| *    | all                  |
+		| *    | memoranda            |
+		| *    | precedentbooks       |
+		| *    | notebooks            |

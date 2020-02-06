@@ -85,9 +85,10 @@ Scenario Outline: FOIRequest_WO416
 	And add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
 	And T&C, Submit order pay through paypal
 	Then I should see Thank you for your order
+	And sign in now
 
 	Examples:
-		| iaId      | searchFirstName | searchLastName | dOB        | category        | firstName | lastName  | email                     | adress1 | townCity | postcode | country        |
-		| C14568023 | Test            | George         | 10/11/1888 | Army            | Tester    | SurTester | tnadiscovery100@gmail.com | 99      | coventry | cv25hz   | United Kingdom |
-		| C14567986 | Test            | David          | 05/03/1770 | Royal Navy      | test      | tester    | tnadiscovery100@gmail.com | 65      | london   | tw96aw   | United Kingdom |
-		| C14567986 | Test            | David          | 05/03/1770 | Royal Air Force | test      | tester    | tnadiscovery100@gmail.com | 65      | Reading  | tw96aw   | Afghanistan     |
+		| iaId                             | searchFirstName | searchLastName | dOB        | category        | firstName | lastName  | email                     | adress1 | townCity | postcode | country        |
+		| C14568023                        | Test            | George         | 10/11/1888 | Army            | Tester    | SurTester | tnadiscovery100@gmail.com | 99      | coventry | cv25hz   | United Kingdom |
+		#| 90ad00a1aa6149efa3991fab6037a5ec | Test            | David          | 05/03/1770 | Royal Navy      | test      | tester    | tnadiscovery100@gmail.com | 65      | london   | tw96aw   | United Kingdom |
+		#| 90ad00a1aa6149efa3991fab6037a5ec | Test            | David          | 05/03/1770 | Royal Air Force | test      | tester    | tnadiscovery100@gmail.com | 65      | Reading  | tw96aw   | Afghanistan    |

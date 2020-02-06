@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using System;
 using System.Linq;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Nunit_NetCore.StepDefinitions
@@ -28,6 +29,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("repositories-lookup")).SendKeys(keyword);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             IWebElement L = _driver.FindElement(By.XPath("(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all'])[1]/li"));
+            Thread.Sleep(2000);
             L.Click();
             _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
         }

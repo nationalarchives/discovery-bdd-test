@@ -37,7 +37,26 @@ namespace Nunit_NetCore
             _driver.Navigate().GoToUrl(url);
             return _driver;
         }
-
+        public IWebDriver GoToNRARedirectsPage()
+        {
+            var path = Configuration.GetValue<string>("NRARedirects");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
+        public IWebDriver GoToA2ARedirectsPage()
+        {
+            var path = Configuration.GetValue<string>("A2ARedirects");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
+        public IWebDriver GoToReaderTicketDemoPage()
+        {
+            var url = Configuration.GetValue<string>("readerTicketDemoPageUrl");
+            return OpenChromeAndNavigateTo(url);
+        }
+        public IWebDriver GoToNRAPdfDownloadPage()
+        {
+            var path = Configuration.GetValue<string>("NRAPdfDownload");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
         public IWebDriver GoToDiscoveryHomePage()
         {
             var path = Configuration.GetValue<string>("discoveryPath");
@@ -46,6 +65,11 @@ namespace Nunit_NetCore
         public IWebDriver GoToFOIRegisterPage()
         {
             var path = Configuration.GetValue<string>("FOI1939Register");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
+        public IWebDriver GoToManorSearchPage()
+        {
+            var path = Configuration.GetValue<string>("manorSearch");
             return OpenChromeAndNavigateTo(baseUrl + path);
         }
         public IWebDriver GoToFindAnArchivePage()
@@ -82,6 +106,11 @@ namespace Nunit_NetCore
         public IWebDriver GoToCabinetPaperSearchPage()
         {
             var url = Configuration.GetValue<string>("cabinetPapersUrl");
+            return OpenChromeAndNavigateTo(url);
+        }
+        public IWebDriver GoToSingleSignOnPage()
+        {
+            var url = Configuration.GetValue<string>("singleSignOnUrl");
             return OpenChromeAndNavigateTo(url);
         }
         public void SingleSignOn(IWebDriver driver)

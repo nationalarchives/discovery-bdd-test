@@ -26,12 +26,14 @@ namespace Nunit_NetCore.StepDefinitions
             // click on search
             _driver.FindElement(By.XPath("(//input[@value='Search'])[1]")).Click();
         }
-
-        [Then(@"check for the filters ""(.*)"", ""(.*)"" and ""(.*)""")]
-        public void ThenCheckForTheFiltersAnd(string documentType, string fromDate, string toDate)
+        [Then(@"check for the filters ""(.*)"" and ""(.*)""")]
+        public void ThenCheckForTheFiltersAnd(string fromDate, string toDate)
         {
-            ScenarioContext.Current.Pending();
+            string filters = _driver.FindElement(By.Id("search-refine")).Text;
+            Assert.IsTrue( (filters.Contains(fromDate)) && (filters.Contains(toDate)));
+            _driver.Quit();
         }
+
         [When(@"enter ""(.*)"", click on ""(.*)"" and select Document description only")]
         public void WhenEnterClickOnAndSelectDocumentDescriptionOnly(string word, string documentType)
         {
@@ -60,7 +62,8 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"enter ""(.*)"" , ""(.*)"" and click on entire document")]
         public void WhenEnterAndClickOnEntireDocument(string word, string filterByDocumentType)
         {
-            _driver.FindElement(By.Id("search-all-collections")).SendKeys(word);
+
+            _driver.FindElement(By.Id("all-words")).SendKeys(word);
             _driver.FindElement(By.Id(filterByDocumentType)).Click();
             _driver.FindElement(By.Id("whole")).Click();
             // click on search

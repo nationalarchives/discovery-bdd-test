@@ -1,6 +1,6 @@
-﻿Feature: DetailPageOnTest
+﻿Feature: DetailPage And WhatToExpectGuide
 
-Scenario Outline: DetailPage_CouldThisPageBeImproved_NO
+Scenario Outline: DetailPage_Feedback_NO
 	Given I am on details page for "<iaId>"
 	When click on NO for could this page be improved?
 	And check for the title Your feedback helps us improve our services. Please share any comments below (optional).
@@ -12,7 +12,7 @@ Scenario Outline: DetailPage_CouldThisPageBeImproved_NO
 		| D32670    |
 		| N13780091 |
 
-Scenario Outline: DetailPage_CouldThisPageBeImproved_Yes
+Scenario Outline: DetailPage_Feedback_Yes
 	Given I am on details page for "<iaId>"
 	When click on YES for could this page be improved?
 	And click on "<checkBox>" under please let us know why you are dissatisfied
@@ -25,7 +25,7 @@ Scenario Outline: DetailPage_CouldThisPageBeImproved_Yes
 		| N13780091 | too-much-information |
 		| N13759454 | expected-the-record  |
 
-Scenario Outline: DetailPage_ErrorOnRecordDescription
+Scenario Outline: DetailPage_letUsKnow
 	Given I am on details page for "<iaId>"
 	When click on "letUsKnow" under catalogue description
 	And I enter fieldContainsError "<fieldContainsError>"
@@ -39,6 +39,7 @@ Scenario Outline: DetailPage_ErrorOnRecordDescription
 		| iaId      | fieldContainsError   |
 		| N13780091 | Creator              |
 		| C3091668  | Physical description |
+		| D6343342  | Former references    |
 
 Scenario Outline: DetailPage_ShowImages_Offsite
 	Given I am on details page for offsite "<iaId>"
@@ -82,7 +83,6 @@ Scenario Outline: Verify_DetailPage_OnSeriesLevel
 		| iaId   | firstName | lastName | filter  |
 		| C12122 | John      | Taylor   | PROB 11 |
 		| C1848  | George    | William  | ADM 139 |
-		| C15459 | Richard   | William  | BT 377  |
 		| C14576 | Thomas    | Allen    | WO 372  |
 
 Scenario Outline: Verify_DetailPage_OnSeriesLevel_Validation
