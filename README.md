@@ -12,6 +12,6 @@ Run or debug the tests
 
 2nd method- 
 open the command prompt
-type the command- cd path of the project
+type the command- cd  pathOfTheProject,
 type the command- dotnet test  
- then you can able to run your tests without opening visual studio
+ Then you can able to run your tests without opening visual studio
