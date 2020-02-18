@@ -35,6 +35,8 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"click on send")]
         public void WhenClickOnSend()
         {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 700)");
             _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
         }
 

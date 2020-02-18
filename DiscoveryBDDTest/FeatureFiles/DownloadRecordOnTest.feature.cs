@@ -70,12 +70,12 @@ namespace DiscoveryBDDTest.FeatureFiles
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify_DownloadOption_ForOffsite")]
+        [NUnit.Framework.DescriptionAttribute("Verify_DownloadOption_LargeFiles_ForOffsite")]
         [NUnit.Framework.TestCaseAttribute("C7351413", null)]
-        [NUnit.Framework.TestCaseAttribute("C198022", null)]
-        public virtual void Verify_DownloadOption_ForOffsite(string iaId, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("C7354941", null)]
+        public virtual void Verify_DownloadOption_LargeFiles_ForOffsite(string iaId, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify_DownloadOption_ForOffsite", null, exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify_DownloadOption_LargeFiles_ForOffsite", null, exampleTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

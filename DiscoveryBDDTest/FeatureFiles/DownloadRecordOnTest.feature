@@ -1,6 +1,6 @@
 ﻿Feature: DownloadRecords_afterSignedIn
 
-Scenario Outline: Verify_DownloadOption_ForOffsite
+Scenario Outline: Verify_DownloadOption_LargeFiles_ForOffsite
 	Given I am on download page for offsite "<iaId>" and signedIn
 	When I add to basket,submit order, pay using paypal
 	Then check for the message Thank you for your order and check we are able to Download
@@ -8,7 +8,7 @@ Scenario Outline: Verify_DownloadOption_ForOffsite
 	Examples:
 		| iaId     |
 		| C7351413 |
-		| C198022  |
+		| C7354941 |
 
 Scenario Outline: Verify_DownloadOption_InAccount
 	Given I am on download page for offsite "<iaId>" and signedIn

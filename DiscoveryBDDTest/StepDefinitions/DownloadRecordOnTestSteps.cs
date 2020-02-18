@@ -58,7 +58,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.LinkText("Download now")).Click();
             Thread.Sleep(4000);
             string title = _driver.Title;
-            Assert.IsTrue(title.Contains("The National Archives"));
+            Assert.IsTrue(title.Contains("Your orders"));
            // string verifyDownload = _driver.FindElement(By.XPath("(//a[@class='download-part discoveryPrimaryCallToActionLink'])[1]")).Text;
            // Assert.AreEqual("Download", verifyDownload);
            // _driver.FindElement(By.LinkText("Download")).Click();
