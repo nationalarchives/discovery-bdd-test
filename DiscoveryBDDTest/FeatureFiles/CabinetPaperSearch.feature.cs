@@ -81,7 +81,7 @@ namespace DiscoveryBDDTest.FeatureFiles
         [NUnit.Framework.DescriptionAttribute("CabinetPapers_Date_descriptionOnly")]
         [NUnit.Framework.TestCaseAttribute("conclusions", "1915", "1980", null)]
         [NUnit.Framework.TestCaseAttribute("memoranda", "1870", "1910", null)]
-        [NUnit.Framework.TestCaseAttribute("notebooks", "1800", "1850", null)]
+        [NUnit.Framework.TestCaseAttribute("notebooks", "1600", "2000", null)]
         public virtual void CabinetPapers_Date_DescriptionOnly(string documentType, string fromDate, string toDate, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CabinetPapers_Date_descriptionOnly", null, exampleTags);
@@ -93,7 +93,7 @@ this.FeatureBackground();
 #line 7
  testRunner.When(string.Format("enter \"*\", click on \"{0}\", \"{1}\", \"{2}\" and select document description only", documentType, fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.Then(string.Format("check for the filters \"{0}\", \"{1}\" and \"{2}\"", documentType, fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("check for the filters \"{0}\" and \"{1}\"", fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -142,11 +142,11 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("CabinetPapers_FilterByDifferentDocument_EntireDocument")]
-        [NUnit.Framework.TestCaseAttribute("all", null)]
-        [NUnit.Framework.TestCaseAttribute("memoranda", null)]
-        [NUnit.Framework.TestCaseAttribute("precedentbooks", null)]
-        [NUnit.Framework.TestCaseAttribute("notebooks", null)]
-        public virtual void CabinetPapers_FilterByDifferentDocument_EntireDocument(string filterByDocumentType, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("*", "all", null)]
+        [NUnit.Framework.TestCaseAttribute("*", "memoranda", null)]
+        [NUnit.Framework.TestCaseAttribute("*", "precedentbooks", null)]
+        [NUnit.Framework.TestCaseAttribute("*", "notebooks", null)]
+        public virtual void CabinetPapers_FilterByDifferentDocument_EntireDocument(string word, string filterByDocumentType, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CabinetPapers_FilterByDifferentDocument_EntireDocument", null, exampleTags);
 #line 36
@@ -155,7 +155,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line 37
- testRunner.When(string.Format("enter \"*\" , \"{0}\" and click on entire document", filterByDocumentType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("enter \"{0}\" , \"{1}\" and click on entire document", word, filterByDocumentType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 38
  testRunner.Then("check for the title Return to cabinet papers website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

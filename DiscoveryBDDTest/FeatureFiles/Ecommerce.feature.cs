@@ -230,8 +230,6 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("FOIRequest_WO416")]
         [NUnit.Framework.TestCaseAttribute("C14568023", "Test", "George", "10/11/1888", "Army", "Tester", "SurTester", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("C14567986", "Test", "David", "05/03/1770", "Royal Navy", "test", "tester", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("C14567986", "Test", "David", "05/03/1770", "Royal Air Force", "test", "tester", "tnadiscovery100@gmail.com", "65", "Reading", "tw96aw", "Afghanistan", null)]
         public virtual void FOIRequest_WO416(string iaId, string searchFirstName, string searchLastName, string dOB, string category, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("FOIRequest_WO416", null, exampleTags);
@@ -252,6 +250,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 87
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 88
+ testRunner.And("sign in now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

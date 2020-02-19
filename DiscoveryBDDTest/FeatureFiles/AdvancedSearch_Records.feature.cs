@@ -24,7 +24,7 @@ namespace DiscoveryBDDTest.FeatureFiles
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "AdavancedSearch_Records.feature"
+#line 1 "AdvancedSearch_Records.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

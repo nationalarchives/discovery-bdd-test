@@ -85,7 +85,6 @@ Scenario Outline: BS_NoOfRecordsPerPage15And30And60
 
 	Examples:
 		| keyword     | numberOfItemsPerPage |
-		| Army        | 15                   |
 		| commissions | 30                   |
 		| Abraham     | 60                   |
 

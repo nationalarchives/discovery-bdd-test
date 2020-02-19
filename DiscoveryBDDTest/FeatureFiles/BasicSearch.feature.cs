@@ -243,7 +243,6 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("BS_NoOfRecordsPerPage15And30And60")]
-        [NUnit.Framework.TestCaseAttribute("Army", "15", null)]
         [NUnit.Framework.TestCaseAttribute("commissions", "30", null)]
         [NUnit.Framework.TestCaseAttribute("Abraham", "60", null)]
         public virtual void BS_NoOfRecordsPerPage15And30And60(string keyword, string numberOfItemsPerPage, string[] exampleTags)
@@ -267,14 +266,14 @@ this.FeatureBackground();
         public virtual void BS_RecordCreator_Filterresult()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordCreator_filterresult", null, ((string[])(null)));
-#line 92
+#line 91
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 93
+#line 92
  testRunner.When("I enter \"*\", go to record creators tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 94
+#line 93
  testRunner.Then("I can see the filters Organisation, person, business, Manor, Family, Diaries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -285,16 +284,16 @@ this.FeatureBackground();
         public virtual void BS_RecordOpenedInTheLast6Months()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLast6months", null, ((string[])(null)));
-#line 96
+#line 95
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 97
+#line 96
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
+#line 97
  testRunner.And("click on opened in the last six months under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
+#line 98
  testRunner.Then("click on the first record and check the record opening date should be in the last" +
                     " six months", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -306,16 +305,16 @@ this.FeatureBackground();
         public virtual void BS_RecordOpenedInTheLast12Months()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLast12months", null, ((string[])(null)));
-#line 101
+#line 100
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 102
+#line 101
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 103
+#line 102
  testRunner.And("click on opened in the last twelve months under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 104
+#line 103
  testRunner.Then("click on the first record and check the record opening date should be in the last" +
                     " twelve months", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -327,16 +326,16 @@ this.FeatureBackground();
         public virtual void BS_RecordOpenedInTheLastWeek()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLastWeek", null, ((string[])(null)));
-#line 106
+#line 105
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 107
+#line 106
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 108
+#line 107
  testRunner.And("click on opened in the last week under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 109
+#line 108
  testRunner.Then("click on the first record and check the record opening date should be in the last" +
                     " week", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -348,16 +347,16 @@ this.FeatureBackground();
         public virtual void BS_RecordOpenedInTheLastDay()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLastDay", null, ((string[])(null)));
-#line 111
+#line 110
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 112
+#line 111
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 112
  testRunner.And("click on opened during the last day under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
+#line 113
  testRunner.Then("click on the first record and check the record opening date should be yesterday", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -370,16 +369,16 @@ this.FeatureBackground();
         public virtual void BS_RecordOpenedOnASpecificDate(string specificDate, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedOnASpecificDate", null, exampleTags);
-#line 116
+#line 115
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 117
+#line 116
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 118
+#line 117
  testRunner.And(string.Format("enter \"{0}\" under Record opening date", specificDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 118
  testRunner.Then(string.Format("click on the first record and check the record opening date should be \"{0}\"", specificDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -392,16 +391,16 @@ this.FeatureBackground();
         public virtual void BS_RecordOpenedWithinADateRange(string fromDate, string toDate, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedWithinADateRange", null, exampleTags);
-#line 126
+#line 125
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 127
+#line 126
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 128
+#line 127
  testRunner.And(string.Format("enter \"{0}\", \"{1}\" for date range under Record opening date", fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 129
+#line 128
  testRunner.Then(string.Format("click on the first record and check the record opening date should be with in the" +
                         " range \"{0}\", \"{1}\"", fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -413,14 +412,14 @@ this.FeatureBackground();
         public virtual void BS_RecordsAndRecordCreatorsDatesUnknown()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordsAndRecordCreatorsDatesUnknown", null, ((string[])(null)));
-#line 136
+#line 135
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
-#line 137
+#line 136
  testRunner.When("enter \"*\", I am under Records tab check for the filter Dates unknown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 137
  testRunner.Then("I am under record creators tab check for the filter Dates unknown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

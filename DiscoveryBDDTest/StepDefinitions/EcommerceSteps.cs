@@ -59,10 +59,25 @@ namespace Nunit_NetCore.StepDefinitions
         [Then(@"I should see Thank you for your order")]
         public void ThenIShouldSeeThankYouForYourOrder()
         {
+            Thread.Sleep(2000);
             string strPageTitle = _driver.Title;
             Assert.IsTrue(strPageTitle.Contains("Thank you for your order"));
+            string recieptMsg = _driver.FindElement(By.Id("orderReference")).Text;
+            Assert.IsTrue(recieptMsg.Contains("The order receipt has been sent to"));
+
             //_driver.Close();
         }
+        [Then(@"sign in now")]
+        public void ThenSignInNow()
+        {
+            _driver.FindElement(By.Id("signin")).Click();
+            var webDriver = new PageNavigator();
+            webDriver.SingleSignOn(_driver);
+            Thread.Sleep(2000);
+            string strPageTitle = _driver.Title;
+            Assert.IsTrue(strPageTitle.Contains("Thank you for your order"));
+        }
+
         [When(@"add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept")]
         public void WhenAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
         {
@@ -70,6 +85,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
             _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
+
             _driver.FindElement(By.XPath("//input[@class='call-to-action-link']")).Click();
             _driver.FindElement(By.XPath("//input[@id='DeliveryEmail']")).SendKeys("tnadiscovery100@gmail.com");
 
@@ -91,7 +107,10 @@ namespace Nunit_NetCore.StepDefinitions
         [Then(@"go to your orders and I can see order number from your orders list")]
         public void ThenGoToYourOrdersAndICanSeeOrderNumberFromYourOrdersList()
         {
-            // get the order number // needs to be done
+            // get the order number 
+            string orderNumber = _driver.FindElement(By.Id("basketItemsWrapper")).Text;
+            Assert.IsTrue(orderNumber.Contains("Order number:"));
+            
             _driver.FindElement(By.Id("signInLink")).Click();
             _driver.FindElement(By.LinkText("Your orders")).Click();
             Thread.Sleep(2000);
@@ -112,9 +131,11 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenIEnterTheDetailsUploadProofOfIdentity(string searchFirstName, string searchLastName, string gender, string dOB, string dataSubjectAccess)
         {
             _driver.FindElement(By.Id("firstnames")).SendKeys(searchFirstName);
+            
             _driver.FindElement(By.Id("search_lastname")).SendKeys(searchLastName);
             SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_gender")));
             oSelect.SelectByValue(gender);
+           
             _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 2300)");
@@ -154,6 +175,7 @@ namespace Nunit_NetCore.StepDefinitions
         [Then(@"I can see confirmation page")]
         public void ThenICanSeeConfirmationPage()
         {
+            Thread.Sleep(2000);
             String title = _driver.Title;
             Assert.IsTrue(title.Contains("DSA1939Confirmation"));
             _driver.Quit();
@@ -250,9 +272,13 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenClickOnRequestASearchOfClosedRecordsEnterSearchDetails(string searchFirstName, string searchLastName, string dOB, string category)
         {
             _driver.FindElement(By.LinkText("Request a search of closed records")).Click();
+            _driver.FindElement(By.Id("search_firstnames")).Clear();
             _driver.FindElement(By.Id("search_firstnames")).SendKeys(searchFirstName);
+            _driver.FindElement(By.Id("search_lastname")).Clear();
             _driver.FindElement(By.Id("search_lastname")).SendKeys(searchLastName);
+            _driver.FindElement(By.Id("search_dob")).Clear();
             _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
+
             SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_category")));
             oSelect.SelectByValue(category);
 

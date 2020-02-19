@@ -28,8 +28,8 @@ namespace Nunit_NetCore.StepDefinitions
         [Then(@"Location should have ""(.*)""")]
         public void ThenLocationShouldHave(string country)
         {
-            var trLocation = _driver.FindElements(By.Id("search-results")).FirstOrDefault(x => x.Text.Contains("Location:"));
-            var actualLocation = trLocation.FindElement(By.TagName("tr")).Text;
+            var trPlace = _driver.FindElements(By.Id("search-results")).FirstOrDefault(x => x.Text.Contains("Location:"));
+            var actualLocation = trPlace.FindElement(By.TagName("tr")).Text;
             Assert.IsTrue(actualLocation.Contains(country));
             _driver.Quit();
         }
@@ -60,7 +60,8 @@ namespace Nunit_NetCore.StepDefinitions
         {
             String yourFilter = _driver.FindElement(By.Id("search-refine")).Text;
             Assert.IsTrue(yourFilter.Contains(region));
-            Assert.IsTrue(yourFilter.Contains(county)); 
+            Assert.IsTrue(yourFilter.Contains(county));
+            _driver.Quit();
         }
         [Given(@"I am on find an archive page")]
         public void GivenIAmOnFindAnArchivePage()
@@ -104,15 +105,17 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"I choose a ""(.*)""")]
         public void WhenIChooseA(string homeNation)
         {
-            ScenarioContext.Current.Pending();
+            _driver.FindElement(By.LinkText(homeNation)).Click();
         }
-
         [When(@"check for the filters ""(.*)"", ""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
-        public void WhenCheckForTheFilters(string p0, string p1, string p2, string p3, string p4)
+        public void WhenCheckForTheFilters(string special, string local, string university, string typeOfArchiveprivate, string national)
         {
-            ScenarioContext.Current.Pending();
+            string filters = _driver.FindElement(By.Id("search-filters")).Text;
+            Assert.IsTrue(filters.Contains(special) && filters.Contains(local) &&
+                filters.Contains(university) && filters.Contains(typeOfArchiveprivate) && filters.Contains(national) );
         }
 
+        
 
     }
 }
