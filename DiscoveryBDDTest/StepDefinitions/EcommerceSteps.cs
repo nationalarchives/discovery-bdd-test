@@ -1,7 +1,9 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.Extensions.Configuration;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Configuration;
 using System.Linq;
 using System.Threading;
 using TechTalk.SpecFlow;
@@ -13,6 +15,9 @@ namespace Nunit_NetCore.StepDefinitions
     [Binding]
     public class EcommerceSteps
     {
+        private string Image1Path;
+        private string Image2Path;
+
         public IWebDriver _driver;
         [Given(@"I am on eCommerce page for ""(.*)""")]
         public void GivenIAmOnECommercePageFor(string iaId)
@@ -124,7 +129,10 @@ namespace Nunit_NetCore.StepDefinitions
         [Given(@"I am on Request a search of closed records page")]
         public void GivenIAmOnRequestASearchOfClosedRecordsPage()
         {
-            _driver = new PageNavigator().GoToFOIRegisterPage();
+            var pageNavigator = new PageNavigator();
+            _driver = pageNavigator.GoToFOIRegisterPage();
+            Image1Path = pageNavigator.Configuration.GetValue<string>("Image1Path");
+           
         }
 
         [When(@"I enter the details ""(.*)"", ""(.*)"",""(.*)"",""(.*)"",""(.*)"", upload proof of identity")]
@@ -142,9 +150,9 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id(dataSubjectAccess)).Click();
             if (dataSubjectAccess == "notSubject")
             {
-                _driver.FindElement(By.Name("consentfile")).SendKeys("C:\\Users\\hparupalli\\Koala.jpg");
+                _driver.FindElement(By.Name("consentfile")).SendKeys(Image1Path);
             }
-            _driver.FindElement(By.Name("proofIDfile")).SendKeys("C:\\Users\\hparupalli\\Koala.jpg");
+            _driver.FindElement(By.Name("proofIDfile")).SendKeys(Image1Path);
 
         }
 
@@ -183,14 +191,16 @@ namespace Nunit_NetCore.StepDefinitions
         [Given(@"I am on FOI request page for ""(.*)""")]
         public void GivenIAmOnFOIRequestPageFor(string iaId)
         {
-            var webDriver = new PageNavigator();
-            _driver = webDriver.GoToFOIRequestPage( iaId);
+            var pageNavigator = new PageNavigator();
+            _driver = pageNavigator.GoToFOIRequestPage(iaId);
+            Image2Path = pageNavigator.Configuration.GetValue<string>("Image2Path");
+           
         }
 
         [When(@"I upload evidence of death, enter ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
         public void WhenIUploadEvidenceOfDeathEnter(string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country)
         {
-            _driver.FindElement(By.Id("chooseFileFOI")).SendKeys("C:\\Users\\hparupalli\\Sample-500kb.jpg");
+            _driver.FindElement(By.Id("chooseFileFOI")).SendKeys(Image2Path);
             _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
             _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
             _driver.FindElement(By.Id("email")).SendKeys(email);

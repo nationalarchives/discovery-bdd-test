@@ -1,4 +1,4 @@
-﻿Feature: DetailPage And WhatToExpectGuide
+﻿Feature: DetailPage 
 
 Scenario Outline: DetailPage_Feedback_NO
 	Given I am on details page for "<iaId>"
