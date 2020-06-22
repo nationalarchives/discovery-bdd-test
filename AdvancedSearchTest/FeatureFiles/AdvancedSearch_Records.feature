@@ -22,8 +22,8 @@ Closed Document and Specific Date
 
 	Examples:
 		| date       |
-		| 01/01/2069 |
-		| 01/01/2058 |
+		| 01/01/2050 |
+		| 01/01/2060 |
 
 Scenario Outline: AS_ClosureStatus_Open_SpecificDate
 Record Opened on specific date

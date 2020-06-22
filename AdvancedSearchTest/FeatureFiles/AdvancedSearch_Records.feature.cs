@@ -164,8 +164,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("AS_ClosureStatus_close_SpecificDate")]
-        [NUnit.Framework.TestCaseAttribute("01/01/2069", null)]
-        [NUnit.Framework.TestCaseAttribute("01/01/2058", null)]
+        [NUnit.Framework.TestCaseAttribute("01/01/2050", null)]
+        [NUnit.Framework.TestCaseAttribute("01/01/2060", null)]
         public virtual void AS_ClosureStatus_Close_SpecificDate(string date, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
