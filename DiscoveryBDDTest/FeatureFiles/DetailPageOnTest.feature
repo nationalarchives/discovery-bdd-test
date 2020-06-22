@@ -1,4 +1,4 @@
-﻿Feature: DetailPage 
+Feature: DetailPage
 
 Scenario Outline: DetailPage_Feedback_NO
 	Given I am on details page for "<iaId>"

@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -153,7 +153,6 @@ namespace Nunit_NetCore.StepDefinitions
                 _driver.FindElement(By.Name("consentfile")).SendKeys(Image1Path);
             }
             _driver.FindElement(By.Name("proofIDfile")).SendKeys(Image1Path);
-
         }
 
         [When(@"I enter contact details ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
