@@ -142,9 +142,9 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id(dataSubjectAccess)).Click();
             if (dataSubjectAccess == "notSubject")
             {
-                _driver.FindElement(By.Name("consentfile")).SendKeys("C:\\Users\\hparupalli\\Koala.jpg");
+                _driver.FindElement(By.Name("consentfile")).SendKeys("C:\\temp\\test-img\\Koala.jpg");
             }
-            _driver.FindElement(By.Name("proofIDfile")).SendKeys("C:\\Users\\hparupalli\\Koala.jpg");
+            _driver.FindElement(By.Name("proofIDfile")).SendKeys("C:\\temp\\test-img\\Koala.jpg");
 
         }
 
@@ -190,7 +190,7 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"I upload evidence of death, enter ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
         public void WhenIUploadEvidenceOfDeathEnter(string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country)
         {
-            _driver.FindElement(By.Id("chooseFileFOI")).SendKeys("C:\\Users\\hparupalli\\Sample-500kb.jpg");
+            _driver.FindElement(By.Id("chooseFileFOI")).SendKeys("C:\\temp\\test-img\\Sample-500kb.jpg");
             _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
             _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
             _driver.FindElement(By.Id("email")).SendKeys(email);
