@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscoveryBDDTest", "DiscoveryBDDTest\DiscoveryBDDTest.csproj", "{5A52C7CD-6DB3-49D7-9E67-F0A860C17A97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedSearchTest", "AdvancedSearchTest\AdvancedSearchTest.csproj", "{2D2F871E-C98E-429E-85B9-E3DD83276BDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvancedSearchTest", "AdvancedSearchTest\AdvancedSearchTest.csproj", "{2D2F871E-C98E-429E-85B9-E3DD83276BDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
