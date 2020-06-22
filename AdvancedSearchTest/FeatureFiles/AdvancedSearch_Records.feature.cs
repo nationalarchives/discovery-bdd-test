@@ -340,7 +340,7 @@ this.FeatureBackground();
         [NUnit.Framework.DescriptionAttribute("AS_Records_DateRange_SearchAll")]
         [NUnit.Framework.TestCaseAttribute("Nelson", "mandela", "1900", "2000", null)]
         [NUnit.Framework.TestCaseAttribute("George", "Robert", "1850", "1950", null)]
-        [NUnit.Framework.TestCaseAttribute("David", "Evans", "1500", "1700", null)]
+        [NUnit.Framework.TestCaseAttribute("David", "Evans", "1300", "1500", null)]
         public virtual void AS_Records_DateRange_SearchAll(string allOfTheseWords, string anyOfTheseWords, string fromDate, string toDate, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

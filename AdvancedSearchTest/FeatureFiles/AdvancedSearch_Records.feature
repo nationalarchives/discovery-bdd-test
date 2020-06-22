@@ -58,7 +58,7 @@ Search all for 'Held by'
 		| AllOfTheseWords | AnyOfTheseWords | FromDate | ToDate |
 		| Nelson          | mandela         | 1900     | 2000   |
 		| George          | Robert          | 1850     | 1950   |
-		| David           | Evans           | 1500     | 1700   |
+		| David           | Evans           | 1300     | 1500   |
 
 Scenario:AS_Records_SearchTNA_CatalogueLevel
 CatalogueLevel and Exclude Title
