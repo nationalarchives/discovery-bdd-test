@@ -37,7 +37,6 @@
     <Compile Remove="StepDefinitions\AS_Records_SearchTNA_Taxonomy_WitchcraftSteps.cs" />
     <Compile Remove="StepDefinitions\AS_Records_SpecificDate_SearchAllSteps.cs" />
     <Compile Remove="StepDefinitions\AS_Reference_SearchAllSteps.cs" />
-    <Compile Remove="StepDefinitions\SearchUITestsSteps.cs" />
     <Compile Remove="StepDefinitions\SearchWithExamplesSteps.cs" />
   </ItemGroup>
 
