@@ -60,6 +60,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp2.1\appsettings.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\DiscoveryBDDTest.deps.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\DiscoveryBDDTest.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\DiscoveryBDDTest.runtimeconfig.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\specflow.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.1\chromedriver.exe" />
+    <None Include="bin\Debug\netcoreapp2.1\DiscoveryBDDTest.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\DiscoveryBDDTest.pdb" />
+    <None Include="bin\Debug\netcoreapp2.1\nunit.engine.api.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\nunit.engine.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb" />
+    <None Include="bin\Debug\netcoreapp2.1\nunit_random_seed.tmp" />
+    <None Include="bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\testhost.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\testhost.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.0" />
