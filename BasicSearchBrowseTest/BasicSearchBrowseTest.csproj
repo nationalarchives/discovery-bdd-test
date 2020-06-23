@@ -151,4 +151,10 @@
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.97" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
