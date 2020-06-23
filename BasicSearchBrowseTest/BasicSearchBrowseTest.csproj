@@ -1,10 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FeatureFiles\BasicSearch.feature.cs" />
+    <Compile Remove="FeatureFiles\BrowseOnTest.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Remove="FeatureFiles\BasicSearch.feature" />
+    <SpecFlowFeatureFiles Remove="FeatureFiles\BrowseOnTest.feature" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="bin\Debug\netcoreapp2.1\appsettings.json" />
