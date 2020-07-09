@@ -86,41 +86,47 @@ namespace DiscoveryBDDTest.StepDefinitions
             string welcomeMessage = _driver.FindElement(By.XPath("//div[@class='heading-holding-banner']")).Text;
             Assert.AreEqual(welcomeMessage, verifyEmailMsg);
         }
-
-        [When(@"go to your personal details, change email ""(.*)""")]
-        public void WhenGoToYourPersonalDetailsChangeEmail(string newEmail)
+        [When(@"signin with ""(.*)"",""(.*)"", go to your personal details, change email ""(.*)""")]
+        public void WhenSigninWithGoToYourPersonalDetailsChangeEmail(string oldId, string oldPswd, string newEmail)
         {
-            _driver.FindElement(By.LinkText("signin")).Click();
+            _driver.FindElement(By.LinkText("Sign in")).Click();
+            _driver.FindElement(By.Id("UserName")).SendKeys(oldId);
+            _driver.FindElement(By.Id("Password")).SendKeys(oldPswd);
+            _driver.FindElement(By.XPath("//input[@value='Sign in']")).Click();
+            //var webDriver = new PageNavigator();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            //js.ExecuteScript("window.scrollTo(0, 400)");
+            //webDriver.SingleSignOn(_driver);
             _driver.FindElement(By.LinkText("Your personal details")).Click();
             _driver.FindElement(By.Id("Email")).Clear();
             _driver.FindElement(By.Id("Email")).SendKeys(newEmail);
+            js.ExecuteScript("window.scrollTo(0, 500)");
             _driver.FindElement(By.XPath("//input[@value='Save details']")).Click();
             Thread.Sleep(1000);
         }
-
-        [When(@"signin with ""(.*)"", old""(.*)"", I should see ""(.*)""")]
-        public void WhenSigninWithOldIShouldSee(string newEmail, string pswd, string verifyEmailMsg)
+       
+        [When(@"signin with ""(.*)"", ""(.*)""")]
+        public void WhenSigninWith(string newEmail, string oldPswd)
         {
 
             _driver.FindElement(By.Id("UserName")).SendKeys(newEmail);
-            _driver.FindElement(By.Id("Password")).SendKeys(pswd);
+            _driver.FindElement(By.Id("Password")).SendKeys(oldPswd);
             _driver.FindElement(By.XPath("//input[@value='Sign in']")).Click();
             Thread.Sleep(1000);
-            string welcomeMessage = _driver.FindElement(By.XPath("//div[@class='heading-holding-banner']")).Text;
-            Assert.AreEqual(welcomeMessage, verifyEmailMsg);
+            //string welcomeMessage = _driver.FindElement(By.XPath("//div[@class='heading-holding-banner']")).Text;
+            //Assert.AreEqual(welcomeMessage, verifyEmailMsg);
         }
 
         [When(@"for change password go to your personal details, change password")]
         public void WhenForChangePasswordGoToYourPersonalDetailsChangePassword()
         {
             _driver.FindElement(By.LinkText("Your personal details")).Click();
-            _driver.FindElement(By.LinkText("Change your password")).Click();
+            _driver.FindElement(By.LinkText("Click here to change your password")).Click();
         }
-
-        [When(@"for change password enter old ""(.*)"",""(.*)"",""(.*)""")]
-        public void WhenForChangePasswordEnterOld(string pswd, string newPassword, string confirmNewPassword)
+        [When(@"for change password enter  ""(.*)"",""(.*)"",""(.*)""")]
+        public void WhenForChangePasswordEnter(string oldPswd, string newPassword, string confirmNewPassword)
         {
-            _driver.FindElement(By.Id("OldPassword")).SendKeys(pswd);
+            _driver.FindElement(By.Id("OldPassword")).SendKeys(oldPswd);
             _driver.FindElement(By.Id("NewPassword")).SendKeys(newPassword);
             _driver.FindElement(By.Id("ConfirmPassword")).SendKeys(confirmNewPassword);
             _driver.FindElement(By.XPath("//input[@name='SavePassword']")).Click();

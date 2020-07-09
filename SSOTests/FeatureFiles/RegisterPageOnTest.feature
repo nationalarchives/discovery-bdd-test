@@ -23,20 +23,20 @@ Scenario Outline: create account
 	Then I should see "<verifyEmailMsg>"
 
 	Examples:
-		| name | email                | confirmEmail         | pswd     | confirmPswd | verifyEmailMsg    |
-		| Test | tnatest595@gmail.com | tnatest595@gmail.com | Test1234 | Test1234    | Verify your email |
+		| name | email                     | confirmEmail              | pswd       | confirmPswd | verifyEmailMsg    |
+		| Test | tnadiscovery100@gmail.com | tnadiscovery100@gmail.com | Test123456 | Test123456  | Verify your email |
 
 Scenario Outline: create account, change email, change password, delete account
-	When go to your personal details, change email "<newEmail>"
-	And signin with "<newEmail>", old"<pswd>", I should see "<verifyEmailMsg>"
+	When signin with "<oldId>","<oldPswd>", go to your personal details, change email "<newEmail>"
+	And signin with "<newEmail>", "<oldPswd>"
 	And for change password go to your personal details, change password
-	And for change password enter old "<pswd>","<newPassword>","<confirmNewPassword>"
+	And for change password enter  "<oldPswd>","<newPassword>","<confirmNewPassword>"
 	Then sign in using "<newEmail>","<newPassword>"
 	And delete the account and check for "<accountDeletionMessage>"
 
 	Examples:
-		| name | email                | confirmEmail         | pswd     | confirmPswd | verifyEmailMsg    | newEmail                  | newPassword | confirmNewPassword | accountDeletionMessage                                      |
-		| Test | tnatest595@gmail.com | tnatest595@gmail.com | Test1234 | Test1234    | Verify your email | tnadiscovery100@gmail.com | Test123456  | Test123456         | Your account has been closed and your account data deleted. |
+		| name | verifyEmailMsg    | oldId                     | oldPswd    | newEmail             | newPassword | confirmNewPassword | accountDeletionMessage                                      |
+		| Test | Verify your email | tnadiscovery100@gmail.com | Test123456 | tnatest595@gmail.com | Test1234    | Test1234           | Your account has been closed and your account data deleted. |
 
 Scenario Outline: forgotten password
 	When click on signin, forgotten your password, enter "<email>"

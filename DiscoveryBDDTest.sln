@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicSearchBrowseTest", "Ba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSOTests", "SSOTests\SSOTests.csproj", "{A4AC946F-2DC8-454F-9762-7F6F8A79C725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalDownloads", "DigitalDownloads\DigitalDownloads.csproj", "{2BDBF4E3-5AB8-41B5-8C50-50B049289873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitalDownloads", "DigitalDownloads\DigitalDownloads.csproj", "{2BDBF4E3-5AB8-41B5-8C50-50B049289873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabinetPapersSearch", "CabinetPapersSearch\CabinetPapersSearch.csproj", "{733D51E5-3B85-4066-8FA0-56C83D99B008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2BDBF4E3-5AB8-41B5-8C50-50B049289873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BDBF4E3-5AB8-41B5-8C50-50B049289873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BDBF4E3-5AB8-41B5-8C50-50B049289873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{733D51E5-3B85-4066-8FA0-56C83D99B008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733D51E5-3B85-4066-8FA0-56C83D99B008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733D51E5-3B85-4066-8FA0-56C83D99B008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733D51E5-3B85-4066-8FA0-56C83D99B008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

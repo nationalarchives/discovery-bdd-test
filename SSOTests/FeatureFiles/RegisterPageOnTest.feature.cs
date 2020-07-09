@@ -176,7 +176,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("create account")]
-        [NUnit.Framework.TestCaseAttribute("Test", "tnatest595@gmail.com", "tnatest595@gmail.com", "Test1234", "Test1234", "Verify your email", null)]
+        [NUnit.Framework.TestCaseAttribute("Test", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "Test123456", "Test123456", "Verify your email", null)]
         public virtual void CreateAccount(string name, string email, string confirmEmail, string pswd, string confirmPswd, string verifyEmailMsg, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -223,17 +223,15 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("create account, change email, change password, delete account")]
-        [NUnit.Framework.TestCaseAttribute("Test", "tnatest595@gmail.com", "tnatest595@gmail.com", "Test1234", "Test1234", "Verify your email", "tnadiscovery100@gmail.com", "Test123456", "Test123456", "Your account has been closed and your account data deleted.", null)]
-        public virtual void CreateAccountChangeEmailChangePasswordDeleteAccount(string name, string email, string confirmEmail, string pswd, string confirmPswd, string verifyEmailMsg, string newEmail, string newPassword, string confirmNewPassword, string accountDeletionMessage, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Test", "Verify your email", "tnadiscovery100@gmail.com", "Test123456", "tnatest595@gmail.com", "Test1234", "Test1234", "Your account has been closed and your account data deleted.", null)]
+        public virtual void CreateAccountChangeEmailChangePasswordDeleteAccount(string name, string verifyEmailMsg, string oldId, string oldPswd, string newEmail, string newPassword, string confirmNewPassword, string accountDeletionMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("name", name);
-            argumentsOfScenario.Add("email", email);
-            argumentsOfScenario.Add("confirmEmail", confirmEmail);
-            argumentsOfScenario.Add("pswd", pswd);
-            argumentsOfScenario.Add("confirmPswd", confirmPswd);
             argumentsOfScenario.Add("verifyEmailMsg", verifyEmailMsg);
+            argumentsOfScenario.Add("oldId", oldId);
+            argumentsOfScenario.Add("oldPswd", oldPswd);
             argumentsOfScenario.Add("newEmail", newEmail);
             argumentsOfScenario.Add("newPassword", newPassword);
             argumentsOfScenario.Add("confirmNewPassword", confirmNewPassword);
@@ -263,16 +261,16 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 30
- testRunner.When(string.Format("go to your personal details, change email \"{0}\"", newEmail), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("signin with \"{0}\",\"{1}\", go to your personal details, change email \"{2}\"", oldId, oldPswd, newEmail), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
- testRunner.And(string.Format("signin with \"{0}\", old\"{1}\", I should see \"{2}\"", newEmail, pswd, verifyEmailMsg), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("signin with \"{0}\", \"{1}\"", newEmail, oldPswd), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 32
  testRunner.And("for change password go to your personal details, change password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
- testRunner.And(string.Format("for change password enter old \"{0}\",\"{1}\",\"{2}\"", pswd, newPassword, confirmNewPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("for change password enter  \"{0}\",\"{1}\",\"{2}\"", oldPswd, newPassword, confirmNewPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
  testRunner.Then(string.Format("sign in using \"{0}\",\"{1}\"", newEmail, newPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
