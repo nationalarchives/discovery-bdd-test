@@ -176,7 +176,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("create account")]
-        [NUnit.Framework.TestCaseAttribute("Test", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "Test123456", "Test123456", "Verify your email", null)]
+        [NUnit.Framework.TestCaseAttribute("Test", "discoveryt32@gmail.com", "discoveryt32@gmail.com", "Test123456", "Test123456", "Verify your email", null)]
         public virtual void CreateAccount(string name, string email, string confirmEmail, string pswd, string confirmPswd, string verifyEmailMsg, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -223,7 +223,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("create account, change email, change password, delete account")]
-        [NUnit.Framework.TestCaseAttribute("Test", "Verify your email", "tnadiscovery100@gmail.com", "Test123456", "tnatest595@gmail.com", "Test1234", "Test1234", "Your account has been closed and your account data deleted.", null)]
+        [NUnit.Framework.TestCaseAttribute("Test", "Verify your email", "discoveryt32@gmail.com", "Test123456", "tnatest595@gmail.com", "Test1234", "Test1234", "Your account has been closed and your account data deleted.", null)]
         public virtual void CreateAccountChangeEmailChangePasswordDeleteAccount(string name, string verifyEmailMsg, string oldId, string oldPswd, string newEmail, string newPassword, string confirmNewPassword, string accountDeletionMessage, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -237,7 +237,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("confirmNewPassword", confirmNewPassword);
             argumentsOfScenario.Add("accountDeletionMessage", accountDeletionMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("create account, change email, change password, delete account", null, tagsOfScenario, argumentsOfScenario);
-#line 29
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -260,22 +260,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 30
+#line 31
  testRunner.When(string.Format("signin with \"{0}\",\"{1}\", go to your personal details, change email \"{2}\"", oldId, oldPswd, newEmail), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
+#line 32
  testRunner.And(string.Format("signin with \"{0}\", \"{1}\"", newEmail, oldPswd), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
+#line 33
  testRunner.And("for change password go to your personal details, change password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 34
  testRunner.And(string.Format("for change password enter  \"{0}\",\"{1}\",\"{2}\"", oldPswd, newPassword, confirmNewPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
+#line 35
  testRunner.Then(string.Format("sign in using \"{0}\",\"{1}\"", newEmail, newPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 35
+#line 36
  testRunner.And(string.Format("delete the account and check for \"{0}\"", accountDeletionMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -292,7 +292,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("email", email);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("forgotten password", null, tagsOfScenario, argumentsOfScenario);
-#line 41
+#line 42
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -315,10 +315,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 42
+#line 43
  testRunner.When(string.Format("click on signin, forgotten your password, enter \"{0}\"", email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
+#line 44
  testRunner.Then("check for the reset your password message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -339,7 +339,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("pswd", pswd);
             argumentsOfScenario.Add("confirmPswd", confirmPswd);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Don\'t accept privacy and cookie policies", null, tagsOfScenario, argumentsOfScenario);
-#line 50
+#line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -362,10 +362,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 51
+#line 52
  testRunner.When(string.Format("I enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\" but don\'t tick T&C and register", name, email, confirmEmail, pswd, confirmPswd), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 52
+#line 53
  testRunner.Then("check for the validation message You must accept the terms and conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

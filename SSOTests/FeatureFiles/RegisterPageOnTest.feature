@@ -23,9 +23,10 @@ Scenario Outline: create account
 	Then I should see "<verifyEmailMsg>"
 
 	Examples:
-		| name | email                     | confirmEmail              | pswd       | confirmPswd | verifyEmailMsg    |
-		| Test | tnadiscovery100@gmail.com | tnadiscovery100@gmail.com | Test123456 | Test123456  | Verify your email |
+		| name | email                  | confirmEmail           | pswd       | confirmPswd | verifyEmailMsg    |
+		| Test | discoveryt32@gmail.com | discoveryt32@gmail.com | Test123456 | Test123456  | Verify your email |
 
+#| Test | tnadiscovery100@gmail.com | tnadiscovery100@gmail.com | Test123456 | Test123456  | Verify your email |
 Scenario Outline: create account, change email, change password, delete account
 	When signin with "<oldId>","<oldPswd>", go to your personal details, change email "<newEmail>"
 	And signin with "<newEmail>", "<oldPswd>"
@@ -35,8 +36,8 @@ Scenario Outline: create account, change email, change password, delete account
 	And delete the account and check for "<accountDeletionMessage>"
 
 	Examples:
-		| name | verifyEmailMsg    | oldId                     | oldPswd    | newEmail             | newPassword | confirmNewPassword | accountDeletionMessage                                      |
-		| Test | Verify your email | tnadiscovery100@gmail.com | Test123456 | tnatest595@gmail.com | Test1234    | Test1234           | Your account has been closed and your account data deleted. |
+		| name | verifyEmailMsg    | oldId                  | oldPswd    | newEmail             | newPassword | confirmNewPassword | accountDeletionMessage                                      |
+		| Test | Verify your email | discoveryt32@gmail.com | Test123456 | tnatest595@gmail.com | Test1234    | Test1234           | Your account has been closed and your account data deleted. |
 
 Scenario Outline: forgotten password
 	When click on signin, forgotten your password, enter "<email>"
