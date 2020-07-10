@@ -36,23 +36,26 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             string actual = _driver.FindElement(By.XPath("//div[@class='emphasis-block']")).Text;
             Assert.IsTrue(actual.Contains("Your tag has been added. Thank you."));
-            _driver.Quit();
+            //_driver.Quit();
 
         }
-        [When(@"click on delete tag")]
-        public void WhenClickOnDeleteTag()
+        [When(@"click on delete tag and Please explain why you think this tag is inappropriate")]
+        public void WhenClickOnDeleteTagAndPleaseExplainWhyYouThinkThisTagIsInappropriate()
         {
             _driver.FindElement(By.XPath("//*[@id='tag-list']/li[1]/div/span/span/a")).Click();
             Thread.Sleep(2000);
-            _driver.SwitchTo().Alert().Accept();
+            _driver.FindElement(By.Id("Reason")).SendKeys("This is a test");
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 1500)");
+            _driver.FindElement(By.Id("submitTagRemovalRequest")).Click();
+            //_driver.SwitchTo().Alert().Accept();
             Thread.Sleep(2000);
         }
-
         [Then(@"check for the message your tag has been deleted")]
         public void ThenCheckForTheMessageYourTagHasBeenDeleted()
         {
-            string actual = _driver.FindElement(By.Id("tag-delete-success-message")).Text;
-            Assert.IsTrue(actual.Contains("Your tag has been deleted."));
+            string actual = _driver.FindElement(By.Id("reportTagCompletionMessage")).Text;
+            Assert.IsTrue(actual.Contains("Thank you for submitting a tag removal request. If you left contact details, a member of our team will be in touch soon."));
             _driver.Quit();
         }
         [When(@"we add ""(.*)"" couple of times")]
@@ -77,7 +80,8 @@ namespace DiscoveryBDDTest.StepDefinitions
         [Then(@"click on delete tag")]
         public void ThenClickOnDeleteTag()
         {
-            _driver.FindElement(By.XPath("//*[@id='tag-list']/li[2]/div/span/span/a")).Click();
+            _driver.FindElement(By.XPath("//*[@id='tag-list']/li[1]/div/span/span/a")).Click();
+            _driver.SwitchTo().Alert().Accept();
             Thread.Sleep(2000);
             _driver.Quit();
         }

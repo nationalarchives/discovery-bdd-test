@@ -151,7 +151,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("I am on discovery details page for staffin \"{0}\", signed in", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 16
- testRunner.When("click on delete tag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("click on delete tag and Please explain why you think this tag is inappropriate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 17
  testRunner.Then("check for the message your tag has been deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

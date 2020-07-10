@@ -76,11 +76,6 @@ namespace ManorSearchTagsSARServerSubscriptionMoDMedalTests.FeatureFiles
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("catalogue description subtitles")]
         [NUnit.Framework.TestCaseAttribute("C14499665", "Record opening date", "Access conditions", "Description", null)]
-        [NUnit.Framework.TestCaseAttribute("C4220383", "Reconsideration due in", "Lord Chancellor\'s Instrument", "LCI signed date", null)]
-        [NUnit.Framework.TestCaseAttribute("C10878728", "Exemption 2", "FOI decision date", "Legal status", null)]
-        [NUnit.Framework.TestCaseAttribute("C10831067", "LCI signed date", "Closure criterion", "Former reference in its original department", null)]
-        [NUnit.Framework.TestCaseAttribute("C9501656", "Explanation", "FOI decision date", "Exemption", null)]
-        [NUnit.Framework.TestCaseAttribute("C3219685", "Closure criterion", "Lord Chancellor\'s Instrument", "LCI signed date", null)]
         [NUnit.Framework.TestCaseAttribute("224b9e65b97b49dd983c11e9f1b45bf4#", "Exemption 1", "Exemption 3", "Record opening date", null)]
         [NUnit.Framework.TestCaseAttribute("5cbe4cfd2f224c0d9d88fc045b3ee5d9", "Physical description", "FOI decision date", "Exemption 2", null)]
         public virtual void CatalogueDescriptionSubtitles(string iaID, string assetDetails1, string assetDetails2, string assetDetails3, string[] exampleTags)

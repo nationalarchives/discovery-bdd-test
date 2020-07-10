@@ -13,7 +13,7 @@ Scenario Outline: Add Tag
 
 Scenario Outline: Delete tag
 	Given I am on discovery details page for staffin "<iaId>", signed in
-	When click on delete tag
+	When click on delete tag and Please explain why you think this tag is inappropriate
 	Then check for the message your tag has been deleted
 
 	Examples:
