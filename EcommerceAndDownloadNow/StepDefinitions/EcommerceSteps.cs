@@ -67,6 +67,7 @@ namespace Nunit_NetCore.StepDefinitions
             //_driver.FindElement(By.Id("Town")).SendKeys("London");
             //_driver.FindElement(By.Id("PostCode")).SendKeys("TW9 4AD");
             //_driver.FindElement(By.XPath("//input[@type='submit' and @value='Save']")).Click();
+           
             _driver.FindElement(By.XPath("//input[@value='Proceed']")).Click();
             Thread.Sleep(1000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
