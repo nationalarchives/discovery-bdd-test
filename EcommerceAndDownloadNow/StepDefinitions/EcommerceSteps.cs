@@ -107,8 +107,9 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 2500)");
-            _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 500)");
+            //  _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            _driver.FindElement(By.LinkText("Add to basket")).Click();
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
             _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();

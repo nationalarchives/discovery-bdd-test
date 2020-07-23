@@ -102,7 +102,7 @@ namespace DigitalDownloads.StepDefinitions
         public void GivenICanSeeTheBanner()
         {
             string bannerText = _driver.FindElement(By.Id("notice")).Text;
-            Assert.IsTrue(bannerText.Contains("While our Kew site is closed, signed-in users can download digital records for free"));
+            Assert.IsTrue(bannerText.Contains("While there is limited access to our Kew site, signed-in users can download digital records for free."));
         }
 
         [When(@"I click on fair policy link")]
@@ -116,7 +116,7 @@ namespace DigitalDownloads.StepDefinitions
         public void ThenIShouldSeeFreeAccessToDigitalRecordsPage()
         {
             string bannerText = _driver.FindElement(By.Id("news-content")).Text;
-            Assert.IsTrue(bannerText.Contains("We are making digital records available on our website free of charge for as long as our Kew site is closed to visitors"));
+            Assert.IsTrue(bannerText.Contains("We are making digital records available on our website free of charge for the time being, as we are initially only able to re-open our reading rooms for a very limited number of researchers."));
         }
 
         [Given(@"I am on home page for DD tests")]
