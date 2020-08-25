@@ -90,16 +90,27 @@ namespace Nunit_NetCore.StepDefinitions
                     int intYear = Int32.Parse(actualDate);
                     Assert.IsTrue((intYear >= fromDate) && (intYear <= toDate));
                 }
-                else if ((actualDate.Length <= 11) && (actualDate.Contains("-")))
+                else if ((actualDate.Length <= 11) && (actualDate.Contains("-")) && !(actualDate.Contains("[")))
                 {
                     int fromRecordDate = Int32.Parse(actualDate.Substring(0, 4));
                     int toRecordDate = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
                     Assert.IsTrue((fromRecordDate >= fromDate && fromRecordDate <= toDate) || (toRecordDate >= fromDate && toRecordDate <= toDate) || (fromDate >= fromRecordDate && toDate <= toRecordDate));
                 }
-                else if ((actualDate.Length >= 11) && (actualDate.Length <= 22))
+                else if ((actualDate.Length >= 11) && (actualDate.Length <= 22) && !(actualDate.Contains("[")))
                 {
                     int Year = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
                     Assert.IsTrue((Year >= fromDate) && (Year <= toDate));
+                }
+                else if ((actualDate.Length <= 12) && (actualDate.Contains("-")) && (actualDate.Contains("]")))
+                {
+                    string fromDateBeforeHyphen = actualDate.Substring(1,4);
+                    string ToDateAfterHyphen = actualDate.Substring(6,4);
+
+                    // string fromDateBeforeHyphen = actualDate.Split("\\-")[1];
+
+                    int fromRecordDate = Int32.Parse(fromDateBeforeHyphen);
+                    int toRecordDate = Int32.Parse(ToDateAfterHyphen);
+                    Assert.IsTrue((fromRecordDate >= fromDate && fromRecordDate <= toDate) || (toRecordDate >= fromDate && toRecordDate <= toDate) || (fromDate >= fromRecordDate && toDate <= toRecordDate));
                 }
                 else if ((actualDate.Length >= 22) && (actualDate.Contains("-")))
                 {
@@ -115,6 +126,8 @@ namespace Nunit_NetCore.StepDefinitions
             {
                 int fromDate = Int32.Parse(from);
                 int toDate = Int32.Parse(to.Substring(to.Length - 4));
+                IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+                js.ExecuteScript("window.scrollTo(0, 500)");
                 // check the first record
                 _driver.FindElement(By.XPath("//*[@id='search-results']/li[1]/a")).Click();
                 var trDate = _driver.FindElements(By.XPath("//table[@class='asset-details']/tbody/tr")).FirstOrDefault(x => x.Text.Contains("Date:"));
@@ -124,7 +137,18 @@ namespace Nunit_NetCore.StepDefinitions
                     int intYear = Int32.Parse(actualDate);
                     Assert.IsTrue((intYear >= fromDate) && (intYear <= toDate));
                 }
-                else if ((actualDate.Length <= 11) && (actualDate.Contains("-")))
+                else if ((actualDate.Length <= 12) && (actualDate.Contains("-")) && (actualDate.Contains("]")))
+                {
+                    string fromDateBeforeHyphen = actualDate.Substring(1, 4);
+                    string ToDateAfterHyphen = actualDate.Substring(6, 4);
+
+                    // string fromDateBeforeHyphen = actualDate.Split("\\-")[1];
+
+                    int fromRecordDate = Int32.Parse(fromDateBeforeHyphen);
+                    int toRecordDate = Int32.Parse(ToDateAfterHyphen);
+                    Assert.IsTrue((fromRecordDate >= fromDate && fromRecordDate <= toDate) || (toRecordDate >= fromDate && toRecordDate <= toDate) || (fromDate >= fromRecordDate && toDate <= toRecordDate));
+                }
+                else if ((actualDate.Length <= 11) && (actualDate.Contains("-"))&& !(actualDate.Contains("]")))
                 {
                     int fromRecordDate = Int32.Parse(actualDate.Substring(0, 4));
                     int toRecordDate = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
@@ -270,7 +294,9 @@ namespace Nunit_NetCore.StepDefinitions
                 }
                 else if ((actualDate.Length >= 11) && (actualDate.Length <= 22) && (!actualDate.Contains("-")))
                 {
-                    int Year = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
+                    DateTime dateTimeFormat = DateTime.Parse(actualDate);
+                    int Year = dateTimeFormat.Year;
+                    //int Year = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
                     Assert.IsTrue((Year >= fromDate) && (Year <= toDate));
                 }
                 else if((actualDate.Length >= 11) && (actualDate.Length <= 22) && (actualDate.Contains("-")) )

@@ -219,7 +219,7 @@ namespace Nunit_NetCore.StepDefinitions
 
             DateTime recordDate = DateTime.Parse(actualOpeningDate);
 
-            DateTime nowDate = DateTime.Now;
+            DateTime nowDate = DateTime.Now.AddDays(-1);
             DateTime sixMonthsAgo = nowDate.AddMonths(-6);
 
             Assert.IsTrue((recordDate >= sixMonthsAgo) && (recordDate <= nowDate));

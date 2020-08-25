@@ -30,6 +30,8 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.LinkText("Download now")).Click();
             //_driver.FindElement(By.Id("progressButton")).Click();
             Thread.Sleep(3000);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 500)");
             _driver.FindElement(By.LinkText("Download")).Click();
         }
 

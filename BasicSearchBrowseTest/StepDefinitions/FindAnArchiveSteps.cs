@@ -39,7 +39,7 @@ namespace Nunit_NetCore.StepDefinitions
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1000)");
             _driver.FindElement(By.LinkText("more options")).Click();
-            js.ExecuteScript("window.scrollTo(0, 500)");
+            js.ExecuteScript("window.scrollTo(0, 600)");
             _driver.FindElement(By.LinkText(letter)).Click();
             Thread.Sleep(1000);
             _driver.FindElement(By.LinkText(country)).Click();

@@ -83,7 +83,7 @@ namespace Nunit_NetCore.StepDefinitions
             Thread.Sleep(1000);
             //_driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 3600)");
+            js.ExecuteScript("window.scrollTo(0, 3700)");
            // _driver.FindElement(By.XPath("//input[@class='checkbox' and @value='C']")).Click();
             _driver.FindElement(By.XPath("//*[@id='page_wrap']/div[2]/div[2]/section[1]/div/div/form/fieldset[9]/div[2]/div/ul/li[3]/label")).Click();
             //_driver.FindElement(By.XPath("//input[@id='cs-C']")).Click();

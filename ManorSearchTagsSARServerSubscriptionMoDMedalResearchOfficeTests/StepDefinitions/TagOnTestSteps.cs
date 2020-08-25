@@ -87,10 +87,10 @@ namespace DiscoveryBDDTest.StepDefinitions
         public void ThenClickOnDeleteTag()
         {
             _driver.FindElement(By.XPath("//*[@id='tag-list']/li[1]/div/span/span/a")).Click();
-            _driver.FindElement(By.Id("Reason")).SendKeys("This is a test");
-            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 1500)");
-            _driver.FindElement(By.Id("submitTagRemovalRequest")).Click();
+           // _driver.FindElement(By.Id("Reason")).SendKeys("This is a test");
+            //IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            //js.ExecuteScript("window.scrollTo(0, 1500)");
+            //_driver.FindElement(By.Id("submitTagRemovalRequest")).Click();
             //_driver.SwitchTo().Alert().Accept();
             Thread.Sleep(2000);
             _driver.Quit();

@@ -39,7 +39,9 @@ namespace DiscoveryBDDTest.StepDefinitions
         public void ThenEnter(string feedback, string acknowledge)
         {
             _driver.FindElement(By.Id("comments")).SendKeys(feedback);
-            Thread.Sleep(2000);
+            //Thread.Sleep(1000);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 1100)");
             //click on send
             _driver.FindElement(By.XPath("//*[@id='no_fieldset']/button[1]")).Click();
             Thread.Sleep(2000);
