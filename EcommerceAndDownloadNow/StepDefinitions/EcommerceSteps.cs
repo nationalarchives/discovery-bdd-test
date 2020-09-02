@@ -127,9 +127,9 @@ namespace Nunit_NetCore.StepDefinitions
             Thread.Sleep(1000);
             _driver.FindElement(By.XPath("(//input[@type='submit'])[3]")).Click();
             Thread.Sleep(1000);
-            _driver.FindElement(By.XPath("(//input[@type='image'])[1]")).Click();
+           _driver.FindElement(By.XPath("(//input[@type='image'])[1]")).Click();
             Thread.Sleep(2000);
-            _driver.FindElement(By.CssSelector("#PMMakePayment")).Click();
+           _driver.FindElement(By.CssSelector("#PMMakePayment")).Click();
             
 
         }
