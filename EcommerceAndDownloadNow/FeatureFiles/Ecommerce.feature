@@ -30,7 +30,7 @@ Scenario Outline: YourOrders_RequestAcopy
 	Examples:
 		| iaId      |
 		| C16120922 |
-		| C7351413  |
+		#| C4771085  |
 
 Scenario Outline: FOI1939 register
 	Given I am on Request a search of closed records page
@@ -59,9 +59,10 @@ Scenario Outline: HomeGuard
 
 Scenario Outline: PageCheckRequestACopy
 	Given I am on page check page for "<iaId>"
-	When click on Get started, enter details, add to basket, checkout, signed in
-	And T&C, Submit order pay through paypal
-	Then I should see Thank you for your order
+	Then I should see the coronavirus update page
+	#When click on Get started, enter details, add to basket, checkout, signed in
+	#And T&C, Submit order pay through paypal
+	#Then I should see Thank you for your order
 
 	Examples:
 		| iaId     |
@@ -71,8 +72,10 @@ Scenario Outline: PageCheckRequestACopy
 Scenario Outline: PageCheckRequestACopy_Morethan1000Characters
 This scenario we are checking the validation message by entering morethan 1000 charcters in customer instructions field.
 	Given I am on page check page for "<iaId>"
-	When click on Get started, enter morethan one thousand characters
-	Then I can see a message Customer Instructions cannot exceed one thousand characters
+		Then I should see the coronavirus update page
+
+	#When click on Get started, enter morethan one thousand characters
+	#Then I can see a message Customer Instructions cannot exceed one thousand characters
 
 	Examples:
 		| iaId     |

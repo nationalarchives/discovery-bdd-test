@@ -108,9 +108,9 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 500)");
-            //  _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
-            _driver.FindElement(By.LinkText("Add to basket")).Click();
+            js.ExecuteScript("window.scrollTo(0, 2600)");
+              _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            //_driver.FindElement(By.LinkText("Add to basket")).Click();
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
             _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
@@ -137,7 +137,7 @@ namespace Nunit_NetCore.StepDefinitions
         public void ThenGoToYourOrdersAndICanSeeOrderNumberFromYourOrdersList()
         {
             // get the order number 
-            string orderNumber = _driver.FindElement(By.Id("basketItemsWrapper")).Text;
+            string orderNumber = _driver.FindElement(By.Id("orderReference")).Text;
             Assert.IsTrue(orderNumber.Contains("Order number:"));
             
             _driver.FindElement(By.Id("signInLink")).Click();
@@ -201,7 +201,9 @@ namespace Nunit_NetCore.StepDefinitions
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 4000)");
             _driver.FindElement(By.Id("Confirm")).Click();
-            _driver.FindElement(By.XPath("//input[@class='discoveryPrimaryCallToActionLink']")).Click();
+            _driver.FindElement(By.XPath("//input[@type='submit' and @value='Submit request']")).Click();
+            Thread.Sleep(3000);
+           // _driver.FindElement(By.ClassName("heading-holding-banner")).Click();
         }
 
         [Then(@"I can see confirmation page")]
@@ -319,8 +321,15 @@ namespace Nunit_NetCore.StepDefinitions
             oSelect.SelectByValue(category);
 
         }
+        [Then(@"I should see the coronavirus update page")]
+        public void ThenIShouldSeeTheCoronavirusUpdatePage()
+        {
+            string title = _driver.Title;
+            Assert.IsTrue(title.Contains("The National Archives now open, offering greater access to our collections - The National Archives"));
+            _driver.Quit();
+        }
 
-        
+
 
 
     }

@@ -37,7 +37,7 @@ Scenario Outline: Records_InTheRange_FromAndTo
 	Examples:
 		| from    | to      |
 		| 05/1910 | 1920    |
-		| 1500    | 1520    |
+		#| 1500    | 1520    |
 		| 1880    | 09/1950 |
 
 Scenario Outline: Tests_AllTabs_search
