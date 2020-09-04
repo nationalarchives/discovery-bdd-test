@@ -31,9 +31,9 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.XPath("//input[@value='Checkout']")).Click();
             _driver.FindElement(By.Id("confirm-terms")).Click();
             _driver.FindElement(By.XPath("//input[@value='Submit order']")).Click();
-            _driver.FindElement(By.XPath("//a[@id='link_PAYPAL-EXPRESS']/font")).Click();
-            Thread.Sleep(2000);
-            _driver.FindElement(By.XPath("//input[@id='PMMakePayment']")).Click();
+            //_driver.FindElement(By.XPath("//a[@id='link_PAYPAL-EXPRESS']/font")).Click();
+            //Thread.Sleep(2000);
+           // _driver.FindElement(By.XPath("//input[@id='PMMakePayment']")).Click();
         }
         
         [Then(@"check for the message Thank you for your order and check we are able to Download")]
@@ -52,7 +52,9 @@ namespace Nunit_NetCore.StepDefinitions
         {
             _driver.FindElement(By.Id("signInLink")).Click();
             _driver.FindElement(By.LinkText("Your orders")).Click();
-            string orderTitle = _driver.FindElement(By.XPath("(//li[@class='orderItem'])[1]/h3[2]")).Text;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 500)");
+            string orderTitle = _driver.FindElement(By.XPath("//li/h3")).Text;
             Assert.IsTrue(orderTitle.Contains(orderDetails));
         }
 

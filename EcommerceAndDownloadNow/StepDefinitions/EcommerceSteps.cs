@@ -108,9 +108,9 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 2600)");
-              _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
-            //_driver.FindElement(By.LinkText("Add to basket")).Click();
+            js.ExecuteScript("window.scrollTo(0, 500)");
+             // _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            _driver.FindElement(By.LinkText("Add to basket")).Click();
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
             _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
@@ -119,6 +119,21 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.XPath("//input[@id='DeliveryEmail']")).SendKeys("tnadiscovery100@gmail.com");
 
         }
+        [When(@"scroll down add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept")]
+        public void WhenScrollDownAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 2600)");
+             _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            //_driver.FindElement(By.LinkText("Add to basket")).Click();
+            _driver.FindElement(By.Id("miniBasketLink")).Click();
+            // click view basket
+            _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 700)");
+            _driver.FindElement(By.XPath("//input[@type='submit' and @value='Checkout'] ")).Click();
+            _driver.FindElement(By.XPath("//input[@id='DeliveryEmail']")).SendKeys("tnadiscovery100@gmail.com");
+        }
+
 
         [When(@"T&C, Submit order pay through paypal")]
         public void WhenTCSubmitOrderPayThroughPaypal()

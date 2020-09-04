@@ -47,7 +47,7 @@ Scenario Outline: FOI1939 register
 Scenario Outline: HomeGuard
 	Given I am on FOI request page for "<iaId>"
 	When I upload evidence of death, enter "<firstName>","<lastName>","<email>","<adress1>","<townCity>","<postcode>","<country>"
-	And add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
+	And scroll down add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
 	And T&C, Submit order pay through paypal
 	Then I should see Thank you for your order
 
@@ -86,7 +86,7 @@ Scenario Outline: FOIRequest_WO416
 	Given I am on eCommerce page for to upload death certificate "<iaId>"
 	When click on request a search of closed records, enter search details "<searchFirstName>","<searchLastName>","<dOB>","<category>"
 	And I upload evidence of death, enter "<firstName>","<lastName>","<email>","<adress1>","<townCity>","<postcode>","<country>"
-	And add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
+	And scroll down add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
 	And T&C, Submit order pay through paypal
 	Then I should see Thank you for your order
 	And sign in now

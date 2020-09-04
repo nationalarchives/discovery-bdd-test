@@ -316,8 +316,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 50
- testRunner.And("add to basket, go to basket, viewbasket,checkout, enter email address under send " +
-                        "a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
+                        " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 51
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -461,8 +461,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 89
- testRunner.And("add to basket, go to basket, viewbasket,checkout, enter email address under send " +
-                        "a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
+                        " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 90
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
