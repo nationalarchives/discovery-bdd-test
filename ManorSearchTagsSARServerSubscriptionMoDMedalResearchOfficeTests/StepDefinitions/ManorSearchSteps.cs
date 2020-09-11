@@ -51,11 +51,12 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver.FindElement(By.Id("search-documents")).Click();
             _driver.FindElement(By.Id("all-words-records")).SendKeys(allOfTheseWords);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 600)");
+            js.ExecuteScript("window.scrollTo(0, 800)");
             SelectElement hCountry = new SelectElement(_driver.FindElements(By.Name("_ocn"))[1]);
             hCountry.SelectByValue(historicCountry);
             SelectElement typeDocument = new SelectElement(_driver.FindElement(By.Name("_mdt")));
             typeDocument.SelectByValue(typesOfDocument);
+            //js.ExecuteScript("window.scrollTo(0, 600)");
             _driver.FindElement(By.Id("search-date-range-record")).Click();
             _driver.FindElement(By.Id("rc-from-date")).SendKeys(from);
             _driver.FindElement(By.Id("rc-to-date")).SendKeys(to);
