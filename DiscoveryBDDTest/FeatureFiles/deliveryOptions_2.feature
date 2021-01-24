@@ -30,9 +30,9 @@ Scenario Outline: AccessUnderReviewStaffin
 
 	Examples:
 		| iaId     | message                                             | xPath                                  | button             | title      |
-		| C4216021 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Contact us |
-		| C5040641 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Contact us |
-		| C1960950 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Contact us |
+		| C4216021 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
+		| C5040641 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
+		| C1960950 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
 
 Scenario Outline: AV_Media
 	Given I am on delivery options page "<iaId>"
@@ -55,8 +55,8 @@ Scenario Outline: ClosedFOIReview
 
 	Examples:
 		| iaId      | xPath                                  | message               | button             | title      |
-		| C10853769 | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | Contact us |
-		| C4633754  | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | Contact us |
+		| C10853769 | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | Freedom of Information (FOI) Request |
+		| C4633754  | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | Freedom of Information (FOI) Request |
 
 Scenario Outline: ClosedRetainedDeptKnown
 	Given I am on delivery options page "<iaId>"
