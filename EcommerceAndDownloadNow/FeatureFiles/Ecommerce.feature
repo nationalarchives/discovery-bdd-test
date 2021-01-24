@@ -30,7 +30,7 @@ Scenario Outline: YourOrders_RequestAcopy
 	Examples:
 		| iaId      |
 		| C16120922 |
-		| C7351413  |
+		| C16120925 |
 
 Scenario Outline: FOI1939 register
 	Given I am on Request a search of closed records page
@@ -55,7 +55,7 @@ Scenario Outline: HomeGuard
 		| iaId                             | firstName | lastName              | email                     | adress1 | townCity | postcode | country        |
 		| 90ad00a1aa6149efa3991fab6037a5ec | test      | testing for something | tnadiscovery100@gmail.com | 99      | coventry | cv25hz   | United Kingdom |
 		| c5c872216727433d95c427b801b9a9ba | test      | testing for something | tnadiscovery100@gmail.com | 65      | london   | tw96aw   | United Kingdom |
-		| 9f6e3f6c40ce4cdd9707728b7348c84d | test      | testing for something | tnadiscovery100@gmail.com | 789     | reading  | rg16jr   | United Kingdom |
+		| 5f36cf2847914d4ab3cef8093e058468 | test      | testing for something | tnadiscovery100@gmail.com | 789     | reading  | rg16jr   | United Kingdom |
 
 Scenario Outline: PageCheckRequestACopy
 	Given I am on page check page for "<iaId>"
@@ -86,7 +86,6 @@ Scenario Outline: FOIRequest_WO416
 	And add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
 	And T&C, Submit order pay through paypal
 	Then I should see Thank you for your order
-	And sign in now
 
 	Examples:
 		| iaId                             | searchFirstName | searchLastName | dOB        | category        | firstName | lastName  | email                     | adress1 | townCity | postcode | country        |
