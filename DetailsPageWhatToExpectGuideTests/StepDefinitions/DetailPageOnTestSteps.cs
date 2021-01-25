@@ -28,6 +28,7 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"check for the title Your feedback helps us improve our services\. Please share any comments below \(optional\)\.")]
         public void WhenCheckForTheTitleYourFeedbackHelpsUsImproveOurServices_PleaseShareAnyCommentsBelowOptional_()
         {
+            Thread.Sleep(1000);
             string feedbackTitle = _driver.FindElement(By.XPath("//*[@id='no_fieldset']/div/label")).Text;
             Assert.AreEqual(feedbackTitle, "Your feedback helps us improve our services. Please share any comments below (optional).");
         }
@@ -36,13 +37,14 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenClickOnSend()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 700)");
+            js.ExecuteScript("window.scrollTo(0, 750)");
             _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
         }
 
         [Then(@"check for the title Thank you for your feedback")]
         public void ThenCheckForTheTitleThankYouForYourFeedback()
         {
+            Thread.Sleep(1000);
             string verifyTitle = _driver.FindElement(By.XPath("//*[@id='details-feedback-wrapper']/div/p")).Text;
             Assert.AreEqual(verifyTitle, "Thank you for your feedback");
             _driver.Quit();
@@ -235,7 +237,7 @@ namespace Nunit_NetCore.StepDefinitions
         public void ThenCheckForTheValidationMessageYouHaveEnteredInvalidDateFormat()
         {
             string validationMessage = _driver.FindElement(By.ClassName("validation-summary-errors")).Text;
-            Assert.AreEqual(validationMessage, "You have entered invalid date formats for the start and end dates. Please use the format DD/MM/YYYY or MM/YYYY or YYYY.");
+            Assert.AreEqual(validationMessage, "You have entered invalid date formats for the start and end dates. Please use the format YYYY.");
             _driver.Quit();
         }
 

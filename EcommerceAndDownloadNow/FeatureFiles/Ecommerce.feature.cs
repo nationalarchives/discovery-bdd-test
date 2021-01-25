@@ -168,7 +168,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("YourOrders_RequestAcopy")]
         [NUnit.Framework.TestCaseAttribute("C16120922", null)]
-        [NUnit.Framework.TestCaseAttribute("C7351413", null)]
+        [NUnit.Framework.TestCaseAttribute("C16120925", null)]
         public virtual void YourOrders_RequestAcopy(string iaId, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -276,7 +276,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("HomeGuard")]
         [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "test", "testing for something", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
         [NUnit.Framework.TestCaseAttribute("c5c872216727433d95c427b801b9a9ba", "test", "testing for something", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("9f6e3f6c40ce4cdd9707728b7348c84d", "test", "testing for something", "tnadiscovery100@gmail.com", "789", "reading", "rg16jr", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("5f36cf2847914d4ab3cef8093e058468", "test", "testing for something", "tnadiscovery100@gmail.com", "789", "reading", "rg16jr", "United Kingdom", null)]
         public virtual void HomeGuard(string iaId, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -479,9 +479,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 88
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 89
- testRunner.And("sign in now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
