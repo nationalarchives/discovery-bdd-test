@@ -806,8 +806,8 @@ this.ScenarioInitialize(scenarioInfo);
             "s.", "Advanced order", "Order documents in advance", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record has not been digitised and cannot be downloaded", "order records in advance", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record is stored off site and will take three working days to be delivered t" +
-            "o The National Archives.", "visit Kew", "Visit us - The National Archives", null)]
-        [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "You can order records in advance to be ready for you when you visit Kew.", "reader\'s ticket", "Do I need a reader&#039;s ticket? - The National Archives", null)]
+            "o The National Archives.", "visit Kew", "Visit us", null)]
+        [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "You can order records in advance to be ready for you when you visit Kew.", "reader\'s ticket", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "Or, you can request a quotation for a copy to be sent to you.", "Order in advance", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "Please order before 11:00 three working days in advance of your visit.", "Order a copy", "Page Check Request", null)]
         public virtual void OffSite(string iaId, string xPathDO, string xPath, string message, string button, string title, string[] exampleTags)
@@ -909,7 +909,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("TooLargeToCopyOriginalOffSite")]
         [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[3]", "This document is either too large or of a condition or media type that means that" +
             " our record copying services are unable to provide a copy.", "order records in advance", "The National Archives", null)]
-        [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[3]", "Our Image Library may be able to provide you with a specialist quote.", "visit Kew", "Visit us - The National Archives", null)]
+        [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[3]", "Our Image Library may be able to provide you with a specialist quote.", "visit Kew", "Visit us", null)]
         [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[3]", "You can order records in advance to be ready for you when you visit Kew", "Order in advance", "The National Archives", null)]
         public virtual void TooLargeToCopyOriginalOffSite(string iaId, string xPathDO, string xPath, string message, string button, string title, string[] exampleTags)
         {
