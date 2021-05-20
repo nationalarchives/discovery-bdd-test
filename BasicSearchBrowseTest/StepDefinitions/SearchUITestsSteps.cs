@@ -30,7 +30,7 @@ namespace Nunit_NetCore.StepDefinitions
         public void ThenICanSeeValidationMessagesToEnterCorrectFormatForStartAndEndDates()
         {
             string validationMsg = _driver.FindElement(By.ClassName("Headline")).Text;
-            Assert.AreEqual("You have entered invalid date formats for the start and end dates. Please use the format DD/MM/YYYY or MM/YYYY or YYYY.",
+            Assert.AreEqual("You have entered invalid date formats for the start and end dates. Please use the format YYYY.",
                validationMsg);
             _driver.Quit();
         }
@@ -45,8 +45,9 @@ namespace Nunit_NetCore.StepDefinitions
         public void ThenICanSeeValidationMessagesToEnterCorrectFormatForStartDates()
         {
             string validationMsg = _driver.FindElement(By.ClassName("Headline")).Text;
-            Assert.AreEqual("You have entered an invalid date format for the start date. Please use the format DD/MM/YYYY or MM/YYYY or YYYY.",
-               validationMsg);
+            //Assert.AreEqual("You have entered an invalid date format for the start date. Please use the format DD/MM/YYYY or MM/YYYY or YYYY.", validationMsg);
+            Assert.AreEqual("You have entered an invalid date format for the start date. Please use the format YYYY.",
+                validationMsg);
             _driver.Quit();
         }
         [When(@"I enter ""(.*)"" for to year on home page")]
@@ -60,7 +61,7 @@ namespace Nunit_NetCore.StepDefinitions
         public void ThenICanSeeValidationMessagesToEnterCorrectFormatForEndDates()
         {
             string validationMsg = _driver.FindElement(By.ClassName("Headline")).Text;
-            Assert.AreEqual("You have entered an invalid date format for the start date. Please use the format DD/MM/YYYY or MM/YYYY or YYYY.",
+            Assert.AreEqual("You have entered an invalid date format for the start date. Please use the format YYYY.",
                validationMsg);
             _driver.Quit();
         }

@@ -18,10 +18,10 @@ Scenario Outline: AcademicSubscriptionOnsiteOffsite
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPath                                     | message                                                            | button             | title                                                                                              | xPathDO                                             |
-		| C2849839 | (//div[@class='order-option-wrapper'])[2] | This record may also be available on other websites                | Adam Matthew       | The National Archives                                                                              | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
-		| C2849839 | (//div[@class='order-option-wrapper'])[2] | This record may also be available on other websites                | Visit Adam Matthew | The National Archives                                                                              | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
-		| C2849839 | (//div[@class='order-option-wrapper'])[3] | Request a quote for a copy to be sent to you via email or post (£) | Order a copy       | The National Archives now open, offering greater access to our collections - The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
+		| iaId     | xPath                                     | message                                                            | button             | title                 | xPathDO                                             |
+		| C2849839 | (//div[@class='order-option-wrapper'])[2] | This record may also be available on other websites                | Adam Matthew       | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
+		| C2849839 | (//div[@class='order-option-wrapper'])[2] | This record may also be available on other websites                | Visit Adam Matthew | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
+		| C2849839 | (//div[@class='order-option-wrapper'])[3] | Request a quote for a copy to be sent to you via email or post (£) | Order a copy       | Page Check Request    | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
 
 Scenario Outline: AccessUnderReviewStaffin
 	Given  I am on delivery options page "<iaId>"
@@ -30,10 +30,10 @@ Scenario Outline: AccessUnderReviewStaffin
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | message                                             | xPath                                  | button             | title                                                                                              |
-		| C4216021 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | The National Archives now open, offering greater access to our collections - The National Archives |
-		| C5040641 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | The National Archives now open, offering greater access to our collections - The National Archives |
-		| C1960950 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | The National Archives now open, offering greater access to our collections - The National Archives |
+		| iaId     | message                                             | xPath                                  | button             | title                                |
+		| C4216021 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
+		| C5040641 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
+		| C1960950 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
 
 Scenario Outline: AV_Media
 	Given I am on delivery options page "<iaId>"
@@ -55,9 +55,9 @@ Scenario Outline: ClosedFOIReview
 	And check for the page "<title>"
 
 	Examples:
-		| iaId      | xPath                                  | message               | button             | title                                                                                              |
-		| C10853769 | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | The National Archives now open, offering greater access to our collections - The National Archives |
-		| C4633754  | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | The National Archives now open, offering greater access to our collections - The National Archives |
+		| iaId      | xPath                                  | message               | button             | title                                |
+		| C10853769 | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | Freedom of Information (FOI) Request |
+		| C4633754  | (//div[@class='order-option-wrapper']) | This record is closed | Submit FOI request | Freedom of Information (FOI) Request |
 
 Scenario Outline: ClosedRetainedDeptKnown
 	Given I am on delivery options page "<iaId>"
@@ -235,10 +235,10 @@ Scenario Outline: DigitizedLiaMoreWaysToViewThisRecordoffsite
 		| iaId     | xpath                                              | title                 | xPathDO                                             |
 		| C2490774 | (//a[contains(text(),'The Genealogist')])[3]       | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
 		| C2490774 | (//a[contains(text(),'Visit The Genealogist')])[2] | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
-		| C2490774 | (//a[contains(text(),'Ancestry')])[2]              | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
-		| C2490774 | (//a[contains(text(),'BMD Registers')])[2]         | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
 
-#| C2490774 | //a[contains(text(),'Available to view free at The National Archives')] | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
+#	| C2490774 | (//a[contains(text(),'Ancestry')])[2]              | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
+#	| C2490774 | (//a[contains(text(),'BMD Registers')])[2]         | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
+#   | C2490774 | //a[contains(text(),'Available to view free at The National Archives')] | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
 Scenario Outline: DigitizedOther
 	Given I am on delivery options page "<iaId>"
 	When  click on view delivery options presented to other users "<xPathDO>"
@@ -317,8 +317,8 @@ Scenario Outline: invigilationSafeRoom
 		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[1] | Your order will take approximately 45 minutes to be prepared               |                  |                       |
 		| C4771662 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[2] | You can view this record under supervision in our Invigilation Room        |                  |                       |
 		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[2] | You must have a reader's ticket to order this record                       | reader's ticket  | The National Archives |
-		| C4771662 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[3] | This record can only be seen under supervision at The National Archives    | Copy this record | The National Archives |
-		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[3] | Request a quotation for a copy to be digitised or printed and sent to you. | Copy this record | The National Archives |
+		| C4771662 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[3] | This record can only be seen under supervision at The National Archives    | Copy this record | Page Check Request    |
+		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[3] | Request a quotation for a copy to be digitised or printed and sent to you. | Copy this record | Page Check Request    |
 
 Scenario Outline: InUse
 	Given  I am on delivery options page "<iaId>"
@@ -328,12 +328,12 @@ Scenario Outline: InUse
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPath                                     | message                                                                 | xPathDO                                       | button                   | title                                                                      |
-		| C4771085 | (//div[@class='order-option-wrapper'])[1] | This record is currently in use                                         | //div[@id='staffViewOfOtherUserDOsWrapper']/a | order records in advance | The National Archives                                                      |
-		| C4771085 | (//div[@class='order-option-wrapper'])[1] | Talk to a member of staff to find out when it may be free               | //div[@id='staffViewOfOtherUserDOsWrapper']/a | visit Kew                | The National Archives                                                      |
-		| C4771085 | (//div[@class='order-option-wrapper'])[2] | This record has not been digitised and cannot be downloaded             | //div[@id='staffViewOfOtherUserDOsWrapper']/a | reader's ticket          | The National Archives                                                      |
-		| C4771085 | (//div[@class='order-option-wrapper'])[2] | You can order records in advance to be ready for you when you visit Kew | //div[@id='staffViewOfOtherUserDOsWrapper']/a | Order in advance         | The National Archives                                                      |
-		| C4771085 | (//div[@class='order-option-wrapper'])[2] | Or, you can request a quotation for a copy to be sent to you.           | //div[@id='staffViewOfOtherUserDOsWrapper']/a | Request a copy           | The National Archives now open, offering greater access to our collections |
+		| iaId     | xPath                                     | message                                                     | xPathDO                                       | button                   | title                 |
+		| C4771085 | (//div[@class='order-option-wrapper'])[1] | This record is currently in use                             | //div[@id='staffViewOfOtherUserDOsWrapper']/a | order records in advance | The National Archives |
+		| C4771085 | (//div[@class='order-option-wrapper'])[1] | Talk to a member of staff to find out when it may be free   | //div[@id='staffViewOfOtherUserDOsWrapper']/a | visit Kew                | The National Archives |
+		| C4771085 | (//div[@class='order-option-wrapper'])[2] | This record has not been digitised and cannot be downloaded | //div[@id='staffViewOfOtherUserDOsWrapper']/a | reader's ticket          | The National Archives |
+		#| C4771085 | (//div[@class='order-option-wrapper'])[2] | You can order records in advance to be ready for you when you visit Kew | //div[@id='staffViewOfOtherUserDOsWrapper']/a | Order in advance         | The National Archives |
+		| C4771085 | (//div[@class='order-option-wrapper'])[2] | Or, you can request a quotation for a copy to be sent to you.           | //div[@id='staffViewOfOtherUserDOsWrapper']/a | Request a copy           | Page Check Request    |
 
 Scenario Outline: LocalArchive
 	Given  I am on delivery options page "<iaId>"
@@ -378,14 +378,14 @@ Scenario Outline: offSite
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                                             | button                   | title                                                                                              |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[1] | You may place an advanced order request to see this record at The National Archives. It will take three working days to bring this record to The National Archives. |                          |                                                                                                    |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[2] | You may place an advanced order request to see this record at The National Archives. It will take three working days to bring this record to The National Archives. | Advanced order           | The National Archives now open, offering greater access to our collections - The National Archives |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded                                                                                                         | order records in advance | The National Archives now open, offering greater access to our collections - The National Archives |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take three working days to be delivered to The National Archives.                                                           | visit Kew                | Visit us                                                                                           |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                                                                            | reader's ticket          | The National Archives                                                                              |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | Or, you can request a quotation for a copy to be sent to you.                                                                                                       | Order in advance         | The National Archives                                                                              |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | Please order before 11:00 three working days in advance of your visit.                                                                                              | Order a copy             | The National Archives now open, offering greater access to our collections - The National Archives |
+		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                                             | button                   | title                              |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[1] | You may place an advanced order request to see this record at The National Archives. It will take three working days to bring this record to The National Archives. |                          |                                    |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[2] | You may place an advance order request to see this record at The National Archives. It will take three working days to bring this record to The National Archives.  | Advanced order           | Book a visit to view our documents |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded                                                                                                         | order records in advance | Book a visit to view our documents |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take three working days to be delivered to The National Archives.                                                           | visit Kew                | Visit us                           |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                                                                            | reader's ticket          | The National Archives              |
+		#| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | Or, you can request a quotation for a copy to be sent to you.                                                                                                       | Order records in advance | The National Archives              |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take three working days to be delivered to The National Archives.                                                           | Order a copy             | Page Check Request                 |
 
 Scenario Outline: PaidSearch
 	Given  I am on delivery options page "<iaId>"
@@ -406,10 +406,10 @@ Scenario Outline: Surrogate
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPathDO                                             | xPath                                     | message                                                      | button          | title                                                                      |
-		| C2050263 | (//a[@class='discoveryPrimaryCallToActionLink'])[2] | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                                                                            |
-		| C9188919 | (//a[@class='discoveryPrimaryCallToActionLink'])[2] | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives                                                      |
-		| C3000330 | (//a[@class='discoveryPrimaryCallToActionLink'])[2] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | The National Archives now open, offering greater access to our collections |
+		| iaId     | xPathDO                                             | xPath                                     | message                                                      | button          | title                 |
+		| C2050263 | (//a[@class='discoveryPrimaryCallToActionLink'])[2] | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                       |
+		| C9188919 | (//a[@class='discoveryPrimaryCallToActionLink'])[2] | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives |
+		| C3000330 | (//a[@class='discoveryPrimaryCallToActionLink'])[2] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | Page Check Request    |
 
 Scenario Outline: TooLargeToCopyOriginal
 	Given  I am on delivery options page "<iaId>"
@@ -436,7 +436,7 @@ Scenario Outline: TooLargeToCopyOriginalOffSite
 		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                     | button                   | title                 |
 		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[3] | This document is either too large or of a condition or media type that means that our record copying services are unable to provide a copy. | order records in advance | The National Archives |
 		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[3] | Our Image Library may be able to provide you with a specialist quote.                                                                       | visit Kew                | Visit us              |
-		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew                                                                     | Order in advance         | The National Archives |
+		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                                                    | Order records in advance | The National Archives |
 
 Scenario Outline: TooLargeToCopySurrogate
 	Given  I am on delivery options page "<iaId>"
@@ -446,16 +446,16 @@ Scenario Outline: TooLargeToCopySurrogate
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPathDO                                             | xPath                                     | message                                                      | button          | title                                                                                              |
-		| C6934963 | (//a[@class='discoveryPrimaryCallToActionLink'])[1] | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                                                                                                    |
-		| C6934963 | (//a[@class='discoveryPrimaryCallToActionLink'])[1] | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives                                                                              |
-		| C6934963 | (//a[@class='discoveryPrimaryCallToActionLink'])[1] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | Page Check Request                                                                                 |
-		| C8135237 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                                                                                                    |
-		| C8135237 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives                                                                              |
-		| C8135237 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | The National Archives now open, offering greater access to our collections                         |
-		| C8135239 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                                                                                                    |
-		| C8135239 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives                                                                              |
-		| C8135239 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | The National Archives now open, offering greater access to our collections - The National Archives |
+		| iaId     | xPathDO                                             | xPath                                     | message                                                      | button          | title                 |
+		| C6934963 | (//a[@class='discoveryPrimaryCallToActionLink'])[1] | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                       |
+		| C6934963 | (//a[@class='discoveryPrimaryCallToActionLink'])[1] | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives |
+		| C6934963 | (//a[@class='discoveryPrimaryCallToActionLink'])[1] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | Page Check Request    |
+		| C8135237 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                       |
+		| C8135237 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives |
+		| C8135237 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | Page Check Request    |
+		| C8135239 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[1] | Ask a member of staff if you need help finding this record.  |                 |                       |
+		| C8135239 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[2] | Ask a member of staff if you need help finding this record.  | reader's ticket | The National Archives |
+		| C8135239 | //*[@id="staffViewOfOtherUserDOsWrapper"]/a         | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded. | Order a copy    | Page Check Request    |
 
 Scenario Outline: UnAvailable
 	Given  I am on delivery options page "<iaId>"

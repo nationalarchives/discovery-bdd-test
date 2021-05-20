@@ -168,6 +168,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("YourOrders_RequestAcopy")]
         [NUnit.Framework.TestCaseAttribute("C16120922", null)]
+        [NUnit.Framework.TestCaseAttribute("C4771085", null)]
         public virtual void YourOrders_RequestAcopy(string iaId, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -275,7 +276,6 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("HomeGuard")]
         [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "test", "testing for something", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
         [NUnit.Framework.TestCaseAttribute("c5c872216727433d95c427b801b9a9ba", "test", "testing for something", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("9f6e3f6c40ce4cdd9707728b7348c84d", "test", "testing for something", "tnadiscovery100@gmail.com", "789", "reading", "rg16jr", "United Kingdom", null)]
         public virtual void HomeGuard(string iaId, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -362,8 +362,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 61
  testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 62
- testRunner.Then("I should see the coronavirus update page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 63
+ testRunner.When("click on Get started, enter details, add to basket, checkout, signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 64
+ testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 65
+ testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -403,8 +409,11 @@ this.ScenarioInitialize(scenarioInfo);
 #line 74
  testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 75
-  testRunner.Then("I should see the coronavirus update page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 77
+ testRunner.When("click on Get started, enter morethan one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 78
+ testRunner.Then("I can see a message Customer Instructions cannot exceed one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -412,7 +421,8 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("FOIRequest_WO416")]
-        [NUnit.Framework.TestCaseAttribute("C14568023", "Test", "George", "10/11/1888", "Army", "Tester", "SurTester", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "Test", "David", "05/03/1770", "Royal Navy", "test", "tester", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "Test", "David", "05/03/1770", "Royal Air Force", "test", "tester", "tnadiscovery100@gmail.com", "65", "Reading", "tw96aw", "Afghanistan", null)]
         public virtual void FOIRequest_WO416(string iaId, string searchFirstName, string searchLastName, string dOB, string category, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

@@ -25,7 +25,7 @@ namespace DigitalDownloads.StepDefinitions
             string strPrice = _driver.FindElement(By.Id("orderInformation")).Text;
             Assert.IsTrue(strPrice.Contains(price) && strPrice.Contains("sign in to get this free"));
             string strBasketInfo = _driver.FindElement(By.ClassName("basketLimitExplanation")).Text;
-            Assert.IsTrue(strBasketInfo.Contains("Order up to 10 items per basket, and up to 50 in a 30 day period"));
+            Assert.IsTrue(strBasketInfo.Contains("Order up to 10 items per basket, and up to 100 in a 30 day period."));
         }
 
         [When(@"I Add to basket, check basket has the ""(.*)""")]
@@ -62,7 +62,7 @@ namespace DigitalDownloads.StepDefinitions
             _driver.FindElement(By.Id("signInLink")).Click();
             _driver.FindElement(By.LinkText("Your orders")).Click();
             string yourOrdersText = _driver.FindElement(By.ClassName("emphasis-block")).Text;
-            Assert.IsTrue(yourOrdersText.Contains("Digital downloads ordered in the last 30 days") && yourOrdersText.Contains("The National Archives permits registered users to order and download a reasonable number of documents and has set a maximum order limit of 50 documents in a 30 day period."));
+            Assert.IsTrue(yourOrdersText.Contains("Digital downloads ordered in the last 30 days") && yourOrdersText.Contains("The National Archives permits registered users to order and download a reasonable number of documents and has set a maximum order limit of 100 documents in a 30 day period."));
             _driver.Close();
         }
 
@@ -115,8 +115,8 @@ namespace DigitalDownloads.StepDefinitions
         [Then(@"I should see free access to digital records page")]
         public void ThenIShouldSeeFreeAccessToDigitalRecordsPage()
         {
-            string bannerText = _driver.FindElement(By.Id("news-content")).Text;
-            Assert.IsTrue(bannerText.Contains("We are making digital records available on our website free of charge for the time being, as we are initially only able to re-open our reading rooms for a very limited number of researchers."));
+            string title = _driver.Title;
+            Assert.IsTrue(title.Contains("The National Archives"));
         }
 
         [Given(@"I am on home page for DD tests")]

@@ -102,6 +102,7 @@ namespace Nunit_NetCore.StepDefinitions
             Thread.Sleep(2000);
             string strPageTitle = _driver.Title;
             Assert.IsTrue(strPageTitle.Contains("Thank you for your order"));
+            _driver.Quit();
         }
 
         [When(@"add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept")]
@@ -266,13 +267,16 @@ namespace Nunit_NetCore.StepDefinitions
         public void WhenClickOnGetStartedEnterDetailsAddToBasketCheckoutSignedIn()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 600)");
+            js.ExecuteScript("window.scrollTo(0, 700)");
             _driver.FindElement(By.Id("get-started")).Click();
             Thread.Sleep(2000);
             _driver.FindElement(By.Id("certified")).Click();
             _driver.FindElement(By.Id("CustomerInstructions")).SendKeys("Test Research");
-            _driver.FindElement(By.XPath("//input[@class='text_sketch']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 1400)");
+            _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
             Thread.Sleep(2000);
+            js.ExecuteScript("window.scrollTo(0, 700)");
+
             _driver.FindElement(By.XPath("//input[@value='Checkout']")).Click();
             var webDriver = new PageNavigator();
             // _driver.FindElement(By.Id("signin")).Click();
@@ -309,7 +313,8 @@ namespace Nunit_NetCore.StepDefinitions
                                                                      + "Test Research::: testing for something as always Where possible,"
                                                                      + "Test Research::: testing for something as always Where possible,"
                                                                      + "Test Research::: testing for something as always Where possible,") ;
-            _driver.FindElement(By.XPath("//input[@class='text_sketch']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 1400)");
+            _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
             Thread.Sleep(1000);
         }
 
@@ -332,17 +337,17 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("search_dob")).Clear();
             _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
 
-            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_category")));
-            oSelect.SelectByValue(category);
+          //  SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_category")));
+          //  oSelect.SelectByValue(category);
 
         }
-        [Then(@"I should see the coronavirus update page")]
-        public void ThenIShouldSeeTheCoronavirusUpdatePage()
-        {
-            string title = _driver.Title;
-            Assert.IsTrue(title.Contains("The National Archives now open, offering greater access to our collections - The National Archives"));
-            _driver.Quit();
-        }
+        //[Then(@"I should see the coronavirus update page")]
+        //public void ThenIShouldSeeTheCoronavirusUpdatePage()
+        //{
+        //    string title = _driver.Title;
+        //    Assert.IsTrue(title.Contains("The National Archives now open, offering greater access to our collections - The National Archives"));
+        //    _driver.Quit();
+        //}
 
 
 

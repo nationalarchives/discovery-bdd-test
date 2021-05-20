@@ -235,7 +235,7 @@ namespace Nunit_NetCore.StepDefinitions
         public void ThenCheckForTheValidationMessageYouHaveEnteredInvalidDateFormat()
         {
             string validationMessage = _driver.FindElement(By.ClassName("validation-summary-errors")).Text;
-            Assert.AreEqual(validationMessage, "You have entered invalid date formats for the start and end dates. Please use the format DD/MM/YYYY or MM/YYYY or YYYY.");
+            Assert.AreEqual(validationMessage, "You have entered invalid date formats for the start and end dates. Please use the format YYYY.");
             _driver.Quit();
         }
 

@@ -28,9 +28,10 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("search-other-repositories")).Click();
             _driver.FindElement(By.Id("repositories-lookup")).SendKeys(keyword);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            IWebElement L = _driver.FindElement(By.XPath("(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all'])[1]/li"));
-            Thread.Sleep(2000);
-            L.Click();
+            //IWebElement L = _driver.FindElement(By.XPath("(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all'])[1]/li"));
+            //Thread.Sleep(2000);
+            // L.Click();
+            _driver.FindElement(By.LinkText("Gloucestershire Archives")).Click();
             _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
         }
 

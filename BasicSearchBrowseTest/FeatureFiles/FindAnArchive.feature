@@ -65,5 +65,5 @@ Scenario Outline: Home nation
 		| England          | Special | Local | University | Private              | National | 
 		| Northern Ireland | Special | Local | University | Private              | National | 
 		| Scotland         | Special | Local | University | Private              | National | 
-		| Wales            | Special | Local | University | Private              | National | 
+		#| Wales            | Special | Local | University | Private              | National | 
 

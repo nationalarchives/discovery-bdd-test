@@ -75,9 +75,9 @@ namespace ManorSearchTagsSARServerSubscriptionMoDMedalTests.FeatureFiles
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add Tag")]
-        [NUnit.Framework.TestCaseAttribute("C7351413", "testing for somethingggg", null)]
-        [NUnit.Framework.TestCaseAttribute("C4216021", "Test1", null)]
-        [NUnit.Framework.TestCaseAttribute("D32670", "Test2", null)]
+        [NUnit.Framework.TestCaseAttribute("C7351413", "testing for somethingggggg", null)]
+        [NUnit.Framework.TestCaseAttribute("C4216021", "Test45", null)]
+        [NUnit.Framework.TestCaseAttribute("D32670", "Test54", null)]
         public virtual void AddTag(string iaId, string tag, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

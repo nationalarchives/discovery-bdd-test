@@ -67,7 +67,8 @@ namespace Nunit_NetCore.StepDefinitions
             // check subjects
             js.ExecuteScript("window.scrollTo(0, 1600)");
             _driver.FindElement(By.Id("subject-filters")).Click();
-            _driver.FindElement(By.Id(subjectsModule)).Click();
+            //js.ExecuteScript("window.scrollTo(0, 800)");
+            _driver.FindElement(By.Id("subjectsModule")).Click();
             _driver.FindElement(By.Name("Refine subjects")).Click();
             string numberOfRecords1 = _driver.FindElement(By.Id("records-tab")).Text;
             Assert.AreNotEqual(numberOfRecords1, "Records 0");

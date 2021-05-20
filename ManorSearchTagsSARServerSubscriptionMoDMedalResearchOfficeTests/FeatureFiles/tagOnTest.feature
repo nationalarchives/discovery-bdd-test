@@ -6,10 +6,10 @@ Scenario Outline: Add Tag
 	Then check for the message your tag has been added
 
 	Examples:
-		| iaId      | tag                      |
-		| C7351413  | testing for somethingggg |
-		| C4216021  | Test1                    |
-		| D32670    | Test2                    |
+		| iaId     | tag                        |
+		| C7351413 | testing for somethingggggg |
+		| C4216021 | Test45                     |
+		| D32670   | Test54                     |
 
 Scenario Outline: Delete tag
 	Given I am on discovery details page for staffin "<iaId>", signed in
@@ -57,4 +57,3 @@ Scenario Outline: stop list tag
 	Examples:
 		| iaId     | tag   |
 		| C7351413 | abuse |
-
