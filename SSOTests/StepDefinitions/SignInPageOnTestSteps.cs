@@ -87,7 +87,33 @@ namespace SSOTests.StepDefinitions
             Assert.AreEqual(changePswdTxt, "Click here to change your password");
             _driver.Close();
         }
+      
+        [When(@"I search ""(.*)"" on homePage")]
+        public void WhenISearchOnHomePage(string keyWord)
+        {
+            var webDriver = new PageNavigator();
 
+            webDriver.SingleSignOn(_driver);
+            _driver.FindElement(By.Id("search-for")).SendKeys(keyWord);
+            _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
+        }
+
+        [When(@"redirect to results page, go to details page, sign out")]
+        public void WhenRedirectToResultsPageGoToDetailsPageSignOut()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 400)");
+            _driver.FindElement(By.XPath("//ul[@id='search-results']/li/a/p")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.LinkText("Sign out")).Click();
+        }
+        [Then(@"I should be on the details page")]
+        public void ThenIShouldBeOnTheDetailsPage()
+        {
+            string title = _driver.Title;
+            Assert.IsTrue(title.Contains("The National Archives"));
+            _driver.Quit();
+        }
 
     }
 }
