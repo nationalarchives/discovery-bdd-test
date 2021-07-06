@@ -207,7 +207,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Records_InTheRange_FromAndTo")]
-        [NUnit.Framework.TestCaseAttribute("05/1910", "1920", null)]
+        [NUnit.Framework.TestCaseAttribute("1500", "1520", null)]
         [NUnit.Framework.TestCaseAttribute("1880", "09/1950", null)]
         public virtual void Records_InTheRange_FromAndTo(string from, string to, string[] exampleTags)
         {

@@ -125,7 +125,8 @@ namespace Nunit_NetCore.StepDefinitions
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 2600)");
-             _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
+           // _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
             //_driver.FindElement(By.LinkText("Add to basket")).Click();
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
@@ -202,23 +203,32 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
             _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
             _driver.FindElement(By.Id("email")).SendKeys(email);
-            _driver.FindElement(By.Id("confirmemail")).SendKeys(confirmEmail);
-            _driver.FindElement(By.Id("address1")).SendKeys(address);
-            _driver.FindElement(By.Id("town")).SendKeys(TownCity);
-            _driver.FindElement(By.Id("postcode")).SendKeys(postcode);
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             Thread.Sleep(2000);
-            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
-            oSelect.SelectByValue(Country);
+            js.ExecuteScript("window.scrollTo(0, 5700)");
+           // Thread.Sleep(2000);
+
+            _driver.FindElement(By.Id("Confirm")).Click();
+           // _driver.FindElement(By.Id("confirmemail")).SendKeys(confirmEmail);
+            //_driver.FindElement(By.Id("address1")).SendKeys(address);
+            //_driver.FindElement(By.Id("town")).SendKeys(TownCity);
+            //_driver.FindElement(By.Id("postcode")).SendKeys(postcode);
+            Thread.Sleep(2000);
+           // SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
+            //oSelect.SelectByValue(Country);
         }
 
         [When(@"Submit request")]
         public void WhenSubmitRequest()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 4000)");
-            _driver.FindElement(By.Id("Confirm")).Click();
-            _driver.FindElement(By.XPath("//input[@type='submit' and @value='Submit request']")).Click();
-            Thread.Sleep(3000);
+            js.ExecuteScript("window.scrollTo(0, 3500)");
+            //  _driver.FindElement(By.Id("Confirm")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.XPath("//input[@value='Submit Request']")).Click();
+            //  _driver.FindElement(By.CssSelector("/html/body/div[2]/div[2]/div/div/div[2]/div/form/div/p/input")).Click();
+           
            // _driver.FindElement(By.ClassName("heading-holding-banner")).Click();
         }
 
@@ -244,16 +254,17 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"I upload evidence of death, enter ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
         public void WhenIUploadEvidenceOfDeathEnter(string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country)
         {
-            _driver.FindElement(By.Id("chooseFileFOI")).SendKeys(Image2Path);
+          
+            _driver.FindElement(By.XPath("//input[@name='deathCertFile']")).SendKeys(Image2Path);
             _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
             _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
             _driver.FindElement(By.Id("email")).SendKeys(email);
-            _driver.FindElement(By.Id("address1")).SendKeys(adress1);
-            _driver.FindElement(By.Id("town")).SendKeys(townCity);
-            _driver.FindElement(By.Id("postcode")).SendKeys(postcode);
+           // _driver.FindElement(By.Id("address1")).SendKeys(adress1);
+            //_driver.FindElement(By.Id("town")).SendKeys(townCity);
+            //_driver.FindElement(By.Id("postcode")).SendKeys(postcode);
             Thread.Sleep(2000);
-            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
-            oSelect.SelectByValue(country);
+           // SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
+            // oSelect.SelectByValue(country);
 
         }
         [Given(@"I am on page check page for ""(.*)""")]

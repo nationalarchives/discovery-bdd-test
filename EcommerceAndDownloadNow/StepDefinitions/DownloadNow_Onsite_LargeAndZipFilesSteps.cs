@@ -41,7 +41,7 @@ namespace Nunit_NetCore.StepDefinitions
             //_driver.FindElement(By.LinkText("Download")).Click();
             Thread.Sleep(3000);
             String title = _driver.Title;
-            Assert.IsTrue(title.Contains("The National Archives"));
+            Assert.IsFalse(title.Contains("Sorry, there has been an error on our website"));
             _driver.Quit();
         }
     }

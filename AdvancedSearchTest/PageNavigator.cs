@@ -29,13 +29,25 @@ namespace Nunit_NetCore
         }
         public IWebDriver OpenChromeAndNavigateTo(string url)
         {
+           // ChromeOptions options = new ChromeOptions();
+            // options.addArguments("--headless");
+            // WebDriver driver = new ChromeDriver(options);
+
             var path = Configuration.GetValue<string>("googleDriverPath");
             ChromeDriverService service = ChromeDriverService.CreateDefaultService(path, "chromedriver.exe");
-            var _driver = new ChromeDriver(service);
-            _driver.Manage().Window.Maximize();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+
+
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--headless");
+            IWebDriver _driver = new ChromeDriver(service);
             _driver.Navigate().GoToUrl(url);
             return _driver;
+
+            //  var _driver = new ChromeDriver(service);
+            //_driver.Manage().Window.Maximize();
+            // _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            // _driver.Navigate().GoToUrl(url);
+            // return _driver;
         }
         public IWebDriver GoToNRARedirectsPage()
         {

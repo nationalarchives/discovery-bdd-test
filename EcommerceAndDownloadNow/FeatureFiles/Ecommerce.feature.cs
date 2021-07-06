@@ -168,7 +168,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("YourOrders_RequestAcopy")]
         [NUnit.Framework.TestCaseAttribute("C16120922", null)]
-        [NUnit.Framework.TestCaseAttribute("C4771085", null)]
+        [NUnit.Framework.TestCaseAttribute("C11865373", null)]
         public virtual void YourOrders_RequestAcopy(string iaId, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -233,7 +233,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("postcode", postcode);
             argumentsOfScenario.Add("Country", country);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("FOI1939 register", null, tagsOfScenario, argumentsOfScenario);
-#line 35
+#line 36
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -253,19 +253,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 36
+#line 37
  testRunner.Given("I am on Request a search of closed records page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 37
+#line 38
  testRunner.When(string.Format("I enter the details \"{0}\", \"{1}\",\"{2}\",\"{3}\",\"{4}\", upload proof of identity", searchFirstName, searchLastName, gender, dOB, dataSubjectAccess), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 38
+#line 39
  testRunner.And(string.Format("I enter contact details \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\"", firstName, lastName, email, confirmEmail, address, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 40
  testRunner.And("Submit request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 41
  testRunner.Then("I can see confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -275,7 +275,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("HomeGuard")]
         [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "test", "testing for something", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("c5c872216727433d95c427b801b9a9ba", "test", "testing for something", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("9f6e3f6c40ce4cdd9707728b7348c84d", "test", "testing for something", "tnadiscovery100@gmail.com", "789", "reading", "rg16jr", "United Kingdom", null)]
         public virtual void HomeGuard(string iaId, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -289,7 +289,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("postcode", postcode);
             argumentsOfScenario.Add("country", country);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("HomeGuard", null, tagsOfScenario, argumentsOfScenario);
-#line 47
+#line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -309,20 +309,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 48
+#line 49
  testRunner.Given(string.Format("I am on FOI request page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 49
+#line 50
  testRunner.When(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 51
  testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
                         " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 52
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 53
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -339,7 +339,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("iaId", iaId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PageCheckRequestACopy", null, tagsOfScenario, argumentsOfScenario);
-#line 60
+#line 61
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -359,16 +359,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 61
+#line 62
  testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 63
+#line 64
  testRunner.When("click on Get started, enter details, add to basket, checkout, signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 64
+#line 65
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 65
+#line 66
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -386,7 +386,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("iaId", iaId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PageCheckRequestACopy_Morethan1000Characters", "This scenario we are checking the validation message by entering morethan 1000 ch" +
                     "arcters in customer instructions field.", tagsOfScenario, argumentsOfScenario);
-#line 72
+#line 73
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -406,13 +406,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 74
+#line 75
  testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 77
+#line 78
  testRunner.When("click on Get started, enter morethan one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 78
+#line 79
  testRunner.Then("I can see a message Customer Instructions cannot exceed one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -440,7 +440,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("postcode", postcode);
             argumentsOfScenario.Add("country", country);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("FOIRequest_WO416", null, tagsOfScenario, argumentsOfScenario);
-#line 85
+#line 86
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -460,27 +460,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 86
+#line 87
  testRunner.Given(string.Format("I am on eCommerce page for to upload death certificate \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 87
+#line 88
  testRunner.When(string.Format("click on request a search of closed records, enter search details \"{0}\",\"{1}\",\"{2" +
                             "}\",\"{3}\"", searchFirstName, searchLastName, dOB, category), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 88
+#line 89
  testRunner.And(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 89
+#line 90
  testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
                         " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 90
+#line 91
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 91
+#line 92
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 92
+#line 93
  testRunner.And("sign in now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

@@ -30,7 +30,8 @@ Scenario Outline: YourOrders_RequestAcopy
 	Examples:
 		| iaId      |
 		| C16120922 |
-		| C4771085  |
+		| C11865373 |
+		#| C4771085  |
 
 Scenario Outline: FOI1939 register
 	Given I am on Request a search of closed records page
@@ -52,10 +53,11 @@ Scenario Outline: HomeGuard
 	Then I should see Thank you for your order
 
 	Examples:
+	
 		| iaId                             | firstName | lastName              | email                     | adress1 | townCity | postcode | country        |
 		| 90ad00a1aa6149efa3991fab6037a5ec | test      | testing for something | tnadiscovery100@gmail.com | 99      | coventry | cv25hz   | United Kingdom |
-		| c5c872216727433d95c427b801b9a9ba | test      | testing for something | tnadiscovery100@gmail.com | 65      | london   | tw96aw   | United Kingdom |
-		#| 9f6e3f6c40ce4cdd9707728b7348c84d | test      | testing for something | tnadiscovery100@gmail.com | 789     | reading  | rg16jr   | United Kingdom |
+		#| c5c872216727433d95c427b801b9a9ba | test      | testing for something | tnadiscovery100@gmail.com | 65      | london   | tw96aw   | United Kingdom |
+		| 9f6e3f6c40ce4cdd9707728b7348c84d | test      | testing for something | tnadiscovery100@gmail.com | 789     | reading  | rg16jr   | United Kingdom |
 
 Scenario Outline: PageCheckRequestACopy
 	Given I am on page check page for "<iaId>"
