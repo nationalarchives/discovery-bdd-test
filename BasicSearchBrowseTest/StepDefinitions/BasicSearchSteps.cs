@@ -17,7 +17,15 @@ namespace Nunit_NetCore.StepDefinitions
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
         }
-
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
         [When(@"I enter ""(.*)""")]
         public void WhenIEnter(string keyword)
         {

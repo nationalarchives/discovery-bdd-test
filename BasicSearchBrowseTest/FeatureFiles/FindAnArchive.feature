@@ -61,9 +61,8 @@ Scenario Outline: Home nation
 	Then Location should have "<homeNation>"
 
 	Examples:
-		| homeNation       | special | local | university | typeOfArchiveprivate | national | 
-		| England          | Special | Local | University | Private              | National | 
-		| Northern Ireland | Special | Local | University | Private              | National | 
-		| Scotland         | Special | Local | University | Private              | National | 
-		#| Wales            | Special | Local | University | Private              | National | 
-
+		| homeNation       | special | local | university | typeOfArchiveprivate | national |
+		| England          | Special | Local | University | Private              | National |
+		| Northern Ireland | Special | Local | University | Private              | National |
+		| Scotland         | Special | Local | University | Private              | National |
+#| Wales            | Special | Local | University | Private              | National |

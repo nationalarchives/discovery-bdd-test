@@ -18,6 +18,15 @@ namespace Nunit_NetCore.StepDefinitions
             _driver = webDriver.GoToDiscoveryDeliveryOptionsPage("r", iaId);
            
         }
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
 
         [When(@"click on NO for could this page be improved\?")]
         public void WhenClickOnNOForCouldThisPageBeImproved()

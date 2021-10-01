@@ -212,10 +212,10 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("FOI1939 register")]
+        [NUnit.Framework.DescriptionAttribute("1939 register SAR")]
         [NUnit.Framework.TestCaseAttribute("ThisIsATest", "George", "Female", "01/01/1900", "notSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "63highstreet", "London", "tw96nu", "United Kingdom", null)]
         [NUnit.Framework.TestCaseAttribute("ThisIsATest", "James", "Male", "01/11/1890", "isSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "99 highway road", "London", "tw81nn", "United Kingdom", null)]
-        public virtual void FOI1939Register(string searchFirstName, string searchLastName, string gender, string dOB, string dataSubjectAccess, string firstName, string lastName, string email, string confirmEmail, string address, string townCity, string postcode, string country, string[] exampleTags)
+        public virtual void _1939RegisterSAR(string searchFirstName, string searchLastName, string gender, string dOB, string dataSubjectAccess, string firstName, string lastName, string email, string confirmEmail, string address, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -232,7 +232,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("TownCity", townCity);
             argumentsOfScenario.Add("postcode", postcode);
             argumentsOfScenario.Add("Country", country);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("FOI1939 register", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1939 register SAR", null, tagsOfScenario, argumentsOfScenario);
 #line 36
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -273,22 +273,26 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("HomeGuard")]
-        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "test", "testing for something", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("9f6e3f6c40ce4cdd9707728b7348c84d", "test", "testing for something", "tnadiscovery100@gmail.com", "789", "reading", "rg16jr", "United Kingdom", null)]
-        public virtual void HomeGuard(string iaId, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("1939 Register FOI")]
+        [NUnit.Framework.TestCaseAttribute("ThisIsATest", "George", "Female", "01/01/1900", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "63highstreet", "London", "tw96nu", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("ThisIsATest", "James", "Male", "01/11/1890", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "99 highway road", "London", "tw81nn", "United Kingdom", null)]
+        public virtual void _1939RegisterFOI(string searchFirstName, string searchLastName, string gender, string dOB, string firstName, string lastName, string email, string confirmEmail, string address, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("iaId", iaId);
+            argumentsOfScenario.Add("searchFirstName", searchFirstName);
+            argumentsOfScenario.Add("searchLastName", searchLastName);
+            argumentsOfScenario.Add("gender", gender);
+            argumentsOfScenario.Add("dOB", dOB);
             argumentsOfScenario.Add("firstName", firstName);
             argumentsOfScenario.Add("lastName", lastName);
             argumentsOfScenario.Add("email", email);
-            argumentsOfScenario.Add("adress1", adress1);
-            argumentsOfScenario.Add("townCity", townCity);
+            argumentsOfScenario.Add("confirmEmail", confirmEmail);
+            argumentsOfScenario.Add("address", address);
+            argumentsOfScenario.Add("TownCity", townCity);
             argumentsOfScenario.Add("postcode", postcode);
-            argumentsOfScenario.Add("country", country);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("HomeGuard", null, tagsOfScenario, argumentsOfScenario);
+            argumentsOfScenario.Add("Country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1939 Register FOI", null, tagsOfScenario, argumentsOfScenario);
 #line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -310,19 +314,23 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 49
- testRunner.Given(string.Format("I am on FOI request page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on Request a search of closed records for register FOI page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 50
- testRunner.When(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter the details \"{0}\", \"{1}\",\"{2}\",\"{3}\",doesn\'t have dataSubjectAccess, uplo" +
+                            "ad proof of identity", searchFirstName, searchLastName, gender, dOB), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 51
+ testRunner.And(string.Format("I enter contact details \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\"", firstName, lastName, email, confirmEmail, address, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 52
  testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
                         " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 53
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 54
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -330,15 +338,22 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("PageCheckRequestACopy")]
-        [NUnit.Framework.TestCaseAttribute("C6553048", null)]
-        [NUnit.Framework.TestCaseAttribute("C4771085", null)]
-        public virtual void PageCheckRequestACopy(string iaId, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("HomeGuard")]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "test", "testing for something", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("311fb42eed1c4ceb81914f014fe98a91", "test", "testing for something", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
+        public virtual void HomeGuard(string iaId, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("iaId", iaId);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PageCheckRequestACopy", null, tagsOfScenario, argumentsOfScenario);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("adress1", adress1);
+            argumentsOfScenario.Add("townCity", townCity);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("HomeGuard", null, tagsOfScenario, argumentsOfScenario);
 #line 61
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -360,10 +375,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 62
- testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I am on FOI request page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 63
+ testRunner.When(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 64
- testRunner.When("click on Get started, enter details, add to basket, checkout, signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
+                        " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 65
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -376,17 +395,16 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("PageCheckRequestACopy_Morethan1000Characters")]
-        [NUnit.Framework.TestCaseAttribute("C2050263", null)]
-        [NUnit.Framework.TestCaseAttribute("C2849839", null)]
-        public virtual void PageCheckRequestACopy_Morethan1000Characters(string iaId, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("PageCheckRequestACopy")]
+        [NUnit.Framework.TestCaseAttribute("C6553048", null)]
+        [NUnit.Framework.TestCaseAttribute("C4771085", null)]
+        public virtual void PageCheckRequestACopy(string iaId, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("iaId", iaId);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PageCheckRequestACopy_Morethan1000Characters", "This scenario we are checking the validation message by entering morethan 1000 ch" +
-                    "arcters in customer instructions field.", tagsOfScenario, argumentsOfScenario);
-#line 73
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PageCheckRequestACopy", null, tagsOfScenario, argumentsOfScenario);
+#line 74
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -409,37 +427,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 75
  testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 77
+ testRunner.When("click on Get started, enter details, add to basket, checkout, signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
 #line 78
- testRunner.When("click on Get started, enter morethan one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 79
- testRunner.Then("I can see a message Customer Instructions cannot exceed one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("FOIRequest_WO416")]
-        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "Test", "David", "05/03/1770", "Royal Navy", "test", "tester", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
-        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "Test", "David", "05/03/1770", "Royal Air Force", "test", "tester", "tnadiscovery100@gmail.com", "65", "Reading", "tw96aw", "Afghanistan", null)]
-        public virtual void FOIRequest_WO416(string iaId, string searchFirstName, string searchLastName, string dOB, string category, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("PageCheckRequestACopy_Morethan1000Characters")]
+        [NUnit.Framework.TestCaseAttribute("C2050263", null)]
+        [NUnit.Framework.TestCaseAttribute("C2849839", null)]
+        public virtual void PageCheckRequestACopy_Morethan1000Characters(string iaId, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("iaId", iaId);
-            argumentsOfScenario.Add("searchFirstName", searchFirstName);
-            argumentsOfScenario.Add("searchLastName", searchLastName);
-            argumentsOfScenario.Add("dOB", dOB);
-            argumentsOfScenario.Add("category", category);
-            argumentsOfScenario.Add("firstName", firstName);
-            argumentsOfScenario.Add("lastName", lastName);
-            argumentsOfScenario.Add("email", email);
-            argumentsOfScenario.Add("adress1", adress1);
-            argumentsOfScenario.Add("townCity", townCity);
-            argumentsOfScenario.Add("postcode", postcode);
-            argumentsOfScenario.Add("country", country);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("FOIRequest_WO416", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PageCheckRequestACopy_Morethan1000Characters", "This scenario we are checking the validation message by entering morethan 1000 ch" +
+                    "arcters in customer instructions field.", tagsOfScenario, argumentsOfScenario);
 #line 86
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -460,28 +471,386 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 87
+#line 88
+ testRunner.Given(string.Format("I am on page check page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 90
+ testRunner.When("click on Get started, enter morethan one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 91
+ testRunner.Then("I can see a message Customer Instructions cannot exceed one thousand characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("HG FOI Items")]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "Test", "David", "05/03/1770", "Royal Navy", "test", "tester", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "Test", "David", "05/03/1770", "Royal Air Force", "test", "tester", "tnadiscovery100@gmail.com", "65", "Reading", "tw96aw", "Afghanistan", null)]
+        public virtual void HGFOIItems(string iaId, string searchFirstName, string searchLastName, string dOB, string category, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("iaId", iaId);
+            argumentsOfScenario.Add("searchFirstName", searchFirstName);
+            argumentsOfScenario.Add("searchLastName", searchLastName);
+            argumentsOfScenario.Add("dOB", dOB);
+            argumentsOfScenario.Add("category", category);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("adress1", adress1);
+            argumentsOfScenario.Add("townCity", townCity);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("HG FOI Items", null, tagsOfScenario, argumentsOfScenario);
+#line 98
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 99
  testRunner.Given(string.Format("I am on eCommerce page for to upload death certificate \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 88
+#line 100
  testRunner.When(string.Format("click on request a search of closed records, enter search details \"{0}\",\"{1}\",\"{2" +
                             "}\",\"{3}\"", searchFirstName, searchLastName, dOB, category), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 89
+#line 101
  testRunner.And(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 90
+#line 102
  testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
                         " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 91
+#line 103
  testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 92
+#line 104
  testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 93
+#line 105
  testRunner.And("sign in now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("PoWItemsFOI")]
+        [NUnit.Framework.TestCaseAttribute("C16953969", "Tester", "William", "05/09/1680", "test", "testing for something", "tnadiscovery100@gmail.com", "65", "london", "tw96aw", "United Kingdom", null)]
+        public virtual void PoWItemsFOI(string iaId, string searchFirstName, string searchLastName, string dOB, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("iaId", iaId);
+            argumentsOfScenario.Add("searchFirstName", searchFirstName);
+            argumentsOfScenario.Add("searchLastName", searchLastName);
+            argumentsOfScenario.Add("dOB", dOB);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("adress1", adress1);
+            argumentsOfScenario.Add("townCity", townCity);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PoWItemsFOI", null, tagsOfScenario, argumentsOfScenario);
+#line 112
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 113
+ testRunner.Given(string.Format("I am on FOI request page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 114
+ testRunner.When(string.Format("I enter the following details \"{0}\", \"{1}\",\"{2}\" upload proof of identity", searchFirstName, searchLastName, dOB), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 115
+ testRunner.And(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 116
+ testRunner.And("Submit request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 117
+ testRunner.Then("I can see confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("PoWPiecesFOI")]
+        [NUnit.Framework.TestCaseAttribute("C14568159", "Tester", "David", "05/03/1770", "test", "testing for something", "tnadiscovery100@gmail.com", "99", "coventry", "cv25hz", "United Kingdom", null)]
+        public virtual void PoWPiecesFOI(string iaId, string searchFirstName, string searchLastName, string dOB, string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("iaId", iaId);
+            argumentsOfScenario.Add("searchFirstName", searchFirstName);
+            argumentsOfScenario.Add("searchLastName", searchLastName);
+            argumentsOfScenario.Add("dOB", dOB);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("adress1", adress1);
+            argumentsOfScenario.Add("townCity", townCity);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PoWPiecesFOI", null, tagsOfScenario, argumentsOfScenario);
+#line 123
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 124
+ testRunner.Given(string.Format("I am on FOI request page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 125
+ testRunner.When(string.Format("I enter the following details \"{0}\", \"{1}\",\"{2}\" upload proof of identity", searchFirstName, searchLastName, dOB), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 126
+ testRunner.And(string.Format("I upload evidence of death, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\"", firstName, lastName, email, adress1, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 127
+ testRunner.And("scroll down add to basket, go to basket, viewbasket,checkout, enter email address" +
+                        " under send a reciept", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 128
+ testRunner.And("T&C, Submit order pay through paypal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 129
+ testRunner.Then("I should see Thank you for your order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 130
+ testRunner.And("sign in now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("PoWPiecesSAR")]
+        [NUnit.Framework.TestCaseAttribute("C14568159", "ThisIsATest", "George", "01/01/1900", "notSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "63highstreet", "London", "tw96nu", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("C14568159", "ThisIsATest", "James", "01/11/1890", "isSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "99 highway road", "London", "tw81nn", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "ThisIsATest", "George", "01/01/1900", "notSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "63highstreet", "London", "tw96nu", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("90ad00a1aa6149efa3991fab6037a5ec", "ThisIsATest", "James", "01/11/1890", "isSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "99 highway road", "London", "tw81nn", "United Kingdom", null)]
+        public virtual void PoWPiecesSAR(string iaId, string searchFirstName, string searchLastName, string dOB, string dataSubjectAccess, string firstName, string lastName, string email, string confirmEmail, string address, string townCity, string postcode, string country, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("iaId", iaId);
+            argumentsOfScenario.Add("searchFirstName", searchFirstName);
+            argumentsOfScenario.Add("searchLastName", searchLastName);
+            argumentsOfScenario.Add("dOB", dOB);
+            argumentsOfScenario.Add("dataSubjectAccess", dataSubjectAccess);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("confirmEmail", confirmEmail);
+            argumentsOfScenario.Add("address", address);
+            argumentsOfScenario.Add("TownCity", townCity);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("Country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PoWPiecesSAR", null, tagsOfScenario, argumentsOfScenario);
+#line 136
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 137
+ testRunner.Given(string.Format("I am on PoWSAR page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 138
+ testRunner.When(string.Format("I enter the details \"{0}\", \"{1}\" ,\"{2}\",\"{3}\",no gender, upload proof of identity" +
+                            "", searchFirstName, searchLastName, dOB, dataSubjectAccess), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 139
+ testRunner.And(string.Format("I enter contact details \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\"", firstName, lastName, email, confirmEmail, address, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 140
+ testRunner.And("confirm Submit request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 141
+ testRunner.Then("I can see confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("PoWItemsSAR")]
+        [NUnit.Framework.TestCaseAttribute("C16953969", "ThisIsATest", "George", "01/01/1900", "notSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "63highstreet", "London", "tw96nu", "United Kingdom", null)]
+        [NUnit.Framework.TestCaseAttribute("C16953969", "ThisIsATest", "James", "01/11/1890", "isSubject", "Tester", "SurTester", "tnadiscovery100@gmail.com", "tnadiscovery100@gmail.com", "99 highway road", "London", "tw81nn", "United Kingdom", null)]
+        public virtual void PoWItemsSAR(string iaId, string searchFirstName, string searchLastName, string dOB, string dataSubjectAccess, string firstName, string lastName, string email, string confirmEmail, string address, string townCity, string postcode, string country, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("iaId", iaId);
+            argumentsOfScenario.Add("searchFirstName", searchFirstName);
+            argumentsOfScenario.Add("searchLastName", searchLastName);
+            argumentsOfScenario.Add("dOB", dOB);
+            argumentsOfScenario.Add("dataSubjectAccess", dataSubjectAccess);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("confirmEmail", confirmEmail);
+            argumentsOfScenario.Add("address", address);
+            argumentsOfScenario.Add("TownCity", townCity);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("Country", country);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PoWItemsSAR", null, tagsOfScenario, argumentsOfScenario);
+#line 150
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 151
+ testRunner.Given(string.Format("I am on PoWSAR page for \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 152
+ testRunner.When(string.Format("I enter the details \"{0}\", \"{1}\" ,\"{2}\",\"{3}\",no gender, upload proof of identity" +
+                            "", searchFirstName, searchLastName, dOB, dataSubjectAccess), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 153
+ testRunner.And(string.Format("I enter contact details \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\"", firstName, lastName, email, confirmEmail, address, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 154
+ testRunner.And("confirm Submit request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 155
+ testRunner.Then("I can see confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("ClosedRecordRequest")]
+        [NUnit.Framework.TestCaseAttribute("Mr", "Tester", "surTester", "tnadiscovery100@gmail.com", "99", "gainsborough grove", "London", "Middlesex", "cv2 5hz", "United Kingdom", "1234567", "This is a test", null)]
+        public virtual void ClosedRecordRequest(string title, string firstName, string lastName, string email, string address1, string address2, string town, string county, string postcode, string country, string telephone, string additionalInfo, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("title", title);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("address1", address1);
+            argumentsOfScenario.Add("address2", address2);
+            argumentsOfScenario.Add("town", town);
+            argumentsOfScenario.Add("county", county);
+            argumentsOfScenario.Add("postcode", postcode);
+            argumentsOfScenario.Add("country", country);
+            argumentsOfScenario.Add("telephone", telephone);
+            argumentsOfScenario.Add("additionalInfo", additionalInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ClosedRecordRequest", " https://test-discovery.nationalarchives.gov.uk/foirequest?reference=WO%20416/178" +
+                    "/416", tagsOfScenario, argumentsOfScenario);
+#line 162
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 166
+ testRunner.Given("I am on ClosedRecordRequest page for the above ref", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 167
+ testRunner.When(string.Format("I enter \"{0}\", \"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\",\"{11}" +
+                            "\"", title, firstName, lastName, email, address1, address2, town, county, postcode, country, telephone, additionalInfo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 168
+ testRunner.Then("click on Submit and I should see the confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace DiscoveryBDDTest.StepDefinitions
@@ -16,6 +17,15 @@ namespace DiscoveryBDDTest.StepDefinitions
         public void GivenIAmOnManorSearchPage()
         {
             _driver = new PageNavigator().GoToManorSearchPage();
+        }
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
         [When(@"I go to Search by Manor, enter ""(.*)"" and select ""(.*)""")]
         public void WhenIGoToSearchByManorEnterAndSelect(string manorName, string historicCountry)

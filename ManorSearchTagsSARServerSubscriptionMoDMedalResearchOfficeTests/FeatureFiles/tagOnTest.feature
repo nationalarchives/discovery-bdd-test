@@ -9,7 +9,7 @@ Scenario Outline: Add Tag
 		| iaId     | tag                        |
 		| C7351413 | testing for somethingggggg |
 		| C4216021 | Test45                     |
-		| D32670   | Test54                     |
+		#+| D32670   | Test54                     |
 
 Scenario Outline: Delete tag
 	Given I am on discovery details page for staffin "<iaId>", signed in

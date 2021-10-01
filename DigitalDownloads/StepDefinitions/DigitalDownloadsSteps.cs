@@ -17,6 +17,15 @@ namespace DigitalDownloads.StepDefinitions
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDetailsPageOffsite("r", iaId);
         }
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
         [Given(@"check ""(.*)"" and sign in to get this free and basketLimitExplanation")]
         public void GivenCheckAndSignInToGetThisFreeAndBasketLimitExplanation(string price)
         {

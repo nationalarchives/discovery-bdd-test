@@ -17,6 +17,18 @@ namespace DiscoveryBDDTest.StepDefinitions
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDiscoveryDeliveryOptionsPage("r", iaId);
         }
+       
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
+
+
         [When(@"check the ""(.*)"" for staffin ""(.*)""")]
         public void WhenCheckTheForStaffin(string message, string xPath)
         {
@@ -37,7 +49,7 @@ namespace DiscoveryBDDTest.StepDefinitions
                 string pgTitle = _driver.Title;
                 Assert.IsTrue(pgTitle.Contains(title));
             }
-            _driver.Quit();
+           // _driver.Quit();
         }
         [When(@"click on view delivery options presented to other users ""(.*)""")]
         public void WhenClickOnViewDeliveryOptionsPresentedToOtherUsers(string xPathDO)

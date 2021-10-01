@@ -4,6 +4,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Nunit_NetCore.StepDefinitions
@@ -16,6 +17,13 @@ namespace Nunit_NetCore.StepDefinitions
         public void GivenIAmOnSearchUIHomePage()
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
+
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
         
         [When(@"I enter ""(.*)"" and ""(.*)"" on home page")]

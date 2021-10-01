@@ -116,9 +116,12 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
- testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 7
+ testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 8
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -141,7 +144,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AcademicSubscriptionOnsiteOffsite", null, tagsOfScenario, argumentsOfScenario);
-#line 13
+#line 14
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -161,19 +164,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 14
+#line 15
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 15
- testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 16
- testRunner.And(string.Format("check the \"{0}\" onsite or offsite \"{1}\"", xPath, message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
+ testRunner.And(string.Format("check the \"{0}\" onsite or offsite \"{1}\"", xPath, message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
+ testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 20
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -195,7 +201,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AccessUnderReviewStaffin", null, tagsOfScenario, argumentsOfScenario);
-#line 26
+#line 28
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -215,16 +221,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 27
+#line 29
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 28
+#line 30
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 29
+#line 32
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 30
+#line 33
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -247,7 +256,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AV_Media", null, tagsOfScenario, argumentsOfScenario);
-#line 38
+#line 41
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -267,16 +276,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 39
+#line 42
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 40
+#line 43
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 45
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 42
+#line 46
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -297,7 +309,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ClosedFOIReview", null, tagsOfScenario, argumentsOfScenario);
-#line 51
+#line 55
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -317,16 +329,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 52
+#line 56
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 53
+#line 57
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 58
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 54
+#line 59
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 55
+#line 60
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -349,7 +364,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ClosedRetainedDeptKnown", null, tagsOfScenario, argumentsOfScenario);
-#line 62
+#line 67
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -369,16 +384,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 63
+#line 68
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 64
+#line 69
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 70
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 65
+#line 71
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 66
+#line 72
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -398,7 +416,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ClosedRetainedDeptUnKnown", null, tagsOfScenario, argumentsOfScenario);
-#line 73
+#line 79
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -418,16 +436,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 74
+#line 80
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 75
+#line 81
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 82
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 76
+#line 83
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 77
+#line 84
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -444,7 +465,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("iaId", iaId);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ClosedRetainedDeptUnKnown_contactUs", null, tagsOfScenario, argumentsOfScenario);
-#line 83
+#line 90
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -464,13 +485,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 84
+#line 91
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 85
+#line 92
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 93
  testRunner.When("I click on contact us button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 86
+#line 94
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -492,7 +516,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("xPath", xPath);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CollectionCareStaffin", null, tagsOfScenario, argumentsOfScenario);
-#line 92
+#line 100
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -512,13 +536,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 93
+#line 101
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 94
+#line 102
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 103
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 95
+#line 104
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -542,7 +569,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CollectionCareOnSiteOffSite", null, tagsOfScenario, argumentsOfScenario);
-#line 103
+#line 112
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -562,19 +589,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 104
+#line 113
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 105
+#line 114
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 115
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 106
+#line 116
  testRunner.And(string.Format("check the \"{0}\" onsite or offsite \"{1}\"", xPath, message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 107
+#line 117
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 108
+#line 118
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -595,7 +625,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedAvailableButNotDownloadableAtItemLevel", null, tagsOfScenario, argumentsOfScenario);
-#line 117
+#line 127
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -615,19 +645,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 118
+#line 128
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 119
+#line 129
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 130
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 120
+#line 131
  testRunner.And("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 121
+#line 132
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 122
+#line 133
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -643,60 +676,6 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("iaId", iaId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedAvailableButNotDownloadableAtItemLevelMoreWaysToViewThisRecord", null, tagsOfScenario, argumentsOfScenario);
-#line 129
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 130
- testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 131
- testRunner.When("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 132
- testRunner.And("I should see Also available from: Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 133
- testRunner.Then("Hide More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 134
- testRunner.And("I shouldn\'t see Also available from: Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DigitizedAvailableButNotDownloadableAtPieceLevel")]
-        [NUnit.Framework.TestCaseAttribute("C1905025", "This record has been digitised as part of multiple records", "//div[@class=\'order-option-wrapper\']", "Go to browse", "Browse records of other archives", null)]
-        [NUnit.Framework.TestCaseAttribute("C1905025", "", "", "The Genealogist", "The National Archives", null)]
-        [NUnit.Framework.TestCaseAttribute("C1905025", "", "", "Ancestry", "The National Archives", null)]
-        public virtual void DigitizedAvailableButNotDownloadableAtPieceLevel(string iaId, string message, string xPath, string button, string title, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("iaId", iaId);
-            argumentsOfScenario.Add("message", message);
-            argumentsOfScenario.Add("xPath", xPath);
-            argumentsOfScenario.Add("button", button);
-            argumentsOfScenario.Add("title", title);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedAvailableButNotDownloadableAtPieceLevel", null, tagsOfScenario, argumentsOfScenario);
 #line 140
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -721,31 +700,40 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 142
- testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 143
- testRunner.And("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 144
- testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I should see Also available from: Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 145
- testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("Hide More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 146
+ testRunner.And("I shouldn\'t see Also available from: Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord")]
-        [NUnit.Framework.TestCaseAttribute("C1905025", null)]
-        public virtual void DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord(string iaId, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("DigitizedAvailableButNotDownloadableAtPieceLevel")]
+        [NUnit.Framework.TestCaseAttribute("C1905025", "This record has been digitised as part of multiple records", "//div[@class=\'order-option-wrapper\']", "Go to browse", "Browse records of other archives", null)]
+        [NUnit.Framework.TestCaseAttribute("C1905025", "", "", "The Genealogist", "The National Archives", null)]
+        [NUnit.Framework.TestCaseAttribute("C1905025", "", "", "Ancestry", "The National Archives", null)]
+        public virtual void DigitizedAvailableButNotDownloadableAtPieceLevel(string iaId, string message, string xPath, string button, string title, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("iaId", iaId);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord", null, tagsOfScenario, argumentsOfScenario);
-#line 153
+            argumentsOfScenario.Add("message", message);
+            argumentsOfScenario.Add("xPath", xPath);
+            argumentsOfScenario.Add("button", button);
+            argumentsOfScenario.Add("title", title);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedAvailableButNotDownloadableAtPieceLevel", null, tagsOfScenario, argumentsOfScenario);
+#line 152
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -765,19 +753,73 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 154
+#line 153
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 154
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 155
- testRunner.When("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 156
- testRunner.And("I should see Also available from:  The Genealogist Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 157
- testRunner.Then("Hide More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 158
+ testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord")]
+        [NUnit.Framework.TestCaseAttribute("C1905025", null)]
+        public virtual void DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord(string iaId, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("iaId", iaId);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord", null, tagsOfScenario, argumentsOfScenario);
+#line 166
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 167
+ testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 168
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 169
+ testRunner.When("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 170
+ testRunner.And("I should see Also available from:  The Genealogist Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 171
+ testRunner.Then("Hide More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 172
  testRunner.And("I shouldn\'t see Also available from: The Genealogist Ancestry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -798,7 +840,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedDiscoveryStaffin", null, tagsOfScenario, argumentsOfScenario);
-#line 164
+#line 178
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -818,16 +860,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 165
+#line 179
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 166
+#line 180
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 181
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 167
+#line 182
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 168
+#line 183
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -848,7 +893,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedDiscoveryOnsiteOffsite", null, tagsOfScenario, argumentsOfScenario);
-#line 175
+#line 190
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -868,22 +913,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 176
+#line 191
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 177
+#line 192
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 193
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 178
+#line 194
  testRunner.And("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 179
+#line 195
  testRunner.And(string.Format("check the \"{0}\" onsite or offsite \"{1}\"", xPath, message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 180
+#line 196
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 181
+#line 197
  testRunner.And("check the basket has one item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -900,7 +948,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("iaId", iaId);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedDiscoveryMoreWaysToViewThisRecord", null, tagsOfScenario, argumentsOfScenario);
-#line 188
+#line 204
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -920,22 +968,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 189
+#line 205
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 190
+#line 206
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 207
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 191
+#line 208
  testRunner.And("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 192
+#line 209
  testRunner.And("I should see Available to view free at TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 193
+#line 210
  testRunner.Then("Hide More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 194
+#line 211
  testRunner.And("I shouldn\'t see Available to view free at TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -956,7 +1007,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedLia", null, tagsOfScenario, argumentsOfScenario);
-#line 201
+#line 218
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -976,16 +1027,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 202
+#line 219
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 203
+#line 220
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 221
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 204
+#line 222
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 205
+#line 223
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1005,7 +1059,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedLiaMoreWaysToViewThisRecord", null, tagsOfScenario, argumentsOfScenario);
-#line 213
+#line 231
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1025,19 +1079,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 214
+#line 232
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 215
+#line 233
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 234
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 216
+#line 235
  testRunner.And("click on More ways to view this record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 217
+#line 236
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 218
+#line 237
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1057,7 +1114,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedLiaMoreWaysToViewThisRecordoffsite", null, tagsOfScenario, argumentsOfScenario);
-#line 227
+#line 246
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1077,19 +1134,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 228
+#line 247
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 229
+#line 248
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 249
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 230
+#line 250
  testRunner.And("I click on More ways to view this record for offsite", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 231
+#line 251
  testRunner.And(string.Format("click on \"{0}\" for offsite", xpath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 232
+#line 252
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1108,7 +1168,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedOther", null, tagsOfScenario, argumentsOfScenario);
-#line 242
+#line 262
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1128,16 +1188,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 243
+#line 263
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 244
+#line 264
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 265
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 245
+#line 266
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 246
+#line 267
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1156,7 +1219,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("xpath", xpath);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DigitizedOtherOffsite", null, tagsOfScenario, argumentsOfScenario);
-#line 252
+#line 273
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1176,19 +1239,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 253
+#line 274
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 254
+#line 275
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 276
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 255
+#line 277
  testRunner.And("I click on More ways to view this record for offsite", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 256
+#line 278
  testRunner.And(string.Format("click on \"{0}\" for offsite", xpath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 257
+#line 279
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1211,7 +1277,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("xPathDO", xPathDO);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DisplayAtMuseum", null, tagsOfScenario, argumentsOfScenario);
-#line 264
+#line 286
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1231,19 +1297,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 265
+#line 287
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 266
+#line 288
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 289
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 267
+#line 290
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 268
+#line 291
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 269
+#line 292
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1263,7 +1332,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("xpath", xpath);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DisplayAtMuseumOffSite", null, tagsOfScenario, argumentsOfScenario);
-#line 277
+#line 300
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1283,16 +1352,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 278
+#line 301
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 279
+#line 302
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 303
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 280
+#line 304
  testRunner.And(string.Format("click on \"{0}\" for offsite", xpath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 281
+#line 305
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1309,7 +1381,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("iaId", iaId);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("FileAuthority", null, tagsOfScenario, argumentsOfScenario);
-#line 288
+#line 312
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1329,13 +1401,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 289
+#line 313
  testRunner.Given(string.Format("I am on delivery options page for fileAuthority \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 290
+#line 314
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 315
  testRunner.When("click on view details of this record creator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 291
+#line 316
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1356,7 +1431,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("xPath", xPath);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GovtWebArchive", null, tagsOfScenario, argumentsOfScenario);
-#line 297
+#line 322
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1376,13 +1451,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 298
+#line 323
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 299
+#line 324
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 325
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 300
+#line 326
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1392,7 +1470,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("invigilationSafeRoom")]
         [NUnit.Framework.TestCaseAttribute("C4771662", "//a[contains(text(),\'View delivery options presented to other users\')]", "(//div[@class=\'order-option-wrapper\'])[1]", "You can view this record under supervision in our Invigilation Room", "", "", null)]
-        [NUnit.Framework.TestCaseAttribute("C4780207", "//a[contains(text(),\'View delivery options presented to other users\')]", "(//div[@class=\'order-option-wrapper\'])[1]", "Your order will take approximately 45 minutes to be prepared", "", "", null)]
+        [NUnit.Framework.TestCaseAttribute("C4780207", "//a[contains(text(),\'View delivery options presented to other users\')]", "(//div[@class=\'order-option-wrapper\'])[1]", "Your order should be ready to view in 60 minutes.", "", "", null)]
         [NUnit.Framework.TestCaseAttribute("C4771662", "//a[contains(text(),\'View delivery options presented to other users\')]", "(//div[@class=\'order-option-wrapper\'])[2]", "You can view this record under supervision in our Invigilation Room", "", "", null)]
         [NUnit.Framework.TestCaseAttribute("C4780207", "//a[contains(text(),\'View delivery options presented to other users\')]", "(//div[@class=\'order-option-wrapper\'])[2]", "You must have a reader\'s ticket to order this record", "reader\'s ticket", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C4771662", "//a[contains(text(),\'View delivery options presented to other users\')]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record can only be seen under supervision at The National Archives", "Copy this record", "Page Check Request", null)]
@@ -1408,7 +1486,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("invigilationSafeRoom", null, tagsOfScenario, argumentsOfScenario);
-#line 307
+#line 333
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1428,19 +1506,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 308
+#line 334
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 309
+#line 335
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 336
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 310
+#line 337
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 311
+#line 338
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 312
+#line 339
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1449,7 +1530,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("InUse")]
-        [NUnit.Framework.TestCaseAttribute("C4771085", "(//div[@class=\'order-option-wrapper\'])[1]", "This record is currently in use", "//div[@id=\'staffViewOfOtherUserDOsWrapper\']/a", "order records in advance", "The National Archives", null)]
+        [NUnit.Framework.TestCaseAttribute("C4771085", "(//div[@class=\'order-option-wrapper\'])[1]", "This record is currently in use", "//div[@id=\'staffViewOfOtherUserDOsWrapper\']/a", "order records in advance", "page check request", null)]
         [NUnit.Framework.TestCaseAttribute("C4771085", "(//div[@class=\'order-option-wrapper\'])[1]", "Talk to a member of staff to find out when it may be free", "//div[@id=\'staffViewOfOtherUserDOsWrapper\']/a", "visit Kew", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C4771085", "(//div[@class=\'order-option-wrapper\'])[2]", "This record has not been digitised and cannot be downloaded", "//div[@id=\'staffViewOfOtherUserDOsWrapper\']/a", "reader\'s ticket", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C4771085", "(//div[@class=\'order-option-wrapper\'])[2]", "Or, you can request a quotation for a copy to be sent to you.", "//div[@id=\'staffViewOfOtherUserDOsWrapper\']/a", "Request a copy", "Page Check Request", null)]
@@ -1464,7 +1545,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InUse", null, tagsOfScenario, argumentsOfScenario);
-#line 323
+#line 350
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1484,19 +1565,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 324
+#line 351
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 325
+#line 352
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 353
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 326
+#line 354
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 327
+#line 355
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 328
+#line 356
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1517,7 +1601,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("LocalArchive", null, tagsOfScenario, argumentsOfScenario);
-#line 338
+#line 366
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1537,16 +1621,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 339
+#line 367
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 340
+#line 368
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 369
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 341
+#line 370
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 342
+#line 371
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1566,7 +1653,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("message", message);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MissingLost", null, tagsOfScenario, argumentsOfScenario);
-#line 349
+#line 378
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1586,13 +1673,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 350
+#line 379
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 351
+#line 380
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 381
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 352
+#line 382
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1616,7 +1706,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MouldTreatment", null, tagsOfScenario, argumentsOfScenario);
-#line 359
+#line 389
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1636,19 +1726,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 360
+#line 390
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 361
+#line 391
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 392
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 362
+#line 393
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 363
+#line 394
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 364
+#line 395
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1658,14 +1751,11 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("offSite")]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[1]", "You may place an advanced order request to see this record at The National Archiv" +
-            "es. It will take three working days to bring this record to The National Archive" +
-            "s.", "", "", null)]
-        [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[2]", "You may place an advance order request to see this record at The National Archive" +
-            "s. It will take three working days to bring this record to The National Archives" +
-            ".", "Advanced order", "Book a visit to view our documents", null)]
+            "es. It will take four working days to bring this record to The National Archives" +
+            ".", "", "", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record has not been digitised and cannot be downloaded", "order records in advance", "Book a visit to view our documents", null)]
-        [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record is stored off site and will take three working days to be delivered t" +
-            "o The National Archives.", "visit Kew", "Visit us", null)]
+        [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record is stored off site and will take four working days to be delivered to" +
+            " The National Archives.", "visit Kew", "Visit us", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "You can order records in advance to be ready for you when you visit Kew.", "reader\'s ticket", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C2698319", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[5]", "(//div[@class=\'order-option-wrapper\'])[3]", "This record is stored off site and will take three working days to be delivered t" +
             "o The National Archives.", "Order a copy", "Page Check Request", null)]
@@ -1680,7 +1770,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("offSite", null, tagsOfScenario, argumentsOfScenario);
-#line 373
+#line 404
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1700,19 +1790,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 374
+#line 405
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 375
+#line 406
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 407
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 376
+#line 408
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 377
+#line 409
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 378
+#line 410
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1734,7 +1827,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PaidSearch", null, tagsOfScenario, argumentsOfScenario);
-#line 390
+#line 422
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1754,19 +1847,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 391
+#line 423
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 392
+#line 424
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 425
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 393
+#line 426
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 394
+#line 427
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 395
+#line 428
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1789,7 +1885,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Surrogate", null, tagsOfScenario, argumentsOfScenario);
-#line 401
+#line 434
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1809,19 +1905,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 402
+#line 435
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 403
+#line 436
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 437
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 404
+#line 438
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 405
+#line 439
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 406
+#line 440
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1830,7 +1929,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("TooLargeToCopyOriginal")]
-        [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[1]", "Your order will take approximately 45 minutes to be prepared.", "", "", null)]
+        [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[1]", "Your order should be ready to view in 60 minutes.", "", "", null)]
         [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[2]", "This document is either too large or of a condition or media type that means that" +
             " our record copying services are unable to provide a copy.", "reader\'s ticket", "The National Archives", null)]
         [NUnit.Framework.TestCaseAttribute("C4560825", "(//a[@class=\'discoveryPrimaryCallToActionLink\'])[4]", "(//div[@class=\'order-option-wrapper\'])[2]", "This record is available to order and view", "Image Library", "The National Archives", null)]
@@ -1845,7 +1944,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TooLargeToCopyOriginal", null, tagsOfScenario, argumentsOfScenario);
-#line 414
+#line 448
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1865,19 +1964,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 415
+#line 449
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 416
+#line 450
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 451
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 417
+#line 452
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 418
+#line 453
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 419
+#line 454
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1901,7 +2003,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TooLargeToCopyOriginalOffSite", null, tagsOfScenario, argumentsOfScenario);
-#line 427
+#line 462
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1921,22 +2023,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 428
+#line 463
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 429
+#line 464
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 465
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 430
+#line 466
  testRunner.And("scroll down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 431
+#line 467
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 432
+#line 468
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 433
+#line 469
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1965,7 +2070,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TooLargeToCopySurrogate", null, tagsOfScenario, argumentsOfScenario);
-#line 441
+#line 477
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -1985,19 +2090,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 442
+#line 478
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 443
+#line 479
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 480
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 444
+#line 481
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 445
+#line 482
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 446
+#line 483
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -2017,7 +2125,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("xPath", xPath);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UnAvailable", null, tagsOfScenario, argumentsOfScenario);
-#line 460
+#line 497
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -2037,13 +2145,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 461
+#line 498
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 462
+#line 499
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 500
  testRunner.When(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 463
+#line 501
  testRunner.Then(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -2071,7 +2182,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("button", button);
             argumentsOfScenario.Add("title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unfit", null, tagsOfScenario, argumentsOfScenario);
-#line 469
+#line 507
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -2091,19 +2202,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 470
+#line 508
  testRunner.Given(string.Format("I am on delivery options page \"{0}\"", iaId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 471
+#line 509
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 510
  testRunner.When(string.Format("click on view delivery options presented to other users \"{0}\"", xPathDO), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 472
+#line 511
  testRunner.And(string.Format("check the \"{0}\" for staffin \"{1}\"", message, xPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 473
+#line 512
  testRunner.Then(string.Format("click on the \"{0}\"", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 474
+#line 513
  testRunner.And(string.Format("check for the page \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

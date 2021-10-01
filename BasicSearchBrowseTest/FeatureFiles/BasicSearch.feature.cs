@@ -80,6 +80,9 @@ namespace BasicSearchBrowseTest.FeatureFiles
 #line 4
  testRunner.Given("Given I am on Discovery Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 5
+ testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -91,7 +94,7 @@ namespace BasicSearchBrowseTest.FeatureFiles
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_searchWithDifferentKeyWords", null, exampleTags);
-#line 6
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -114,10 +117,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 7
+#line 8
  testRunner.When(string.Format("I enter \"{0}\"", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 9
  testRunner.Then(string.Format("results should contain \"{0}\"", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -132,7 +135,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_FilterResult_VerifyCollectionAndSubjects", " In the subject module C10092 is Army and C10060 is Medals", exampleTags);
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -155,10 +158,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 18
+#line 19
  testRunner.When(string.Format("enter \"{0}\", filter by TNA", word), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 19
+#line 20
  testRunner.Then(string.Format("check for the \"{0}\",\"{1}\" got particular number of records", collectionModule, subjectsModule), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -174,7 +177,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_GreaterThan10000_ExportFirst1000RecordsAsHtmlCsvXml", null, exampleTags);
-#line 26
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -197,17 +200,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 27
+#line 28
  testRunner.When(string.Format("I enter \"{0}\", check the total number of records and record creators are not zero" +
                             "", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 28
+#line 29
  testRunner.And("check for the sorting is only enabled message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 30
  testRunner.And(string.Format("Export results in \"{0}\"", selectFormat), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 30
+#line 31
  testRunner.Then("we are able to download and check the file that has been downloaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -223,7 +226,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_GreaterThan10000_ExportFirst1000RecordCreatorsAsHtmlCsvXml", null, exampleTags);
-#line 38
+#line 39
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -246,14 +249,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 39
+#line 40
  testRunner.When(string.Format("I enter \"{0}\", check the total number of records and record creators are not zero" +
                             "", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 40
+#line 41
  testRunner.And(string.Format("go to record creators and Export results in \"{0}\"", selectFormat), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 42
  testRunner.Then("we are able to download and check the file that has been downloaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -269,7 +272,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_LessThan10000_ExportFirst1000RecordCreators_sort_AsXmlHtmlCsv", null, exampleTags);
-#line 49
+#line 50
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -292,14 +295,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 50
+#line 51
  testRunner.When(string.Format("I enter \"{0}\", check the total number of records and record creators are not zero" +
                             "", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 51
+#line 52
  testRunner.And(string.Format("go to record creators,select \"{0}\", select \"{1}\" under export results", sortedBy, selectFormat), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 53
  testRunner.Then("we are able to download and check the file that has been downloaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -316,7 +319,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_LessThan10000_ExportFirst1000Records_Sort_AsXmlHtmlCsv", null, exampleTags);
-#line 60
+#line 61
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -339,14 +342,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 61
+#line 62
  testRunner.When(string.Format("I enter \"{0}\", check the total number of records and record creators are not zero" +
                             "", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 63
  testRunner.And(string.Format("go to simple view, select \"{0}\", select \"{1}\" under export results", sortedBy, selectFormat), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 64
  testRunner.Then("we are able to download and check the file that has been downloaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -361,7 +364,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_LessThan10000_ExportAllRecordsAsCSV", null, exampleTags);
-#line 72
+#line 73
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -384,15 +387,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 73
+#line 74
  testRunner.When(string.Format("I enter \"{0}\", check the total number of records and record creators are not zero" +
                             "", keyword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 74
+#line 75
  testRunner.And(string.Format("go to \"{0}\" select \"{1}\", select all records as spreadsheet(CSV) under export res" +
                             "ults", recordsTab, sortedBy), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 75
+#line 76
  testRunner.Then("we are able to download and check the file that has been downloaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -407,7 +410,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_NoOfRecordsPerPage15And30And60", null, exampleTags);
-#line 82
+#line 83
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -430,10 +433,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 83
+#line 84
  testRunner.When(string.Format("I enter \"{0}\", click on \"{1}\" on the bottom", keyword, numberOfItemsPerPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 84
+#line 85
  testRunner.Then(string.Format("the number of records displaying per page should be \"{0}\"", numberOfItemsPerPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -446,7 +449,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordCreator_filterresult", null, ((string[])(null)));
-#line 91
+#line 92
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -469,10 +472,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 92
+#line 93
  testRunner.When("I enter \"*\", go to record creators tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 93
+#line 94
  testRunner.Then("I can see the filters Organisation, person, business, Manor, Family, Diaries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -485,7 +488,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLast6months", null, ((string[])(null)));
-#line 95
+#line 96
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -508,13 +511,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 96
+#line 97
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 97
+#line 98
  testRunner.And("click on opened in the last six months under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 98
+#line 99
  testRunner.Then("click on the first record and check the record opening date should be in the last" +
                         " six months", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -528,7 +531,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLast12months", null, ((string[])(null)));
-#line 100
+#line 101
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -551,13 +554,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 101
+#line 102
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 102
+#line 103
  testRunner.And("click on opened in the last twelve months under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 103
+#line 104
  testRunner.Then("click on the first record and check the record opening date should be in the last" +
                         " twelve months", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -571,7 +574,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLastWeek", null, ((string[])(null)));
-#line 105
+#line 106
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -594,13 +597,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 106
+#line 107
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 107
+#line 108
  testRunner.And("click on opened in the last week under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 108
+#line 109
  testRunner.Then("click on the first record and check the record opening date should be in the last" +
                         " week", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -614,7 +617,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedInTheLastDay", null, ((string[])(null)));
-#line 110
+#line 111
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -637,13 +640,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 111
+#line 112
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 112
+#line 113
  testRunner.And("click on opened during the last day under Record opening date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 113
+#line 114
  testRunner.Then("click on the first record and check the record opening date should be yesterday", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -658,7 +661,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedOnASpecificDate", null, exampleTags);
-#line 115
+#line 116
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -681,13 +684,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 116
+#line 117
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 117
+#line 118
  testRunner.And(string.Format("enter \"{0}\" under Record opening date", specificDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 118
+#line 119
  testRunner.Then(string.Format("click on the first record and check the record opening date should be \"{0}\"", specificDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -702,7 +705,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordOpenedWithinADateRange", null, exampleTags);
-#line 125
+#line 126
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -725,13 +728,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 126
+#line 127
  testRunner.When("enter \"*\", filter by TNA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 127
+#line 128
  testRunner.And(string.Format("enter \"{0}\", \"{1}\" for date range under Record opening date", fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 128
+#line 129
  testRunner.Then(string.Format("click on the first record and check the record opening date should be with in the" +
                             " range \"{0}\", \"{1}\"", fromDate, toDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -745,7 +748,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("BS_RecordsAndRecordCreatorsDatesUnknown", null, ((string[])(null)));
-#line 135
+#line 136
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -768,10 +771,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 136
+#line 137
  testRunner.When("enter \"*\", I am under Records tab check for the filter Dates unknown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 137
+#line 138
  testRunner.Then("I am under record creators tab check for the filter Dates unknown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

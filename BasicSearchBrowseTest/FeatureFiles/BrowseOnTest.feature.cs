@@ -91,7 +91,7 @@ namespace BasicSearchBrowseTest.FeatureFiles
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Browse_Archives", null, exampleTags);
-#line 6
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -114,10 +114,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 7
+#line 8
  testRunner.When(string.Format("I click on \"{0}\" under Browse archives", alphabet), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 9
  testRunner.Then(string.Format("check for the first title starts with \"{0}\"", alphabet), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -133,7 +133,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Record_Creators", null, exampleTags);
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -156,13 +156,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 17
+#line 18
  testRunner.When(string.Format("click on \"{0}\"", recordCreatorsType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 18
+#line 19
  testRunner.Then(string.Format("click on the \"{0}\" under record creators", alphabet), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 19
+#line 20
  testRunner.And(string.Format("check for the title starts with \"{0}\",\"{1}\"", recordCreatorsType, alphabet), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -178,7 +178,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Records_Of_OtherArchives", null, exampleTags);
-#line 27
+#line 28
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -201,10 +201,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 28
+#line 29
  testRunner.When(string.Format("click on \"{0}\" under Records of other archives", letter), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 29
+#line 30
  testRunner.Then(string.Format("check the title starts with \"{0}\"", letter), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -220,7 +220,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Records_Of_TNA", null, exampleTags);
-#line 37
+#line 38
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -243,10 +243,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 38
+#line 39
  testRunner.When(string.Format("click on \"{0}\" under Records of the National Archives", letter), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 39
+#line 40
  testRunner.Then(string.Format("check the second record title starts with \"{0}\"", letter), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

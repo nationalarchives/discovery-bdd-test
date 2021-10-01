@@ -16,6 +16,15 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDetailsPageOffsite("r", iaId);
+
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
+
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 900)");
         }

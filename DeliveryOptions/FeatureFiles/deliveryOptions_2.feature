@@ -3,6 +3,7 @@
 @wip
 Scenario Outline: AcademicSubscriptionStaffin
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then check for the page "<title>"
 
@@ -12,6 +13,7 @@ Scenario Outline: AcademicSubscriptionStaffin
 
 Scenario Outline: AcademicSubscriptionOnsiteOffsite
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<xPath>" onsite or offsite "<message>"
 	Then click on the "<button>"
@@ -25,6 +27,7 @@ Scenario Outline: AcademicSubscriptionOnsiteOffsite
 
 Scenario Outline: AccessUnderReviewStaffin
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
 	And check for the page "<title>"
@@ -37,6 +40,7 @@ Scenario Outline: AccessUnderReviewStaffin
 
 Scenario Outline: AV_Media
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then  click on the "<button>"
 	And check for the page "<title>"
@@ -50,6 +54,7 @@ Scenario Outline: AV_Media
 
 Scenario Outline: ClosedFOIReview
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then  click on the "<button>"
 	And check for the page "<title>"
@@ -61,6 +66,7 @@ Scenario Outline: ClosedFOIReview
 
 Scenario Outline: ClosedRetainedDeptKnown
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then  click on the "<button>"
 	And check for the page "<title>"
@@ -72,6 +78,7 @@ Scenario Outline: ClosedRetainedDeptKnown
 
 Scenario Outline: ClosedRetainedDeptUnKnown
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then  click on the "<button>"
 	And check for the page "<title>"
@@ -82,6 +89,7 @@ Scenario Outline: ClosedRetainedDeptUnKnown
 
 Scenario Outline: ClosedRetainedDeptUnKnown_contactUs
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When I click on contact us button
 	Then check for the page "<title>"
 
@@ -91,6 +99,7 @@ Scenario Outline: ClosedRetainedDeptUnKnown_contactUs
 
 Scenario Outline: CollectionCareStaffin
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then check for the page "<title>"
 
@@ -102,6 +111,7 @@ Scenario Outline: CollectionCareStaffin
 
 Scenario Outline: CollectionCareOnSiteOffSite
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<xPath>" onsite or offsite "<message>"
 	Then click on the "<button>"
@@ -116,6 +126,7 @@ Scenario Outline: CollectionCareOnSiteOffSite
 
 Scenario Outline: DigitizedAvailableButNotDownloadableAtItemLevel
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	And click on More ways to view this record
 	Then click on the "<button>"
@@ -128,6 +139,7 @@ Scenario Outline: DigitizedAvailableButNotDownloadableAtItemLevel
 
 Scenario Outline: DigitizedAvailableButNotDownloadableAtItemLevelMoreWaysToViewThisRecord
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When click on More ways to view this record
 	And I should see Also available from: Ancestry
 	Then Hide More ways to view this record
@@ -139,6 +151,7 @@ Scenario Outline: DigitizedAvailableButNotDownloadableAtItemLevelMoreWaysToViewT
 
 Scenario Outline: DigitizedAvailableButNotDownloadableAtPieceLevel
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	And click on More ways to view this record
 	Then click on the "<button>"
@@ -152,6 +165,7 @@ Scenario Outline: DigitizedAvailableButNotDownloadableAtPieceLevel
 
 Scenario Outline: DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToViewThisRecord
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When click on More ways to view this record
 	And I should see Also available from:  The Genealogist Ancestry
 	Then Hide More ways to view this record
@@ -163,6 +177,7 @@ Scenario Outline: DigitizedAvailableButNotDownloadableAtPieceLevelMoreWaysToView
 
 Scenario Outline: DigitizedDiscoveryStaffin
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
 	And check for the page "<title>"
@@ -174,6 +189,7 @@ Scenario Outline: DigitizedDiscoveryStaffin
 
 Scenario Outline: DigitizedDiscoveryOnsiteOffsite
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And click on More ways to view this record
 	And check the "<xPath>" onsite or offsite "<message>"
@@ -187,6 +203,7 @@ Scenario Outline: DigitizedDiscoveryOnsiteOffsite
 
 Scenario Outline: DigitizedDiscoveryMoreWaysToViewThisRecord
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And click on More ways to view this record
 	And I should see Available to view free at TNA
@@ -200,6 +217,7 @@ Scenario Outline: DigitizedDiscoveryMoreWaysToViewThisRecord
 
 Scenario Outline: DigitizedLia
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
 	And check for the page "<title>"
@@ -212,6 +230,7 @@ Scenario Outline: DigitizedLia
 #| C2490774 | This is available to download from The Genealogist | (//div[@class='order-option-wrapper'])[2] |                       |                       |
 Scenario Outline: DigitizedLiaMoreWaysToViewThisRecord
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And click on More ways to view this record
 	Then click on the "<button>"
@@ -226,6 +245,7 @@ Scenario Outline: DigitizedLiaMoreWaysToViewThisRecord
 #| C2490774 | Ancestry[2]                                     | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
 Scenario Outline: DigitizedLiaMoreWaysToViewThisRecordoffsite
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And I click on More ways to view this record for offsite
 	And click on "<xpath>" for offsite
@@ -241,6 +261,7 @@ Scenario Outline: DigitizedLiaMoreWaysToViewThisRecordoffsite
 #   | C2490774 | //a[contains(text(),'Available to view free at The National Archives')] | The National Archives | (//a[@class='discoveryPrimaryCallToActionLink'])[3] |
 Scenario Outline: DigitizedOther
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	Then click on the "<button>"
 	And check for the page "<title>"
@@ -251,6 +272,7 @@ Scenario Outline: DigitizedOther
 
 Scenario Outline:DigitizedOtherOffsite
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And I click on More ways to view this record for offsite
 	And click on "<xpath>" for offsite
@@ -263,6 +285,7 @@ Scenario Outline:DigitizedOtherOffsite
 #| C1847980 | //div[@id='staffViewOfOtherUserDOsWrapper']/a | //a[contains(text(),'Available to view free at The National Archives')] | The National Archives |
 Scenario Outline: DisplayAtMuseum
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -276,6 +299,7 @@ Scenario Outline: DisplayAtMuseum
 
 Scenario Outline:DisplayAtMuseumOffSite
 	Given I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And click on "<xpath>" for offsite
 	Then check for the page "<title>"
@@ -287,6 +311,7 @@ Scenario Outline:DisplayAtMuseumOffSite
 
 Scenario Outline: FileAuthority
 	Given I am on delivery options page for fileAuthority "<iaId>"
+	And click on cookies, hide this message
 	When click on view details of this record creator
 	Then check for the page "<title>"
 
@@ -296,6 +321,7 @@ Scenario Outline: FileAuthority
 
 Scenario Outline: GovtWebArchive
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then check for the page "<title>"
 
@@ -306,6 +332,7 @@ Scenario Outline: GovtWebArchive
 
 Scenario Outline: invigilationSafeRoom
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -314,7 +341,7 @@ Scenario Outline: invigilationSafeRoom
 	Examples:
 		| iaId     | xPathDO                                                                | xPath                                     | message                                                                    | button           | title                 |
 		| C4771662 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[1] | You can view this record under supervision in our Invigilation Room        |                  |                       |
-		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[1] | Your order will take approximately 45 minutes to be prepared               |                  |                       |
+		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[1] | Your order should be ready to view in 60 minutes.                          |                  |                       |
 		| C4771662 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[2] | You can view this record under supervision in our Invigilation Room        |                  |                       |
 		| C4780207 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[2] | You must have a reader's ticket to order this record                       | reader's ticket  | The National Archives |
 		| C4771662 | //a[contains(text(),'View delivery options presented to other users')] | (//div[@class='order-option-wrapper'])[3] | This record can only be seen under supervision at The National Archives    | Copy this record | Page Check Request    |
@@ -322,6 +349,7 @@ Scenario Outline: invigilationSafeRoom
 
 Scenario Outline: InUse
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -329,7 +357,7 @@ Scenario Outline: InUse
 
 	Examples:
 		| iaId     | xPath                                     | message                                                     | xPathDO                                       | button                   | title                 |
-		| C4771085 | (//div[@class='order-option-wrapper'])[1] | This record is currently in use                             | //div[@id='staffViewOfOtherUserDOsWrapper']/a | order records in advance | The National Archives |
+		| C4771085 | (//div[@class='order-option-wrapper'])[1] | This record is currently in use                             | //div[@id='staffViewOfOtherUserDOsWrapper']/a | order records in advance | page check request |
 		| C4771085 | (//div[@class='order-option-wrapper'])[1] | Talk to a member of staff to find out when it may be free   | //div[@id='staffViewOfOtherUserDOsWrapper']/a | visit Kew                | The National Archives |
 		| C4771085 | (//div[@class='order-option-wrapper'])[2] | This record has not been digitised and cannot be downloaded | //div[@id='staffViewOfOtherUserDOsWrapper']/a | reader's ticket          | The National Archives |
 		#| C4771085 | (//div[@class='order-option-wrapper'])[2] | You can order records in advance to be ready for you when you visit Kew | //div[@id='staffViewOfOtherUserDOsWrapper']/a | Order in advance         | The National Archives |
@@ -337,6 +365,7 @@ Scenario Outline: InUse
 
 Scenario Outline: LocalArchive
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
 	And check for the page "<title>"
@@ -348,6 +377,7 @@ Scenario Outline: LocalArchive
 
 Scenario Outline: MissingLost
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then  check for the page "<title>"
 
@@ -358,6 +388,7 @@ Scenario Outline: MissingLost
 
 Scenario Outline: MouldTreatment
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -372,23 +403,25 @@ Scenario Outline: MouldTreatment
 
 Scenario Outline: offSite
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                                             | button                   | title                              |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[1] | You may place an advanced order request to see this record at The National Archives. It will take three working days to bring this record to The National Archives. |                          |                                    |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[2] | You may place an advance order request to see this record at The National Archives. It will take three working days to bring this record to The National Archives.  | Advanced order           | Book a visit to view our documents |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded                                                                                                         | order records in advance | Book a visit to view our documents |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take three working days to be delivered to The National Archives.                                                           | visit Kew                | Visit us                           |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                                                                            | reader's ticket          | The National Archives              |
+		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                                            | button                   | title                              |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[1] | You may place an advanced order request to see this record at The National Archives. It will take four working days to bring this record to The National Archives. |                          |                                    |
+		#| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[2] | You may place an advance order request to see this record at The National Archives. It will take four working days to bring this record to The National Archives.  | Advanced order           | Book a visit to view our documents |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded                                                                                                        | order records in advance | Book a visit to view our documents |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take four working days to be delivered to The National Archives.                                                           | visit Kew                | Visit us                           |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                                                                           | reader's ticket          | The National Archives              |
 		#| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | Or, you can request a quotation for a copy to be sent to you.                                                                                                       | Order records in advance | The National Archives              |
 		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take three working days to be delivered to The National Archives.                                                           | Order a copy             | Page Check Request                 |
 
 Scenario Outline: PaidSearch
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	When check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -400,6 +433,7 @@ Scenario Outline: PaidSearch
 
 Scenario Outline: Surrogate
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -413,6 +447,7 @@ Scenario Outline: Surrogate
 
 Scenario Outline: TooLargeToCopyOriginal
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -420,12 +455,13 @@ Scenario Outline: TooLargeToCopyOriginal
 
 	Examples:
 		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                     | button          | title                 |
-		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[1] | Your order will take approximately 45 minutes to be prepared.                                                                               |                 |                       |
+		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[1] | Your order should be ready to view in 60 minutes.                                                                              |                 |                       |
 		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[2] | This document is either too large or of a condition or media type that means that our record copying services are unable to provide a copy. | reader's ticket | The National Archives |
 		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[2] | This record is available to order and view                                                                                                  | Image Library   | The National Archives |
 
 Scenario Outline: TooLargeToCopyOriginalOffSite
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And scroll down
 	And check the "<message>" for staffin "<xPath>"
@@ -440,6 +476,7 @@ Scenario Outline: TooLargeToCopyOriginalOffSite
 
 Scenario Outline: TooLargeToCopySurrogate
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"
@@ -459,6 +496,7 @@ Scenario Outline: TooLargeToCopySurrogate
 
 Scenario Outline: UnAvailable
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When check the "<message>" for staffin "<xPath>"
 	Then check for the page "<title>"
 
@@ -468,6 +506,7 @@ Scenario Outline: UnAvailable
 
 Scenario Outline: Unfit
 	Given  I am on delivery options page "<iaId>"
+	And click on cookies, hide this message
 	When  click on view delivery options presented to other users "<xPathDO>"
 	And check the "<message>" for staffin "<xPath>"
 	Then click on the "<button>"

@@ -82,9 +82,19 @@ namespace Nunit_NetCore
             var path = Configuration.GetValue<string>("findAnArchive");
             return OpenChromeAndNavigateTo(baseUrl + path);
         }
+        public IWebDriver GoToClosedRecordRequestPage()
+        {
+            var path = Configuration.GetValue<string>("closedRecordsRequest");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
         public IWebDriver GoToFOIRequestPage(string iaId)
         {
             var path = string.Format(Configuration.GetValue<string>("FOIRequest"), iaId);
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
+        public IWebDriver GoToPoWSARPage(string iaId)
+        {
+            var path = string.Format(Configuration.GetValue<string>("PoWSAR"), iaId);
             return OpenChromeAndNavigateTo(baseUrl + path);
         }
         public IWebDriver GoToPageCheckRequestPage(string iaId)
@@ -108,6 +118,12 @@ namespace Nunit_NetCore
             var path = string.Format(Configuration.GetValue<string>("offsiteDetailsPath"), recordType, iaId);
             return OpenChromeAndNavigateTo(baseUrl + path);
         }
+        public IWebDriver GoToNewFOIRegisterPage()
+        {
+            var path = Configuration.GetValue<string>("1939RegisterFOI");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
+
         public IWebDriver GoToCabinetPaperSearchPage()
         {
             var url = Configuration.GetValue<string>("cabinetPapersUrl");

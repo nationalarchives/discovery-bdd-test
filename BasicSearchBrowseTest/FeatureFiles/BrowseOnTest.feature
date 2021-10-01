@@ -3,6 +3,7 @@
 Background:
 	Given I am on the browse page
 
+
 Scenario Outline: Browse_Archives
 	When I click on "<alphabet>" under Browse archives
 	Then check for the first title starts with "<alphabet>"
