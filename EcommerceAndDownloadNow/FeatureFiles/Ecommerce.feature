@@ -37,7 +37,7 @@ Scenario Outline: 1939 register SAR
 	Given I am on Request a search of closed records page
 	When I enter the details "<searchFirstName>", "<searchLastName>","<gender>","<dOB>","<dataSubjectAccess>", upload proof of identity
 	And I enter contact details "<firstName>","<lastName>","<email>","<confirmEmail>","<address>","<TownCity>","<postcode>","<Country>"
-	And Submit request
+	And confirm Submit request
 	Then I can see confirmation page
 
 	Examples:

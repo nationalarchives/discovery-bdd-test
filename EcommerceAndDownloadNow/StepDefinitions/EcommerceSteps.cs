@@ -253,7 +253,7 @@ namespace Nunit_NetCore.StepDefinitions
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 3500)");
-            //  _driver.FindElement(By.Id("Confirm")).Click();
+             //_driver.FindElement(By.Id("Confirm")).Click();
             Thread.Sleep(2000);
             _driver.FindElement(By.XPath("//input[@value='Submit request']")).Click();
             //  _driver.FindElement(By.CssSelector("/html/body/div[2]/div[2]/div/div/div[2]/div/form/div/p/input")).Click();
@@ -421,6 +421,7 @@ namespace Nunit_NetCore.StepDefinitions
              _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 2300)");
+           
             _driver.FindElement(By.Name("proofIDfile")).SendKeys(Image1Path);
         }
         [Given(@"I am on PoWSAR page for ""(.*)""")]

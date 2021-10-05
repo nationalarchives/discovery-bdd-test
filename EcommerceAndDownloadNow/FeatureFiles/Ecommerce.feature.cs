@@ -263,7 +263,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And(string.Format("I enter contact details \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\"", firstName, lastName, email, confirmEmail, address, townCity, postcode, country), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 40
- testRunner.And("Submit request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("confirm Submit request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 41
  testRunner.Then("I can see confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
