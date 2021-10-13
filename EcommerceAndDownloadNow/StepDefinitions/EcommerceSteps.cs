@@ -422,7 +422,7 @@ namespace Nunit_NetCore.StepDefinitions
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 2300)");
            
-            _driver.FindElement(By.Name("proofIDfile")).SendKeys(Image1Path);
+            _driver.FindElement(By.Name("deathCertFile")).SendKeys(Image1Path);
         }
         [Given(@"I am on PoWSAR page for ""(.*)""")]
         public void GivenIAmOnPoWSARPageFor(string iaId)

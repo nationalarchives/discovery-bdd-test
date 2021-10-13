@@ -61,6 +61,11 @@ namespace Nunit_NetCore
             var url = Configuration.GetValue<string>("readerTicketDemoPageUrl");
             return OpenChromeAndNavigateTo(url);
         }
+        public IWebDriver GoToKBSPage()
+        {
+            var url = Configuration.GetValue<string>("KBSUrl");
+            return OpenChromeAndNavigateTo(url);
+        }
         public IWebDriver GoToNRAPdfDownloadPage()
         {
             var path = Configuration.GetValue<string>("NRAPdfDownload");
