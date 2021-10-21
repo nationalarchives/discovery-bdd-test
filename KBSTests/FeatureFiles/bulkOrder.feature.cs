@@ -90,8 +90,7 @@ namespace KBSTests.FeatureFiles
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("bulkOrder_orderDocNow_20")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("9497872", "firstTester", "lastTester", "tnadiscovery100@gmail.com", "abcd", "CAB 120", "CAB 120/1", "CAB 120/2", "CAB 120/3", "CAB 120/4", "CAB 120/5", "CAB 120/6", "CAB 120/7", "CAB 120/8", "CAB 120/9", "CAB 120/10", "CAB 120/11", "CAB 120/12", "CAB 120/13", "CAB 120/14", "CAB 120/15", "CAB 120/16", "CAB 120/17", "CAB 120/18", "CAB 120/19", "CAB 120/20", null)]
+        [NUnit.Framework.TestCaseAttribute("3656217", "firstTester", "lastTester", "tnadiscovery100@gmail.com", "abcd", "CAB 120", "CAB 120/1", "CAB 120/2", "CAB 120/3", "CAB 120/4", "CAB 120/5", "CAB 120/6", "CAB 120/7", "CAB 120/8", "CAB 120/9", "CAB 120/10", "CAB 120/11", "CAB 120/12", "CAB 120/13", "CAB 120/14", "CAB 120/15", "CAB 120/16", "CAB 120/17", "CAB 120/18", "CAB 120/19", "CAB 120/20", null)]
         public virtual void BulkOrder_OrderDocNow_20(
                     string readerTicketNo, 
                     string firstName, 
@@ -121,13 +120,7 @@ namespace KBSTests.FeatureFiles
                     string docRef20, 
                     string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "mytag"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("readerTicketNo", readerTicketNo);
             argumentsOfScenario.Add("firstName", firstName);
@@ -156,7 +149,7 @@ namespace KBSTests.FeatureFiles
             argumentsOfScenario.Add("DocRef19", docRef19);
             argumentsOfScenario.Add("DocRef20", docRef20);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("bulkOrder_orderDocNow_20", null, tagsOfScenario, argumentsOfScenario);
-#line 9
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -179,15 +172,21 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 10
- testRunner.And(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\" and complete booking", readerTicketNo, firstName, lastName, email, telNo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 12
- testRunner.Then("check the page title, click on Order documents now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\" and complete booking", readerTicketNo, firstName, lastName, email, telNo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.And(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\",\"{11}\",\"" +
-                            "{12}\",\"{13}\",\"{14}\",\"{15}\",\"{16}\",\"{17}\",\"{18}\",\"{19}\",\"{20}\"", series, docRef1, docRef2, docRef3, docRef4, docRef5, docRef6, docRef7, docRef8, docRef9, docRef10, docRef11, docRef12, docRef13, docRef14, docRef15, docRef16, docRef17, docRef18, docRef19, docRef20), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("check the page title, click on Order documents now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 14
+ testRunner.And(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\"", series, docRef1, docRef2, docRef3, docRef4, docRef5, docRef6, docRef7, docRef8, docRef9, docRef10), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+ testRunner.And(string.Format("enter all the doc reference numbers \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7" +
+                            "}\",\"{8}\",\"{9}\"", docRef11, docRef12, docRef13, docRef14, docRef15, docRef16, docRef17, docRef18, docRef19, docRef20), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+ testRunner.And("check the page title order summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -195,12 +194,18 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("bulkOrder_orderDocLater")]
-        public virtual void BulkOrder_OrderDocLater()
+        [NUnit.Framework.TestCaseAttribute("9497920", "Tester", "lastTester", "tnadiscovery100@gmail.com", "abcd", null)]
+        public virtual void BulkOrder_OrderDocLater(string readerTicketNo, string firstName, string lastName, string email, string telNo, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("readerTicketNo", readerTicketNo);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("telNo", telNo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("bulkOrder_orderDocLater", null, tagsOfScenario, argumentsOfScenario);
-#line 26
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -223,10 +228,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 27
+#line 23
+ testRunner.When(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\" and complete booking", readerTicketNo, firstName, lastName, email, telNo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
  testRunner.Then("check the page title, click on Order documents later", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 28
+#line 25
  testRunner.And("check the page title, click on Yes, I’d like to order my documents later", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -235,7 +243,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("bulkOrder_orderDocLater_No")]
-        [NUnit.Framework.TestCaseAttribute("9497872", "firstTester", "lastTester", "tnadiscovery100@gmail.com", "abcd", "CAB 120", "CAB 120/1", "CAB 120/2", "CAB 120/3", "CAB 120/4", "CAB 120/5", "CAB 120/6", "CAB 120/7", "CAB 120/8", "CAB 120/9", "CAB 120/10", "CAB 120/11", "CAB 120/12", "CAB 120/13", "CAB 120/14", "CAB 120/15", "CAB 120/16", "CAB 120/17", "CAB 120/18", "CAB 120/19", "CAB 120/20", null)]
+        [NUnit.Framework.TestCaseAttribute("9503041", "firstTester", "lastTester", "tnadiscovery100@gmail.com", "abcd", "CAB 120", "CAB 120/1", "CAB 120/2", "CAB 120/3", "CAB 120/4", "CAB 120/5", "CAB 120/6", "CAB 120/7", "CAB 120/8", "CAB 120/9", "CAB 120/10", "CAB 120/11", "CAB 120/12", "CAB 120/13", "CAB 120/14", "CAB 120/15", "CAB 120/16", "CAB 120/17", "CAB 120/18", "CAB 120/19", "CAB 120/20", null)]
         public virtual void BulkOrder_OrderDocLater_No(
                     string readerTicketNo, 
                     string firstName, 
@@ -294,7 +302,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("DocRef19", docRef19);
             argumentsOfScenario.Add("DocRef20", docRef20);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("bulkOrder_orderDocLater_No", null, tagsOfScenario, argumentsOfScenario);
-#line 30
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -317,15 +325,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 31
- testRunner.Then("check the page title, click on Order documents later", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
 #line 32
- testRunner.And("check the page title, click on No, I’d like to order my documents now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\" and complete booking", readerTicketNo, firstName, lastName, email, telNo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
- testRunner.And(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\",\"{11}\",\"" +
-                            "{12}\",\"{13}\",\"{14}\",\"{15}\",\"{16}\",\"{17}\",\"{18}\",\"{19}\",\"{20}\"", series, docRef1, docRef2, docRef3, docRef4, docRef5, docRef6, docRef7, docRef8, docRef9, docRef10, docRef11, docRef12, docRef13, docRef14, docRef15, docRef16, docRef17, docRef18, docRef19, docRef20), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("check the page title, click on Order documents later", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 34
+ testRunner.And("check the page title, click on No, I’d like to order my documents now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
+    testRunner.And(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\"", series, docRef1, docRef2, docRef3, docRef4, docRef5, docRef6, docRef7, docRef8, docRef9, docRef10), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
+ testRunner.And(string.Format("enter all the doc reference numbers \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\",\"{5}\",\"{6}\",\"{7" +
+                            "}\",\"{8}\",\"{9}\"", docRef11, docRef12, docRef13, docRef14, docRef15, docRef16, docRef17, docRef18, docRef19, docRef20), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 37
+  testRunner.And("check the page title order summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -333,12 +350,18 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("bulkOrder_cancelVisit")]
-        public virtual void BulkOrder_CancelVisit()
+        [NUnit.Framework.TestCaseAttribute("9487253", "Tester", "lastTester", "tnadiscovery100@gmail.com", "abcd", null)]
+        public virtual void BulkOrder_CancelVisit(string readerTicketNo, string firstName, string lastName, string email, string telNo, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("readerTicketNo", readerTicketNo);
+            argumentsOfScenario.Add("firstName", firstName);
+            argumentsOfScenario.Add("lastName", lastName);
+            argumentsOfScenario.Add("email", email);
+            argumentsOfScenario.Add("telNo", telNo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("bulkOrder_cancelVisit", null, tagsOfScenario, argumentsOfScenario);
-#line 39
+#line 43
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -361,14 +384,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 40
-testRunner.Then("check the page title, click on Order documents now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 44
+ testRunner.When(string.Format("enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\" and complete booking", readerTicketNo, firstName, lastName, email, telNo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
-testRunner.And("click on cancel your visit, check the page title and proceed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+ testRunner.Then("check the page title, click on Order documents now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 42
-testRunner.And("I can see the message Your visit has been cancelled on the top of the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+ testRunner.And("click on cancel your visit, check the page title and proceed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 48
+ testRunner.And("I can see the message Your visit has been cancelled on the top of the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

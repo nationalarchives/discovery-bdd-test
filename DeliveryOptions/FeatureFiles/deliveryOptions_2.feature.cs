@@ -188,7 +188,6 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("AccessUnderReviewStaffin")]
-        [NUnit.Framework.TestCaseAttribute("C4216021", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
         [NUnit.Framework.TestCaseAttribute("C5040641", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
         [NUnit.Framework.TestCaseAttribute("C1960950", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
         public virtual void AccessUnderReviewStaffin(string iaId, string message, string xPath, string button, string title, string[] exampleTags)

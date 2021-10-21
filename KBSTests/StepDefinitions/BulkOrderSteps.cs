@@ -37,7 +37,8 @@ namespace DiscoveryBDDTest.StepDefinitions
         public void WhenClickOnDateInTheFirstRow()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 600)");
+            js.ExecuteScript("window.scrollTo(0, 900)");
+
             _driver.FindElement(By.XPath("//button[@type='submit' and @id='first-available'] ")).Click();
 
 
@@ -51,14 +52,15 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver.FindElement(By.XPath("//input[@name='Ticket' and @type='text'] ")).SendKeys(readerTicketNo);
             _driver.FindElement(By.Id("FirstName")).SendKeys(firstName);
             _driver.FindElement(By.XPath("//input[@name='LastName' and @type='text']")).SendKeys(lastName);
-            js.ExecuteScript("window.scrollTo(0, 2700)");
+            //js.ExecuteScript("window.scrollTo(0, 2700)");
             _driver.FindElement(By.XPath(" //input[@name='Email' and @type='text']")).SendKeys(email);
             _driver.FindElement(By.XPath("  //input[@name='Phone' and @type='text'] ")).SendKeys(telNo);
             //_driver.FindElement(By.Id("terms-conditions")).Selected = true;
-               // ("checkbox").checked = true;
-            _driver.FindElement(By.Id("terms-conditions")).Click();
+            // ("checkbox").checked = true;
+            // _driver.FindElement(By.Id("terms-conditions")).Click();
+            _driver.FindElement(By.Id("terms-conditions")).SendKeys(Keys.Space);
             Thread.Sleep(2000);
-
+            js.ExecuteScript("window.scrollTo(0, 1700)");
             _driver.FindElement(By.XPath("//button[@name='submitbutton'] ")).Click();
 
 
@@ -67,11 +69,16 @@ namespace DiscoveryBDDTest.StepDefinitions
         [Then(@"check the page title, click on Order documents now")]
         public void ThenCheckThePageTitleClickOnOrderDocumentsNow()
         {
-            ScenarioContext.Current.Pending();
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Your visit details - bulk order booking"));
+            // string provisionalBookingMsg = _driver.FindElement(By.ClassName("row")).Text;
+            // Assert.IsTrue(provisionalBookingMsg.Contains("You have made a provisional booking to visit the reading rooms"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 1100)");
+            _driver.FindElement(By.LinkText("Order documents now")).Click();
         }
-        
-        [Then(@"enter ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
-        public void ThenEnter(string series, string DocRef1, string DocRef2, string DocRef3, string DocRef4, string DocRef5, string DocRef6, string DocRef7, string DocRef8, string DocRef9, string DocRef10, string DocRef11, string DocRef12, string DocRef13, string DocRef14, string DocRef15, string DocRef16, string DocRef17, string DocRef18, string DocRef19, string DocRef20)
+        [Then(@"enter ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
+        public void ThenEnter(string series, string DocRef1, string DocRef2, string DocRef3, string DocRef4, string DocRef5, string DocRef6, string DocRef7, string DocRef8, string DocRef9, string DocRef10)
         {
             _driver.FindElement(By.Id("Series")).SendKeys(series);
             _driver.FindElement(By.Id("DocumentReference1")).SendKeys(DocRef1);
@@ -84,6 +91,11 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver.FindElement(By.Id("DocumentReference8")).SendKeys(DocRef8);
             _driver.FindElement(By.Id("DocumentReference9")).SendKeys(DocRef9);
             _driver.FindElement(By.Id("DocumentReference10")).SendKeys(DocRef10);
+        }
+
+        [Then(@"enter all the doc reference numbers ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
+        public void ThenEnterAllTheDocReferenceNumbers(string DocRef11, string DocRef12, string DocRef13, string DocRef14, string DocRef15, string DocRef16, string DocRef17, string DocRef18, string DocRef19, string DocRef20)
+        {
             _driver.FindElement(By.Id("DocumentReference11")).SendKeys(DocRef11);
             _driver.FindElement(By.Id("DocumentReference12")).SendKeys(DocRef12);
             _driver.FindElement(By.Id("DocumentReference13")).SendKeys(DocRef13);
@@ -94,69 +106,71 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver.FindElement(By.Id("DocumentReference18")).SendKeys(DocRef18);
             _driver.FindElement(By.Id("DocumentReference19")).SendKeys(DocRef19);
             _driver.FindElement(By.Id("DocumentReference20")).SendKeys(DocRef20);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 2300)");
+            Thread.Sleep(2000);
 
+            _driver.FindElement(By.XPath("(//button[@type='submit'])[2]")).Click();
+        }
+        [Then(@"check the page title order summary")]
+        public void ThenCheckThePageTitleOrderSummary()
+        {
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Order summary - bulk order booking - The National Archives"));
+        }
+
+        [Then(@"click on cancel your visit, check the page title and proceed")]
+        public void ThenClickOnCancelYourVisitCheckThePageTitleAndProceed()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 3400)");
+            _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.XPath("//button[@type='submit']")).Click();
+
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Cancellation confirmation - bulk order booking - The National Archives"));
+        }
+
+        [Then(@"I can see the message Your visit has been cancelled on the top of the page")]
+        public void ThenICanSeeTheMessageYourVisitHasBeenCancelledOnTheTopOfThePage()
+        {
+
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Cancellation confirmation - bulk order booking - The National Archives"));
 
         }
-        //[Then(@"enter forty document references ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",")]
-        //public void ThenEnterFortyDocumentReferences(string series, string DocRef1, string DocRef2, string DocRef3, string DocRef4, string DocRef5, string DocRef6, string DocRef7, string DocRef8, string DocRef9, string DocRef10, string DocRef11, string DocRef12, string DocRef13, string DocRef14, string DocRef15, string DocRef16, string DocRef17, string DocRef18, string DocRef19, string DocRef20, string DocRef21, string DocRef22, string DocRef23, string DocRef24, string DocRef25, string DocRef26, string DocRef27, string DocRef28, string DocRef29, string DocRef30, string DocRef31, string DocRef32, string DocRef33, string DocRef34, string DocRef35, string DocRef36, string DocRef37, string DocRef38, string DocRef39, string DocRef40)
-        //{
-        //    _driver.FindElement(By.Id("Series")).SendKeys(series);
-        //    _driver.FindElement(By.Id("DocumentReference1")).SendKeys(DocRef1);
-        //    _driver.FindElement(By.Id("DocumentReference2")).SendKeys(DocRef2);
-        //    _driver.FindElement(By.Id("DocumentReference3")).SendKeys(DocRef3);
-        //    _driver.FindElement(By.Id("DocumentReference4")).SendKeys(DocRef4);
-        //    _driver.FindElement(By.Id("DocumentReference5")).SendKeys(DocRef5);
-        //    _driver.FindElement(By.Id("DocumentReference6")).SendKeys(DocRef6);
-        //    _driver.FindElement(By.Id("DocumentReference7")).SendKeys(DocRef7);
-        //    _driver.FindElement(By.Id("DocumentReference8")).SendKeys(DocRef8);
-        //    _driver.FindElement(By.Id("DocumentReference9")).SendKeys(DocRef9);
-        //    _driver.FindElement(By.Id("DocumentReference10")).SendKeys(DocRef10);
-        //    _driver.FindElement(By.Id("DocumentReference11")).SendKeys(DocRef11);
-        //    _driver.FindElement(By.Id("DocumentReference12")).SendKeys(DocRef12);
-        //    _driver.FindElement(By.Id("DocumentReference13")).SendKeys(DocRef13);
-        //    _driver.FindElement(By.Id("DocumentReference14")).SendKeys(DocRef14);
-        //    _driver.FindElement(By.Id("DocumentReference15")).SendKeys(DocRef15);
-        //    _driver.FindElement(By.Id("DocumentReference16")).SendKeys(DocRef16);
-        //    _driver.FindElement(By.Id("DocumentReference17")).SendKeys(DocRef17);
-        //    _driver.FindElement(By.Id("DocumentReference18")).SendKeys(DocRef18);
-        //    _driver.FindElement(By.Id("DocumentReference19")).SendKeys(DocRef19);
-        //    _driver.FindElement(By.Id("DocumentReference20")).SendKeys(DocRef20);
-        //    _driver.FindElement(By.Id("DocumentReference21")).SendKeys(DocRef21);
-        //    _driver.FindElement(By.Id("DocumentReference22")).SendKeys(DocRef22);
-        //    _driver.FindElement(By.Id("DocumentReference23")).SendKeys(DocRef23);
-        //    _driver.FindElement(By.Id("DocumentReference24")).SendKeys(DocRef24);
-        //    _driver.FindElement(By.Id("DocumentReference25")).SendKeys(DocRef25);
-        //    _driver.FindElement(By.Id("DocumentReference26")).SendKeys(DocRef26);
-        //    _driver.FindElement(By.Id("DocumentReference27")).SendKeys(DocRef27);
-        //    _driver.FindElement(By.Id("DocumentReference28")).SendKeys(DocRef28);
-        //    _driver.FindElement(By.Id("DocumentReference29")).SendKeys(DocRef29);
-        //    _driver.FindElement(By.Id("DocumentReference30")).SendKeys(DocRef30);
-        //    _driver.FindElement(By.Id("DocumentReference31")).SendKeys(DocRef31);
-        //    _driver.FindElement(By.Id("DocumentReference32")).SendKeys(DocRef32);
-        //    _driver.FindElement(By.Id("DocumentReference33")).SendKeys(DocRef33);
-        //    _driver.FindElement(By.Id("DocumentReference34")).SendKeys(DocRef34);
-        //    _driver.FindElement(By.Id("DocumentReference35")).SendKeys(DocRef35);
-        //    _driver.FindElement(By.Id("DocumentReference36")).SendKeys(DocRef36);
-        //    _driver.FindElement(By.Id("DocumentReference37")).SendKeys(DocRef37);
-        //    _driver.FindElement(By.Id("DocumentReference38")).SendKeys(DocRef38);
-        //    _driver.FindElement(By.Id("DocumentReference39")).SendKeys(DocRef39);
-        //    _driver.FindElement(By.Id("DocumentReference40")).SendKeys(DocRef40);
-        //}
+
+
         [Then(@"check the page title, click on Order documents later")]
         public void ThenCheckThePageTitleClickOnOrderDocumentsLater()
         {
-            ScenarioContext.Current.Pending();
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Your visit details - bulk order booking - The National Archives"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 1100)");
+            _driver.FindElement(By.LinkText("Order documents later")).Click();
         }
 
         [Then(@"check the page title, click on Yes, I’d like to order my documents later")]
         public void ThenCheckThePageTitleClickOnYesIDLikeToOrderMyDocumentsLater()
         {
-            ScenarioContext.Current.Pending();
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Continue later - bulk order booking - The National Archives"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 900)");
+            _driver.FindElement(By.LinkText("Yes, I’d like to order my documents later")).Click();
+            string pgTitle1 = _driver.Title;
+            Assert.IsTrue(pgTitle1.Contains("Continue later confirmation - The National Archives"));
         }
         [Then(@"check the page title, click on No, I’d like to order my documents now")]
         public void ThenCheckThePageTitleClickOnNoIDLikeToOrderMyDocumentsNow()
         {
-            ScenarioContext.Current.Pending();
+            string pgTitle = _driver.Title;
+            Assert.IsTrue(pgTitle.Contains("Continue later - bulk order booking - The National Archives"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 900)");
+            _driver.FindElement(By.LinkText("No, I’d like to order my documents now")).Click();
         }
 
     }

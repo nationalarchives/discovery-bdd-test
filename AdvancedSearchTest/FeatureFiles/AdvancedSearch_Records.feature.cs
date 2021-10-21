@@ -467,45 +467,6 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("AS_Records_SearchTNA_Taxonomy_Witchcraft")]
-        public virtual void AS_Records_SearchTNA_Taxonomy_Witchcraft()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AS_Records_SearchTNA_Taxonomy_Witchcraft", "Taxonomy subjects", ((string[])(null)));
-#line 80
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 82
- testRunner.When("typed \"*\", click on TNA, Click on All records and click on Witchcraft", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 83
- testRunner.Then("check the third record contains witchcraft", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("AS_Records_SpecificDate_SearchAll")]
         [NUnit.Framework.TestCaseAttribute("Nelson", "Mandela", "1986", null)]
         [NUnit.Framework.TestCaseAttribute("George", "William", "1900", null)]
@@ -513,7 +474,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AS_Records_SpecificDate_SearchAll", "Search a specific Date", exampleTags);
-#line 85
+#line 86
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -536,13 +497,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 87
+#line 88
  testRunner.When(string.Format("typed \"{0}\" , \"{1}\", \"{2}\"", allOfTheseWords, anyOfTheseWords, specificDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 88
+#line 89
  testRunner.Then(string.Format("check for the filter contains \"{0}\"", specificDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 89
+#line 90
  testRunner.And(string.Format("check the second record contains \"{0}\" , \"{1}\"", allOfTheseWords, anyOfTheseWords), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -557,7 +518,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AS_Reference_SearchAll", "Any of these References", exampleTags);
-#line 96
+#line 97
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -580,10 +541,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 98
+#line 99
  testRunner.When(string.Format("enter \"{0}\"", reference), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 99
+#line 100
  testRunner.Then(string.Format("check in the third record for \"{0}\"", reference), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -598,7 +559,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AS_Search_Find_DontFindWord", null, exampleTags);
-#line 106
+#line 107
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -621,16 +582,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 107
+#line 108
  testRunner.When(string.Format("enter \"{0}\",\"{1}\" and Search", allOfTheseWords, exactWordOrPhase), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 108
+#line 109
  testRunner.Then(string.Format("I should see the \"{0}\"", exactWordOrPhase), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 109
+#line 110
  testRunner.When(string.Format("I click on AdvancedSearch again and enter \"{0}\"", dontFindAnyOfTheseWords), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 110
+#line 111
  testRunner.Then(string.Format("I shouldn\'t see \"{0}\"", dontFindAnyOfTheseWords), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -643,7 +604,7 @@ this.FeatureBackground();
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AS_SearchOtherArchives", null, ((string[])(null)));
-#line 117
+#line 118
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -666,10 +627,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 118
+#line 119
  testRunner.When("I enter \"*\" and click on other archives", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 119
+#line 120
  testRunner.Then("I should see the filter Other Archives and Records shouldn\'t be zero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

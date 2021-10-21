@@ -34,7 +34,7 @@ Scenario Outline: AccessUnderReviewStaffin
 
 	Examples:
 		| iaId     | message                                             | xPath                                  | button             | title                                |
-		| C4216021 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
+		#| C4216021 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
 		| C5040641 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
 		| C1960950 | This record is closed whilst access is under review | (//div[@class='order-option-wrapper']) | Submit FOI request | Freedom of Information (FOI) Request |
 
@@ -357,7 +357,7 @@ Scenario Outline: InUse
 
 	Examples:
 		| iaId     | xPath                                     | message                                                     | xPathDO                                       | button                   | title                 |
-		| C4771085 | (//div[@class='order-option-wrapper'])[1] | This record is currently in use                             | //div[@id='staffViewOfOtherUserDOsWrapper']/a | order records in advance | page check request |
+		| C4771085 | (//div[@class='order-option-wrapper'])[1] | This record is currently in use                             | //div[@id='staffViewOfOtherUserDOsWrapper']/a | order records in advance | page check request    |
 		| C4771085 | (//div[@class='order-option-wrapper'])[1] | Talk to a member of staff to find out when it may be free   | //div[@id='staffViewOfOtherUserDOsWrapper']/a | visit Kew                | The National Archives |
 		| C4771085 | (//div[@class='order-option-wrapper'])[2] | This record has not been digitised and cannot be downloaded | //div[@id='staffViewOfOtherUserDOsWrapper']/a | reader's ticket          | The National Archives |
 		#| C4771085 | (//div[@class='order-option-wrapper'])[2] | You can order records in advance to be ready for you when you visit Kew | //div[@id='staffViewOfOtherUserDOsWrapper']/a | Order in advance         | The National Archives |
@@ -410,12 +410,12 @@ Scenario Outline: offSite
 	And check for the page "<title>"
 
 	Examples:
-		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                                            | button                   | title                              |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[1] | You may place an advanced order request to see this record at The National Archives. It will take four working days to bring this record to The National Archives. |                          |                                    |
+		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                                            | button | title |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[1] | You may place an advanced order request to see this record at The National Archives. It will take four working days to bring this record to The National Archives. |        |       |
 		#| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[2] | You may place an advance order request to see this record at The National Archives. It will take four working days to bring this record to The National Archives.  | Advanced order           | Book a visit to view our documents |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded                                                                                                        | order records in advance | Book a visit to view our documents |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take four working days to be delivered to The National Archives.                                                           | visit Kew                | Visit us                           |
-		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                                                                           | reader's ticket          | The National Archives              |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record has not been digitised and cannot be downloaded                                              | order records in advance | Book a visit to view our documents |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take four working days to be delivered to The National Archives. | visit Kew                | Visit us                           |
+		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | You can order records in advance to be ready for you when you visit Kew.                                 | reader's ticket          | The National Archives              |
 		#| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | Or, you can request a quotation for a copy to be sent to you.                                                                                                       | Order records in advance | The National Archives              |
 		| C2698319 | (//a[@class='discoveryPrimaryCallToActionLink'])[5] | (//div[@class='order-option-wrapper'])[3] | This record is stored off site and will take three working days to be delivered to The National Archives.                                                           | Order a copy             | Page Check Request                 |
 
@@ -455,7 +455,7 @@ Scenario Outline: TooLargeToCopyOriginal
 
 	Examples:
 		| iaId     | xPathDO                                             | xPath                                     | message                                                                                                                                     | button          | title                 |
-		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[1] | Your order should be ready to view in 60 minutes.                                                                              |                 |                       |
+		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[1] | Your order should be ready to view in 60 minutes.                                                                                           |                 |                       |
 		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[2] | This document is either too large or of a condition or media type that means that our record copying services are unable to provide a copy. | reader's ticket | The National Archives |
 		| C4560825 | (//a[@class='discoveryPrimaryCallToActionLink'])[4] | (//div[@class='order-option-wrapper'])[2] | This record is available to order and view                                                                                                  | Image Library   | The National Archives |
 
