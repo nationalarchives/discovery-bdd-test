@@ -41,3 +41,8 @@ you need to clone the project
 		  $dotnet test  
 	
  - Then you can able to run your tests without opening visual studio
+
+## Post test cleanup
+If running the tests leaves multiple Chrome windows open run these commands on an elevate command prompt to close the windows
+ - taskkill /IM chrome.exe /F
+ - taskkill /IM chromedriver.exe /F
