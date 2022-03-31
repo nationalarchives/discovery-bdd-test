@@ -43,6 +43,7 @@ you need to clone the project
 	
  - Then you can able to run your tests without opening visual studio
  
+ ## Tidy up
  The tests open Chrome for every test and some (a lot) remain open after testing. To close these windows run these commands -
  taskkill /IM chrome.exe /F
  taskkill /IM chromedriver.exe /F
