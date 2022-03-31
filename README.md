@@ -45,5 +45,7 @@ you need to clone the project
  
  ## Tidy up
  The tests open Chrome for every test and some (a lot) remain open after testing. To close these windows run these commands -
+ 
  taskkill /IM chrome.exe /F
+ 
  taskkill /IM chromedriver.exe /F
