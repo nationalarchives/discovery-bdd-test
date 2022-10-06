@@ -13,7 +13,8 @@ you need to clone the project
  - open the sln file with visual studio.
  - Ensure that the Chrome browser is available locally
  - Download and unzip chromedriver locally: https://chromedriver.chromium.org/downloads
-	- Download it locally in the path C:\\chromedriver-83.0\\  which is mentioned in "appsettings.json" file
+	- Download it locally in the path C:\\chromedriver-83.0\\  
+	- Update the 12 "appsettings.json" files to set "googleDriverPath": "C:\\chromedriver-83.0\\". Just do a find and replace.
 	
       NOTE: Ensure the chromedriver version is compatible with the local Chrome browser version
  
