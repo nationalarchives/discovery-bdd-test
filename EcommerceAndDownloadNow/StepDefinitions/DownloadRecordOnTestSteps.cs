@@ -15,6 +15,11 @@ namespace Nunit_NetCore.StepDefinitions
         {
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDetailsPageOffsite("r", iaId);
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
             _driver.FindElement(By.Id("signin")).Click();
             webDriver.SingleSignOn(_driver);
         }
@@ -31,9 +36,10 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.XPath("//input[@value='Checkout']")).Click();
             _driver.FindElement(By.Id("confirm-terms")).Click();
             _driver.FindElement(By.XPath("//input[@value='Submit order']")).Click();
-           // _driver.FindElement(By.XPath("//a[@id='link_PAYPAL-EXPRESS']/font")).Click();
+            //_driver.FindElement(By.XPath("//a[@id='link_PAYPAL-EXPRESS']/font")).Click();
             //Thread.Sleep(2000);
-            //_driver.FindElement(By.XPath("//input[@id='PMMakePayment']")).Click();
+           // _driver.FindElement(By.XPath("//input[@id='PMMakePayment']")).Click();
+
         }
         
         [Then(@"check for the message Thank you for your order and check we are able to Download")]
@@ -45,7 +51,7 @@ namespace Nunit_NetCore.StepDefinitions
             string verifyDownload = _driver.FindElement(By.XPath("(//a[@class='download-part discoveryPrimaryCallToActionLink'])[1]")).Text;
             Assert.AreEqual("Download", verifyDownload);
             _driver.FindElement(By.LinkText("Download")).Click();
-            _driver.Quit();
+           // _driver.Quit();
         }
         [Then(@"go to your orders in the account and check for the ""(.*)""")]
         public void ThenGoToYourOrdersInTheAccountAndCheckForThe(string orderDetails)
@@ -88,6 +94,11 @@ namespace Nunit_NetCore.StepDefinitions
             var webDriver = new PageNavigator();
             _driver.FindElement(By.Id("signin")).Click();
             webDriver.SingleSignOn(_driver);
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
 
     }

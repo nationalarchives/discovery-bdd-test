@@ -291,7 +291,6 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("England", "Special", "Local", "University", "Private", "National", null)]
         [NUnit.Framework.TestCaseAttribute("Northern Ireland", "Special", "Local", "University", "Private", "National", null)]
         [NUnit.Framework.TestCaseAttribute("Scotland", "Special", "Local", "University", "Private", "National", null)]
-        [NUnit.Framework.TestCaseAttribute("Wales", "Special", "Local", "University", "Private", "National", null)]
         public virtual void HomeNation(string homeNation, string special, string local, string university, string typeOfArchiveprivate, string national, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

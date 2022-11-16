@@ -24,12 +24,23 @@ namespace Nunit_NetCore.StepDefinitions
         {
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDetailsPageOffsite("r", iaId);
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
         }
         [Given(@"I am on eCommerce page for to upload death certificate ""(.*)""")]
         public void GivenIAmOnECommercePageForToUploadDeathCertificate(string iaId)
         {
             var pageNavigator = new PageNavigator();
             _driver = pageNavigator.GoToDetailsPageOffsite("r", iaId);
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
             Image2Path = pageNavigator.Configuration.GetValue<string>("Image2Path");
         }
 
@@ -101,18 +112,38 @@ namespace Nunit_NetCore.StepDefinitions
             Thread.Sleep(2000);
             string strPageTitle = _driver.Title;
             Assert.IsTrue(strPageTitle.Contains("Thank you for your order"));
+            _driver.Quit();
         }
 
         [When(@"add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept")]
         public void WhenAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
         {
-            _driver.FindElement(By.XPath("//a[@class='discoveryPrimaryCallToActionLink']")).Click();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 500)");
+             // _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            _driver.FindElement(By.LinkText("Add to basket")).Click();
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
             _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
             _driver.FindElement(By.XPath("//input[@type='submit' and @value='Checkout'] ")).Click();
             _driver.FindElement(By.XPath("//input[@id='DeliveryEmail']")).SendKeys("tnadiscovery100@gmail.com");
         }
+        [When(@"scroll down add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept")]
+        public void WhenScrollDownAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 2600)");
+            _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
+           // _driver.FindElement(By.XPath("//input[@type='submit' and @value='Add to basket']")).Click();
+            //_driver.FindElement(By.LinkText("Add to basket")).Click();
+            _driver.FindElement(By.Id("miniBasketLink")).Click();
+            // click view basket
+            _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 700)");
+            _driver.FindElement(By.XPath("//input[@type='submit' and @value='Checkout'] ")).Click();
+            _driver.FindElement(By.XPath("//input[@id='DeliveryEmail']")).SendKeys("tnadiscovery100@gmail.com");
+        }
+
 
         [When(@"T&C, Submit order pay through paypal")]
         public void WhenTCSubmitOrderPayThroughPaypal()
@@ -149,9 +180,27 @@ namespace Nunit_NetCore.StepDefinitions
         {
             var pageNavigator = new PageNavigator();
             _driver = pageNavigator.GoToFOIRegisterPage();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
             Image1Path = pageNavigator.Configuration.GetValue<string>("Image1Path");
            
         }
+        [Given(@"I am on Request a search of closed records for register FOI page")]
+        public void GivenIAmOnRequestASearchOfClosedRecordsForRegisterFOIPage()
+        {
+            var pageNavigator = new PageNavigator();
+            _driver = pageNavigator.GoToNewFOIRegisterPage();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+            Image1Path = pageNavigator.Configuration.GetValue<string>("Image1Path");
+        }
+
 
         [When(@"I enter the details ""(.*)"", ""(.*)"",""(.*)"",""(.*)"",""(.*)"", upload proof of identity")]
         public void WhenIEnterTheDetailsUploadProofOfIdentity(string searchFirstName, string searchLastName, string gender, string dOB, string dataSubjectAccess)
@@ -180,22 +229,33 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
             _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
             _driver.FindElement(By.Id("email")).SendKeys(email);
-            _driver.FindElement(By.Id("confirmemail")).SendKeys(confirmEmail);
-            _driver.FindElement(By.Id("address1")).SendKeys(address);
-            _driver.FindElement(By.Id("town")).SendKeys(TownCity);
-            _driver.FindElement(By.Id("postcode")).SendKeys(postcode);
+
+           // IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+           // Thread.Sleep(2000);
+           //js.ExecuteScript("window.scrollTo(0, 3000)");
+            // Thread.Sleep(2000);
+
+            //  _driver.FindElement(By.Id("Confirm")).Click();
+            // _driver.FindElement(By.Id("confirmemail")).SendKeys(confirmEmail);
+            //_driver.FindElement(By.Id("address1")).SendKeys(address);
+            //_driver.FindElement(By.Id("town")).SendKeys(TownCity);
+            //_driver.FindElement(By.Id("postcode")).SendKeys(postcode);
             Thread.Sleep(2000);
-            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
-            oSelect.SelectByValue(Country);
+           // SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
+            //oSelect.SelectByValue(Country);
         }
 
         [When(@"Submit request")]
         public void WhenSubmitRequest()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 4000)");
-            _driver.FindElement(By.Id("Confirm")).Click();
-            _driver.FindElement(By.XPath("//input[@class='discoveryPrimaryCallToActionLink']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 3500)");
+             //_driver.FindElement(By.Id("Confirm")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.XPath("//input[@value='Submit request']")).Click();
+            //  _driver.FindElement(By.CssSelector("/html/body/div[2]/div[2]/div/div/div[2]/div/form/div/p/input")).Click();
+           
+           // _driver.FindElement(By.ClassName("heading-holding-banner")).Click();
         }
 
         [Then(@"I can see confirmation page")]
@@ -203,7 +263,7 @@ namespace Nunit_NetCore.StepDefinitions
         {
             Thread.Sleep(2000);
             String title = _driver.Title;
-            Assert.IsTrue(title.Contains("DSA1939Confirmation"));
+            Assert.IsTrue(title.Contains("Confirmation"));
             _driver.Quit();
         }
         [Given(@"I am on FOI request page for ""(.*)""")]
@@ -211,25 +271,30 @@ namespace Nunit_NetCore.StepDefinitions
         {
             var pageNavigator = new PageNavigator();
             _driver = pageNavigator.GoToFOIRequestPage(iaId);
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+            Image1Path = pageNavigator.Configuration.GetValue<string>("Image1Path");
             Image2Path = pageNavigator.Configuration.GetValue<string>("Image2Path");
-
-           
 
         }
 
         [When(@"I upload evidence of death, enter ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
         public void WhenIUploadEvidenceOfDeathEnter(string firstName, string lastName, string email, string adress1, string townCity, string postcode, string country)
         {
-            _driver.FindElement(By.Id("chooseFileFOI")).SendKeys(Image2Path);
+          
+            _driver.FindElement(By.XPath("//input[@name='deathCertFile']")).SendKeys(Image2Path);
             _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
             _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
             _driver.FindElement(By.Id("email")).SendKeys(email);
-            _driver.FindElement(By.Id("address1")).SendKeys(adress1);
-            _driver.FindElement(By.Id("town")).SendKeys(townCity);
-            _driver.FindElement(By.Id("postcode")).SendKeys(postcode);
+           // _driver.FindElement(By.Id("address1")).SendKeys(adress1);
+            //_driver.FindElement(By.Id("town")).SendKeys(townCity);
+            //_driver.FindElement(By.Id("postcode")).SendKeys(postcode);
             Thread.Sleep(2000);
-            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
-            oSelect.SelectByValue(country);
+           // SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
+            // oSelect.SelectByValue(country);
 
         }
         [Given(@"I am on page check page for ""(.*)""")]
@@ -237,20 +302,26 @@ namespace Nunit_NetCore.StepDefinitions
         {
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToPageCheckRequestPage(iaId);
+             Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
 
         [When(@"click on Get started, enter details, add to basket, checkout, signed in")]
         public void WhenClickOnGetStartedEnterDetailsAddToBasketCheckoutSignedIn()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 600)");
+            js.ExecuteScript("window.scrollTo(0, 700)");
             _driver.FindElement(By.Id("get-started")).Click();
             Thread.Sleep(2000);
             _driver.FindElement(By.Id("certified")).Click();
             _driver.FindElement(By.Id("CustomerInstructions")).SendKeys("Test Research");
-            _driver.FindElement(By.XPath("//input[@class='text_sketch']")).Click();
-            js.ExecuteScript("window.scrollTo(0, 600)");
-            Thread.Sleep(1000);
+            js.ExecuteScript("window.scrollTo(0, 1400)");
+            _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
+            Thread.Sleep(2000);
+            js.ExecuteScript("window.scrollTo(0, 700)");
             _driver.FindElement(By.XPath("//input[@value='Checkout']")).Click();
             var webDriver = new PageNavigator();
             // _driver.FindElement(By.Id("signin")).Click();
@@ -287,7 +358,8 @@ namespace Nunit_NetCore.StepDefinitions
                                                                      + "Test Research::: testing for something as always Where possible,"
                                                                      + "Test Research::: testing for something as always Where possible,"
                                                                      + "Test Research::: testing for something as always Where possible,") ;
-            _driver.FindElement(By.XPath("//input[@class='text_sketch']")).Click();
+            js.ExecuteScript("window.scrollTo(0, 1400)");
+            _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
             Thread.Sleep(1000);
         }
 
@@ -310,13 +382,131 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("search_dob")).Clear();
             _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
 
-            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_category")));
-            oSelect.SelectByValue(category);
+          //  SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_category")));
+          //  oSelect.SelectByValue(category);
+
+        }
+        //[Then(@"I should see the coronavirus update page")]
+        //public void ThenIShouldSeeTheCoronavirusUpdatePage()
+        //{
+        //    string title = _driver.Title;
+        //    Assert.IsTrue(title.Contains("The National Archives now open, offering greater access to our collections - The National Archives"));
+        //    _driver.Quit();
+        //}
+        [When(@"I enter the details ""(.*)"", ""(.*)"",""(.*)"",""(.*)"",doesn't have dataSubjectAccess, upload proof of identity")]
+        public void WhenIEnterTheDetailsDoesnTHaveDataSubjectAccessUploadProofOfIdentity(string searchFirstName, string searchLastName, string gender, string dOB)
+        {
+            _driver.FindElement(By.Id("firstnames")).SendKeys(searchFirstName);
+
+            _driver.FindElement(By.Id("search_lastname")).SendKeys(searchLastName);
+            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("search_gender")));
+            oSelect.SelectByValue(gender);
+
+            _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 2300)");
+            _driver.FindElement(By.Name("deathCertFile")).SendKeys(Image1Path);
+
+        }
+        [When(@"I enter the following details ""(.*)"", ""(.*)"",""(.*)"" upload proof of identity")]
+        public void WhenIEnterTheFollowingDetailsUploadProofOfIdentity(string searchFirstName, string searchLastName, string dOB)
+        {
+            _driver.FindElement(By.Id("search_firstnames")).SendKeys(searchFirstName);
+
+            _driver.FindElement(By.Id("search_lastname")).SendKeys(searchLastName);
+             _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 2300)");
+           
+            _driver.FindElement(By.Name("deathCertFile")).SendKeys(Image1Path);
+        }
+        [Given(@"I am on PoWSAR page for ""(.*)""")]
+        public void GivenIAmOnPoWSARPageFor(string iaId)
+        {
+            var pageNavigator = new PageNavigator();
+            _driver = pageNavigator.GoToPoWSARPage(iaId);
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+            Image1Path = pageNavigator.Configuration.GetValue<string>("Image1Path");
+            Image2Path = pageNavigator.Configuration.GetValue<string>("Image2Path");
+        }
+        [When(@"I enter the details ""(.*)"", ""(.*)"" ,""(.*)"",""(.*)"",no gender, upload proof of identity")]
+        public void WhenIEnterTheDetailsNoGenderUploadProofOfIdentity(string searchFirstName, string searchLastName, string dOB, string dataSubjectAccess)
+        {
+            _driver.FindElement(By.Id("search_firstnames")).SendKeys(searchFirstName);
+
+            _driver.FindElement(By.Id("search_lastname")).SendKeys(searchLastName);
+          
+            _driver.FindElement(By.Id("search_dob")).SendKeys(dOB);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 2300)");
+            _driver.FindElement(By.Id(dataSubjectAccess)).Click();
+            if (dataSubjectAccess == "notSubject")
+            {
+                _driver.FindElement(By.Name("consentfile")).SendKeys(Image1Path);
+            }
+            _driver.FindElement(By.Name("proofIDfile")).SendKeys(Image1Path);
+        }
+
+        [When(@"confirm Submit request")]
+        public void WhenConfirmSubmitRequest()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 3500)");
+             _driver.FindElement(By.Id("Confirm")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.XPath("//input[@value='Submit request']")).Click();
+        }
+        [Given(@"I am on ClosedRecordRequest page for the above ref")]
+        public void GivenIAmOnClosedRecordRequestPageForTheAboveRef()
+        {
+            var pageNavigator = new PageNavigator();
+            _driver = pageNavigator.GoToClosedRecordRequestPage();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
+
+        [When(@"I enter ""(.*)"", ""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)"",""(.*)""")]
+        public void WhenIEnter(string title, string firstName, string lastName, string email, string address1, string address2, string town, string county, string postcode, string country, string telephone, string additionalInfo)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 600)");
+            _driver.FindElement(By.Id("Ttl")).SendKeys(title);
+            _driver.FindElement(By.Id("firstname")).SendKeys(firstName);
+            _driver.FindElement(By.Id("lastname")).SendKeys(lastName);
+            _driver.FindElement(By.Id("addressr")).Click();
+            _driver.FindElement(By.Id("address1")).SendKeys(address1);
+            _driver.FindElement(By.Id("address2")).SendKeys(address2);
+            _driver.FindElement(By.Id("town")).SendKeys(town);
+            _driver.FindElement(By.Id("county")).SendKeys(county);
+            _driver.FindElement(By.Id("postcode")).SendKeys(postcode);
+
+            SelectElement oSelect = new SelectElement(_driver.FindElement(By.Id("country")));
+            oSelect.SelectByValue(country);
+
+            //_driver.FindElement(By.Id("telnumber")).SendKeys(telephone);
+            _driver.FindElement(By.Id("Enquiry")).SendKeys(additionalInfo);
+
+
 
         }
 
-        
-
+        [Then(@"click on Submit and I should see the confirmation page")]
+        public void ThenClickOnSubmitAndIShouldSeeTheConfirmationPage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.XPath("//input[@value='Submit']")).Click();
+            Thread.Sleep(2000);
+            String title = _driver.Title;
+            Assert.IsTrue(title.Contains("Confirmation"));
+            _driver.Quit();
+        }
 
     }
 }

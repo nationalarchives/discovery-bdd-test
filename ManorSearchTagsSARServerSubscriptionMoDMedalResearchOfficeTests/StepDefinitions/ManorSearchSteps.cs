@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace DiscoveryBDDTest.StepDefinitions
@@ -16,6 +17,15 @@ namespace DiscoveryBDDTest.StepDefinitions
         public void GivenIAmOnManorSearchPage()
         {
             _driver = new PageNavigator().GoToManorSearchPage();
+        }
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
         [When(@"I go to Search by Manor, enter ""(.*)"" and select ""(.*)""")]
         public void WhenIGoToSearchByManorEnterAndSelect(string manorName, string historicCountry)
@@ -51,11 +61,12 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver.FindElement(By.Id("search-documents")).Click();
             _driver.FindElement(By.Id("all-words-records")).SendKeys(allOfTheseWords);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 600)");
+            js.ExecuteScript("window.scrollTo(0, 800)");
             SelectElement hCountry = new SelectElement(_driver.FindElements(By.Name("_ocn"))[1]);
             hCountry.SelectByValue(historicCountry);
             SelectElement typeDocument = new SelectElement(_driver.FindElement(By.Name("_mdt")));
             typeDocument.SelectByValue(typesOfDocument);
+            //js.ExecuteScript("window.scrollTo(0, 600)");
             _driver.FindElement(By.Id("search-date-range-record")).Click();
             _driver.FindElement(By.Id("rc-from-date")).SendKeys(from);
             _driver.FindElement(By.Id("rc-to-date")).SendKeys(to);

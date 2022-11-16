@@ -74,6 +74,18 @@ namespace ManorSearchTagsSARServerSubscriptionMoDMedalTests.FeatureFiles
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+ #line hidden
+#line 7
+ testRunner.Given("I am on manor search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 8
+   testRunner.And("click on cookies, hide this message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("verify Record creators")]
         [NUnit.Framework.CategoryAttribute("mytag")]
@@ -93,7 +105,7 @@ namespace ManorSearchTagsSARServerSubscriptionMoDMedalTests.FeatureFiles
             argumentsOfScenario.Add("manorName", manorName);
             argumentsOfScenario.Add("historicCountry", historicCountry);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("verify Record creators", null, tagsOfScenario, argumentsOfScenario);
-#line 7
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -113,16 +125,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
- testRunner.Given("I am on manor search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ this.FeatureBackground();
 #line hidden
-#line 9
+#line 14
  testRunner.When(string.Format("I go to Search by Manor, enter \"{0}\" and select \"{1}\"", manorName, historicCountry), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 15
  testRunner.Then("check for Records should be zero and Record creators shouldn\'t be zero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 11
+#line 16
  testRunner.And(string.Format("place should be \"{0}\"", historicCountry), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -144,7 +156,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("from", from);
             argumentsOfScenario.Add("to", to);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Manorial documents keyword search And Date Range", null, tagsOfScenario, argumentsOfScenario);
-#line 19
+#line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -164,13 +176,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 20
- testRunner.Given("I am on manor search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ this.FeatureBackground();
 #line hidden
-#line 21
+#line 26
  testRunner.When(string.Format("I go to search for manorial documents, enter \"{0}\",\"{1}\",\"{2}\",\"{3}\",\"{4}\"", allOfTheseWords, historicCountry, typesOfDocument, from, to), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 27
  testRunner.Then(string.Format("check for \"{0}\" in the results and  Date is in the range \"{1}\",\"{2}\" and record c" +
                             "reators shoul be zero", typesOfDocument, from, to), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

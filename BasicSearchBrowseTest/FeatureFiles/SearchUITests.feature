@@ -35,11 +35,11 @@ Scenario Outline: Records_InTheRange_FromAndTo
 	Then I should see the results in the range "<from>" "<to>"
 
 	Examples:
-		| from    | to      |
-		| 05/1910 | 1920    |
-		| 1500    | 1520    |
-		| 1880    | 09/1950 |
+		| from | to   |
+		| 1910 | 1980 |
+		| 1500 | 1520 |
 
+#| 1880    | 09/1950 |
 Scenario Outline: Tests_AllTabs_search
 	When I enter "<word>", "<heldBy>" archives
 	And I enter "<from>" and "<to>" for between fields

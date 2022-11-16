@@ -18,6 +18,14 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver = webDriver.GoToDiscoveryDeliveryOptionsPage("r", iaId);
             _driver.FindElement(By.Id("signin")).Click();
             webDriver.SingleSignOn(_driver);
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
+
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 1000)");
         }
@@ -47,10 +55,11 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             _driver.FindElement(By.XPath("//*[@id='tag-list']/li[1]/div/span/span/a")).Click();
             Thread.Sleep(2000);
-            _driver.FindElement(By.Id("Reason")).SendKeys("This is a test");
-            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 1500)");
-            _driver.FindElement(By.Id("submitTagRemovalRequest")).Click();
+            _driver.SwitchTo().Alert().Accept();
+           // _driver.FindElement(By.Id("Reason")).SendKeys("This is a test");
+            //IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            //js.ExecuteScript("window.scrollTo(0, 1500)");
+            //_driver.FindElement(By.Id("submitTagRemovalRequest")).Click();
            // _driver.SwitchTo().Alert().Accept();
             Thread.Sleep(2000);
         }
@@ -58,10 +67,10 @@ namespace DiscoveryBDDTest.StepDefinitions
         public void ThenCheckForTheMessageYourTagHasBeenDeleted()
         {
             
-          // string actual = _driver.FindElement(By.Id("tag-delete-success-message")).Text;
-            //Assert.IsTrue(actual.Contains("Your tag has been deleted."));
-            string actual = _driver.FindElement(By.Id("reportTagCompletionMessage")).Text;
-            Assert.IsTrue(actual.Contains("Thank you for submitting a tag removal request. If you left contact details, a member of our team will be in touch soon."));
+           string actual = _driver.FindElement(By.Id("tag-delete-success-message")).Text;
+          Assert.IsTrue(actual.Contains("Your tag has been deleted."));
+            //string actual = _driver.FindElement(By.Id("reportTagCompletionMessage")).Text;
+            //Assert.IsTrue(actual.Contains("Thank you for submitting a tag removal request. If you left contact details, a member of our team will be in touch soon."));
             _driver.Quit();
         }
         [When(@"we add ""(.*)"" couple of times")]
@@ -100,6 +109,13 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDiscoveryDeliveryOptionsPage("r", iaId);
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 600)");
         }

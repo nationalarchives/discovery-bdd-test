@@ -32,3 +32,13 @@ Scenario Outline: PersonalDetails
 	Examples:
 		| username                  | password   |
 		| tnadiscovery100@gmail.com | Test123456 |
+
+Scenario Outline: signinSignOut
+
+When I search "<keyWord>" on homePage
+And redirect to results page, go to details page, sign out
+Then I should be on the details page
+Examples: 
+| keyWord |
+| george  |
+| WO 95   |

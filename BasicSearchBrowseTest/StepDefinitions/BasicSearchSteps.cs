@@ -17,7 +17,15 @@ namespace Nunit_NetCore.StepDefinitions
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
         }
-
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
         [When(@"I enter ""(.*)""")]
         public void WhenIEnter(string keyword)
         {
@@ -67,7 +75,8 @@ namespace Nunit_NetCore.StepDefinitions
             // check subjects
             js.ExecuteScript("window.scrollTo(0, 1600)");
             _driver.FindElement(By.Id("subject-filters")).Click();
-            _driver.FindElement(By.Id(subjectsModule)).Click();
+            //js.ExecuteScript("window.scrollTo(0, 800)");
+           // _driver.FindElement(By.Id("subjectsModule")).Click();
             _driver.FindElement(By.Name("Refine subjects")).Click();
             string numberOfRecords1 = _driver.FindElement(By.Id("records-tab")).Text;
             Assert.AreNotEqual(numberOfRecords1, "Records 0");

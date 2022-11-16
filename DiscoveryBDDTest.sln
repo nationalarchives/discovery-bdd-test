@@ -17,13 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CabinetPapersSearch", "Cabi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceAndDownloadNow", "EcommerceAndDownloadNow\EcommerceAndDownloadNow.csproj", "{2F8536F2-B0E9-41B0-8343-641DD9034F10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRAPdfDownloadsANDRedirectTests", "NRAPdfDownloadsANDRedirectTests\NRAPdfDownloadsANDRedirectTests.csproj", "{B3D3C0F3-07F0-4DC4-AB0A-42F2A2A186B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NRAPdfDownloadsANDRedirectTests", "NRAPdfDownloadsANDRedirectTests\NRAPdfDownloadsANDRedirectTests.csproj", "{B3D3C0F3-07F0-4DC4-AB0A-42F2A2A186B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetailsPageWhatToExpectGuideTests", "DetailsPageWhatToExpectGuideTests\DetailsPageWhatToExpectGuideTests.csproj", "{FCD1F867-1528-47D1-9EFC-2F3E9B42F8C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DetailsPageWhatToExpectGuideTests", "DetailsPageWhatToExpectGuideTests\DetailsPageWhatToExpectGuideTests.csproj", "{FCD1F867-1528-47D1-9EFC-2F3E9B42F8C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManorSearchTagsSARServerSubscriptionMoDMedalTests", "ManorSearchTagsSARServerSubscriptionMoDMedalResearchOfficeTests\ManorSearchTagsSARServerSubscriptionMoDMedalTests.csproj", "{3D786E8F-2DB8-48B5-A3F9-5F199109DE5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManorSearchTagsSARServerSubscriptionMoDMedalTests", "ManorSearchTagsSARServerSubscriptionMoDMedalResearchOfficeTests\ManorSearchTagsSARServerSubscriptionMoDMedalTests.csproj", "{3D786E8F-2DB8-48B5-A3F9-5F199109DE5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOptions", "DeliveryOptions\DeliveryOptions.csproj", "{265A0EEB-8FE5-4E03-B8C9-A4FFCBDD6CF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryOptions", "DeliveryOptions\DeliveryOptions.csproj", "{265A0EEB-8FE5-4E03-B8C9-A4FFCBDD6CF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KBSTests", "KBSTests\KBSTests.csproj", "{E967409A-66E3-406F-86D7-753D01545A12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{265A0EEB-8FE5-4E03-B8C9-A4FFCBDD6CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{265A0EEB-8FE5-4E03-B8C9-A4FFCBDD6CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{265A0EEB-8FE5-4E03-B8C9-A4FFCBDD6CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E967409A-66E3-406F-86D7-753D01545A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E967409A-66E3-406F-86D7-753D01545A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E967409A-66E3-406F-86D7-753D01545A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E967409A-66E3-406F-86D7-753D01545A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

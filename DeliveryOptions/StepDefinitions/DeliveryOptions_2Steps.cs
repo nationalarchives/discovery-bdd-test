@@ -17,11 +17,25 @@ namespace DiscoveryBDDTest.StepDefinitions
             var webDriver = new PageNavigator();
             _driver = webDriver.GoToDiscoveryDeliveryOptionsPage("r", iaId);
         }
+       
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+        }
+
+
         [When(@"check the ""(.*)"" for staffin ""(.*)""")]
         public void WhenCheckTheForStaffin(string message, string xPath)
         {
             if (!string.IsNullOrWhiteSpace(xPath))
             {
+                IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+                js.ExecuteScript("window.scrollTo(0, 1400)");
                 string staffinMessage = _driver.FindElement(By.XPath(xPath)).Text;
                 Assert.IsTrue(staffinMessage.Contains(message));
             }
@@ -35,15 +49,17 @@ namespace DiscoveryBDDTest.StepDefinitions
                 string pgTitle = _driver.Title;
                 Assert.IsTrue(pgTitle.Contains(title));
             }
-            _driver.Quit();
+           // _driver.Quit();
         }
         [When(@"click on view delivery options presented to other users ""(.*)""")]
         public void WhenClickOnViewDeliveryOptionsPresentedToOtherUsers(string xPathDO)
         {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 600)");
             _driver.FindElement(By.XPath(xPathDO)).Click();
             Thread.Sleep(2000);
-            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 500)");
+           // IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 600)");
         }
 
         [When(@"check the ""(.*)"" onsite or offsite ""(.*)""")]
@@ -59,7 +75,7 @@ namespace DiscoveryBDDTest.StepDefinitions
             if (!string.IsNullOrWhiteSpace(button))
             {
                 IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-                js.ExecuteScript("window.scrollTo(0, 800)");
+                js.ExecuteScript("window.scrollTo(0, 1300)");
                 _driver.FindElement(By.LinkText(button)).Click();
                 Thread.Sleep(2000);
             }
@@ -121,7 +137,7 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             string actual = _driver.FindElement(By.CssSelector("section > ul a")).Text;
             Thread.Sleep(2000);
-            Assert.IsTrue(actual.Contains("Available to view free at The National Archives"));
+            Assert.IsTrue(actual.Contains("Treasures from The National Archives"));
         }
 
         [Then(@"I shouldn't see Available to view free at TNA")]
@@ -139,8 +155,8 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             Thread.Sleep(2000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            js.ExecuteScript("window.scrollTo(0, 600)");
-            _driver.FindElement(By.XPath("(//a[contains(text(),'More ways to view this record')])[2]")).Click();
+            js.ExecuteScript("window.scrollTo(0, 700)");
+            //_driver.FindElement(By.XPath("(//a[contains(text(),'More ways to view this record')])[2]")).Click();
         }
      
         [When(@"click on ""(.*)"" for offsite")]
@@ -148,6 +164,8 @@ namespace DiscoveryBDDTest.StepDefinitions
         {
             if (!string.IsNullOrWhiteSpace(xpath))
             {
+                IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+                js.ExecuteScript("window.scrollTo(0, 800)");
                 _driver.FindElement(By.XPath(xpath)).Click();
             }
         }

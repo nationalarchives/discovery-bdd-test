@@ -72,6 +72,13 @@ namespace Nunit_NetCore
             var path = Configuration.GetValue<string>("FOI1939Register");
             return OpenChromeAndNavigateTo(baseUrl + path);
         }
+
+        public IWebDriver GoToNewFOIRegisterPage()
+        {
+            var path = Configuration.GetValue<string>("1939RegisterFOI");
+            return OpenChromeAndNavigateTo(baseUrl + path);
+        }
+
         public IWebDriver GoToManorSearchPage()
         {
             var path = Configuration.GetValue<string>("manorSearch");

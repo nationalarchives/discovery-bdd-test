@@ -20,6 +20,11 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"click on download now for zip files")]
         public void WhenClickOnDownloadNowForZipFiles()
         {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
             _driver.FindElement(By.LinkText("Download now")).Click();
             Thread.Sleep(2000);
         }
@@ -27,12 +32,18 @@ namespace Nunit_NetCore.StepDefinitions
         [When(@"click on download now")]
         public void WhenClickOnDownloadNow()
         {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
             _driver.FindElement(By.LinkText("Download now")).Click();
             //_driver.FindElement(By.Id("progressButton")).Click();
             Thread.Sleep(3000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollTo(0, 500)");
             _driver.FindElement(By.LinkText("Download")).Click();
+            Thread.Sleep(5000);
         }
 
         [Then(@"we can able to download the files")]
@@ -41,8 +52,8 @@ namespace Nunit_NetCore.StepDefinitions
             //_driver.FindElement(By.LinkText("Download")).Click();
             Thread.Sleep(3000);
             String title = _driver.Title;
-            Assert.IsTrue(title.Contains("The National Archives"));
-            _driver.Quit();
+            Assert.IsFalse(title.Contains("Sorry, there has been an error on our website"));
+           // _driver.Quit();
         }
     }
 }

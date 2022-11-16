@@ -2,6 +2,8 @@
 
 Scenario Outline: PriceZeroWhenSignedIn and basketLimitExplanation
 	Given I am on digital downloads page "<iaId>"
+		And click on cookies, hide this message
+
 	And check "<price>" and sign in to get this free and basketLimitExplanation
 	When I signed in
 	Then I should see the price should be free
@@ -14,6 +16,8 @@ Scenario Outline: PriceZeroWhenSignedIn and basketLimitExplanation
 
 Scenario Outline: viewYourPastOrders
 	Given I am on digital downloads page "<iaId>"
+			And click on cookies, hide this message
+
 	When I Add to basket, check basket has the "<price>"
 	And I signed in
 	Then check the "<priceAfterSignedIn>", view your past orders
@@ -27,12 +31,16 @@ Scenario Outline: viewYourPastOrders
 
 Scenario: fairPolicyBannerFromHomePage
 	Given I am on home page for DD tests
+			And click on cookies, hide this message
+
 	And  I can see the banner
 	When I click on fair policy link
 	Then I should see free access to digital records page
 
 Scenario Outline: fairPolicyBannerDetailsPage
 	Given I am on digital downloads page "<iaId>"
+			And click on cookies, hide this message
+
 	And  I can see the banner
 	When I click on fair policy link
 	Then I should see free access to digital records page
@@ -45,5 +53,7 @@ Scenario Outline: fairPolicyBannerDetailsPage
 
 Scenario: dataProtection
 	Given I am on home page for DD tests
+			And click on cookies, hide this message
+
 	When click on register
 	Then I can see Data protection message in the register page

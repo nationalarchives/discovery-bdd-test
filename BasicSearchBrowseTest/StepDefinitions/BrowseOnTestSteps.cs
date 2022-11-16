@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Nunit_NetCore.StepDefinitions
@@ -13,10 +14,20 @@ namespace Nunit_NetCore.StepDefinitions
         public void GivenIAmOnTheBrowsePage()
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
+
+
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
+
             _driver.FindElement(By.LinkText("browse")).Click();
         }
-        
-        [When(@"I click on ""(.*)"" under Browse archives")]
+
+       [When(@"I click on ""(.*)"" under Browse archives")]
         public void WhenIClickOnUnderBrowseArchives(string alphabet)
         {
             //_driver.FindElement(By.XPath("//a[contains(@href,'/browse/a/"+ alphabet + "')]")).Click();

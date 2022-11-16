@@ -17,8 +17,15 @@ namespace Nunit_NetCore.StepDefinitions
         public void GivenIAmOnDiscoveryHomePageToTestFindAnArchive()
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
-        
+
+       
         [When(@"I enter ""(.*)"" in the search bar")]
         public void WhenIEnterInTheSearchBar(string country)
         {
@@ -68,6 +75,12 @@ namespace Nunit_NetCore.StepDefinitions
         public void GivenIAmOnFindAnArchivePage()
         {
             _driver = new PageNavigator().GoToFindAnArchivePage();
+
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
 
         [When(@"I search for ""(.*)""")]

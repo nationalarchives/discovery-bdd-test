@@ -2,6 +2,7 @@
 
 Background:
 	Given Given I am on Discovery Home page
+	And click on cookies, hide this message
 
 Scenario Outline: BS_searchWithDifferentKeyWords
 	When I enter "<keyword>"

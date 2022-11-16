@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Nunit_NetCore.StepDefinitions
@@ -15,10 +16,19 @@ namespace Nunit_NetCore.StepDefinitions
         public void GivenNavigateToAdvancedSearchAndClickOnRecordCreatorsTab()
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
+            
+            // Accept cookies
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
+
             _driver.FindElement(By.XPath("//a[contains(text(),'Advanced search')]")).Click();
             _driver.FindElement(By.Id("record-creators-tab")).Click();
         }
-        
+       
         [When(@"I enter ""(.*)"" , select ""(.*)"", ""(.*)"" and ""(.*)"" under record creators")]
         public void WhenIEnterSelectAndUnderRecordCreators(string word, string CreatorType, string Category, string SubCategory)
         {

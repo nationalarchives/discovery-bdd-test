@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Nunit_NetCore.StepDefinitions
@@ -17,6 +18,15 @@ namespace Nunit_NetCore.StepDefinitions
             _driver = webDriver.GoToDiscoveryDetailsPage("r", Iaid);
             _driver.FindElement(By.Id("signin")).Click();
             webDriver.SingleSignOn(_driver);
+        }
+        [Given(@"click on cookies, hide this message")]
+        public void GivenClickOnCookiesHideThisMessage()
+        {
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
         }
         [When(@"I click on bookmark link and add the bookmark")]
         public void WhenIClickOnBookmarkLinkAndAddTheBookmark()

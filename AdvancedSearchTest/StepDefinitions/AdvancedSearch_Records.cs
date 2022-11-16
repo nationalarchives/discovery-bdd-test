@@ -16,6 +16,15 @@ namespace Nunit_NetCore.StepDefinitions
         public void GivenOpenChromeAndNavigateToDiscoveryAdvancedSearch()
         {
             _driver = new PageNavigator().GoToDiscoveryHomePage();
+
+            // Accept cookies
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("accept_optional_cookies")).Click();
+            //_driver.FindElement(By.Id("reject_optional_cookies")).Click();
+            Thread.Sleep(2000);
+            _driver.FindElement(By.Id("hide_this_message")).Click();
+
+
             _driver.FindElement(By.XPath("//a[contains(text(),'Advanced search')]")).Click();
         }
 
@@ -28,10 +37,11 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("search-other-repositories")).Click();
             _driver.FindElement(By.Id("repositories-lookup")).SendKeys(keyword);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            IWebElement L = _driver.FindElement(By.XPath("(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all'])[1]/li"));
-            Thread.Sleep(2000);
-            L.Click();
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            //IWebElement L = _driver.FindElement(By.XPath("(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all'])[1]/li"));
+            //Thread.Sleep(2000);
+            // L.Click();
+            _driver.FindElement(By.LinkText("Gloucestershire Archives")).Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search'  and @value='Search']")).FirstOrDefault().Click();
         }
 
         [Then(@"I can see the filters Other archives and Gloucestershire Archives")]
@@ -57,7 +67,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             string actual = _driver.FindElement(By.XPath("//*[@id='departments']/div[2]/label")).Text;
             Console.WriteLine(actual);
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
         [Then(@"I can see the filters The national archives and filters with gov")]
         public void ThenICanSeeTheFiltersTheNationalArchivesAndFiltersWithGov()
@@ -88,7 +98,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.XPath("//*[@id='page_wrap']/div[2]/div[2]/section[1]/div/div/form/fieldset[9]/div[2]/div/ul/li[3]/label")).Click();
             //_driver.FindElement(By.XPath("//input[@id='cs-C']")).Click();
             // click on search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
             string yourfilters = _driver.FindElement(By.Id("search-refine")).Text;
             Console.WriteLine(yourfilters);
             Assert.IsTrue((yourfilters.Contains("The National Archives")) && (yourfilters.Contains("Closed Document")));
@@ -104,7 +114,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.XPath("//input[@type='checkbox' and @value='O']")).Click();
            // _driver.FindElement(By.Id("cs-O")).Click();
             // click on search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
             string yourfilters = _driver.FindElement(By.Id("search-refine")).Text;
             Console.WriteLine(yourfilters);
             Assert.IsTrue((yourfilters.Contains("The National Archives")) && (yourfilters.Contains("Open Document")));
@@ -141,7 +151,7 @@ namespace Nunit_NetCore.StepDefinitions
             js.ExecuteScript("window.scrollTo(0, 2100)");
             _driver.FindElement(By.Id("cs-P")).Click();
             // click on search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
 
         [Then(@"Check for the filter Partially Open and zero Records")]
@@ -169,7 +179,7 @@ namespace Nunit_NetCore.StepDefinitions
             js.ExecuteScript("window.scrollTo(0, 2100)");
             _driver.FindElement(By.Id("cs-R")).Click();
             // click on search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
 
         [When(@"Check for the filter Retained Document and click on the first record")]
@@ -199,7 +209,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("from-date")).SendKeys(FromDate);
             _driver.FindElement(By.Id("to-date")).SendKeys(ToDate);
             // click on search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
         [Then(@"check the third record is in the range ""(.*)"" and ""(.*)""")]
         public void ThenCheckTheThirdRecordIsInTheRangeAnd(string strFromDate, string strToDate)
@@ -305,7 +315,7 @@ namespace Nunit_NetCore.StepDefinitions
             // click on exclude title
             _driver.FindElement(By.Id("notitlesearch")).Click();
             // click on search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
         [Then(@"the records shouldn't be zero")]
         public void ThenTheRecordsShouldnTBeZero()
@@ -327,7 +337,7 @@ namespace Nunit_NetCore.StepDefinitions
             js.ExecuteScript("window.scrollTo(0, 2000)");
             // click on include content
             _driver.FindElement(By.Id("includecontent")).Click();
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
 
         }
 
@@ -356,7 +366,7 @@ namespace Nunit_NetCore.StepDefinitions
             js.ExecuteScript("window.scrollTo(0, 4100)");
             _driver.FindElement(By.Id("C10117")).Click();
             // search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
 
         [Then(@"check the third record contains witchcraft")]
@@ -388,7 +398,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("search-specific-date")).Click();
             _driver.FindElement(By.Id("from-date")).SendKeys(SpecificDate);
             // search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
 
         }
 
@@ -412,7 +422,7 @@ namespace Nunit_NetCore.StepDefinitions
         {
             _driver.FindElement(By.Id("reference-search-0")).SendKeys(Reference);
             // search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
 
         [Then(@"check in the third record for ""(.*)""")]
@@ -437,7 +447,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("all-words-records")).SendKeys(AllOfTheseWords);
             _driver.FindElement(By.Id("exact-words-records")).SendKeys(exactWordOrPhase);
             // search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
 
         }
 
@@ -455,7 +465,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.LinkText("Advanced search")).Click();
             _driver.FindElement(By.Id("not-words-records-one")).SendKeys(dontFindAnyOfTheseWords);
             // search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit'and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
         }
 
         [Then(@"I shouldn't see ""(.*)""")]
@@ -471,7 +481,7 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("all-words-records")).SendKeys(word);
             _driver.FindElement(By.Id("search-other-repositories")).Click();
             // search
-            _driver.FindElements(By.XPath("//input[@type='submit' and @value='Search']")).FirstOrDefault().Click();
+            _driver.FindElements(By.XPath("//input[@type='submit' and @name='bottom-records-advanced-search' and @value='Search']")).FirstOrDefault().Click();
 
         }
 

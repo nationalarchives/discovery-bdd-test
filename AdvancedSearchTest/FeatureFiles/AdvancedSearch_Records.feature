@@ -77,10 +77,11 @@ Include content
 		| ED 151              |
 		| ECG 3               |
 
-Scenario: AS_Records_SearchTNA_Taxonomy_Witchcraft
-Taxonomy subjects
-	When typed "*", click on TNA, Click on All records and click on Witchcraft
-	Then check the third record contains witchcraft
+# This scenario works with elastic search
+#Scenario: AS_Records_SearchTNA_Taxonomy_Witchcraft
+#Taxonomy subjects
+#	When typed "*", click on TNA, Click on All records and click on Witchcraft
+#	Then check the third record contains witchcraft
 
 Scenario Outline: AS_Records_SpecificDate_SearchAll
 Search a specific Date

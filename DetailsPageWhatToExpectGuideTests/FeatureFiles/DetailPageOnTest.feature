@@ -2,6 +2,8 @@
 
 Scenario Outline: DetailPage_Feedback_NO
 	Given I am on details page for "<iaId>"
+		And click on cookies, hide this message
+
 	When click on NO for could this page be improved?
 	And check for the title Your feedback helps us improve our services. Please share any comments below (optional).
 	And click on send
@@ -14,6 +16,8 @@ Scenario Outline: DetailPage_Feedback_NO
 
 Scenario Outline: DetailPage_Feedback_Yes
 	Given I am on details page for "<iaId>"
+			And click on cookies, hide this message
+
 	When click on YES for could this page be improved?
 	And click on "<checkBox>" under please let us know why you are dissatisfied
 	And click on send
@@ -27,6 +31,8 @@ Scenario Outline: DetailPage_Feedback_Yes
 
 Scenario Outline: DetailPage_letUsKnow
 	Given I am on details page for "<iaId>"
+			And click on cookies, hide this message
+
 	When click on "letUsKnow" under catalogue description
 	And I enter fieldContainsError "<fieldContainsError>"
 	#And enter info "<fieldContainsError>","<whatIsTheError>","<correctInformation>","<name>" and "<email>"
@@ -43,6 +49,8 @@ Scenario Outline: DetailPage_letUsKnow
 
 Scenario Outline: DetailPage_ShowImages_Offsite
 	Given I am on details page for offsite "<iaId>"
+			And click on cookies, hide this message
+
 	When click on preview an image of this record
 	Then check for the title To download this record without a watermark please add it to your basket
 
@@ -53,6 +61,8 @@ Scenario Outline: DetailPage_ShowImages_Offsite
 
 Scenario Outline: DetailPage_ShowImages_staffin
 	Given I am on details page for staffin "<iaId>"
+			And click on cookies, hide this message
+
 	When click on preview an image of this record
 	Then I shouldn't see the message To download this recordwithout watermark please add it to your basket
 
@@ -63,6 +73,8 @@ Scenario Outline: DetailPage_ShowImages_staffin
 
 Scenario Outline: Verify_DetailPage_OnAllLevels
 	Given I am on details page for offsite "<iaId>"
+			And click on cookies, hide this message
+
 	When  verify the reference On Department level
 	And  verify the reference on Division level
 	And verify series level
@@ -76,6 +88,8 @@ Scenario Outline: Verify_DetailPage_OnAllLevels
 
 Scenario Outline: Verify_DetailPage_OnSeriesLevel
 	Given I am on details page for offsite "<iaId>"
+			And click on cookies, hide this message
+
 	When I enter all these "<firstName>", "<lastName>"
 	Then check for "<firstName>","<lastName>" from the first record and check "<filter>"
 
@@ -87,6 +101,8 @@ Scenario Outline: Verify_DetailPage_OnSeriesLevel
 
 Scenario Outline: Verify_DetailPage_OnSeriesLevel_Validation
 	Given I am on details page for offsite "<iaId>"
+			And click on cookies, hide this message
+
 	When I enter charcters in "<fromDate>", "<toDate>"
 	Then check for the validation message You have entered invalid date format
 
