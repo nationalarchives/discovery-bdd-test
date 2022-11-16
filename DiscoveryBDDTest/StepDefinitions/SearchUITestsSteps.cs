@@ -125,11 +125,13 @@ namespace Nunit_NetCore.StepDefinitions
                 }
                 else if ((actualDate.Length <= 11) && (actualDate.Contains("-")))
                 {
-                    int fromRecordDate = Int32.Parse(actualDate.Substring(0, 4));
-                    int toRecordDate = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
+                    char[] trimChar = { '[', ']' };
+                    var trimmedDate = actualDate.Trim(trimChar);
+                    int fromRecordDate = Int32.Parse(trimmedDate.Substring(0, 3));
+                    int toRecordDate = Int32.Parse(trimmedDate.Substring(trimmedDate.Length - 4));
                     Assert.IsTrue((fromRecordDate >= fromDate && fromRecordDate <= toDate) || (toRecordDate >= fromDate && toRecordDate <= toDate) || (fromDate >= fromRecordDate && toDate <= toRecordDate));
                 }
-                else if ((actualDate.Length >= 11) && (actualDate.Length <= 20))
+                else if ((actualDate.Length > 11) && (actualDate.Length <= 20))
                 {
                     int Year = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
                     Assert.IsTrue((Year >= fromDate) && (Year <= toDate));
@@ -192,16 +194,18 @@ namespace Nunit_NetCore.StepDefinitions
                 }
                 else if ((actualDate.Length <= 11) && (actualDate.Contains("-")))
                 {
-                    int fromRecordDate = Int32.Parse(actualDate.Substring(0, 4));
-                    int toRecordDate = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
+                    char[] trimChar = { '[', ']'};
+                    var trimmedDate = actualDate.Trim(trimChar);
+                    int fromRecordDate = Int32.Parse(trimmedDate.Substring(0, 3));
+                    int toRecordDate = Int32.Parse(trimmedDate.Substring(trimmedDate.Length-4));
                     Assert.IsTrue((fromRecordDate >= fromDate && fromRecordDate <= toDate) || (toRecordDate >= fromDate && toRecordDate <= toDate) || (fromDate >= fromRecordDate && toDate <= toRecordDate));
                 }
-                else if ((actualDate.Length >= 11) && (actualDate.Length <= 22))
+                else if ((actualDate.Length > 11) && (actualDate.Length <= 22))
                 {
-                    int Year = Int32.Parse(actualDate.Substring(actualDate.Length - 4));
+                    int Year = Int32.Parse(actualDate.Substring(0,4));
                     Assert.IsTrue((Year >= fromDate) && (Year <= toDate));
                 }
-                else if ((actualDate.Length >= 22) && (actualDate.Contains("-")))
+                else if ((actualDate.Length > 22) && (actualDate.Contains("-")))
                 {
                     string fromDateBeforeHyphen = actualDate.Split("\\-")[0];
 

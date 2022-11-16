@@ -136,3 +136,13 @@ Scenario Outline: BS_RecordOpenedWithinADateRange
 Scenario: BS_RecordsAndRecordCreatorsDatesUnknown
 	When enter "*", I am under Records tab check for the filter Dates unknown
 	Then I am under record creators tab check for the filter Dates unknown
+
+Scenario Outline: BS_RecordOpeningDate_ExportResults
+	When enter "*", filter by TNA
+	And enter "<specificDate>" under Record opening date
+	Then click on export results and check the downloaded file manually 
+	Examples: 
+	| specificDate |
+	| 21/08/2020     |
+	| 21/08/2019     |
+

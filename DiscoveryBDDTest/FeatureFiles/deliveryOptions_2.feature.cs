@@ -115,9 +115,9 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("AccessUnderReviewStaffin")]
-        [NUnit.Framework.TestCaseAttribute("C4216021", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Contact us", null)]
-        [NUnit.Framework.TestCaseAttribute("C5040641", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Contact us", null)]
-        [NUnit.Framework.TestCaseAttribute("C1960950", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Contact us", null)]
+        [NUnit.Framework.TestCaseAttribute("C4216021", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
+        [NUnit.Framework.TestCaseAttribute("C5040641", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
+        [NUnit.Framework.TestCaseAttribute("C1960950", "This record is closed whilst access is under review", "(//div[@class=\'order-option-wrapper\'])", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
         public virtual void AccessUnderReviewStaffin(string iaId, string message, string xPath, string button, string title, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("AccessUnderReviewStaffin", null, exampleTags);
@@ -162,8 +162,8 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("ClosedFOIReview")]
-        [NUnit.Framework.TestCaseAttribute("C10853769", "(//div[@class=\'order-option-wrapper\'])", "This record is closed", "Submit FOI request", "Contact us", null)]
-        [NUnit.Framework.TestCaseAttribute("C4633754", "(//div[@class=\'order-option-wrapper\'])", "This record is closed", "Submit FOI request", "Contact us", null)]
+        [NUnit.Framework.TestCaseAttribute("C10853769", "(//div[@class=\'order-option-wrapper\'])", "This record is closed", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
+        [NUnit.Framework.TestCaseAttribute("C4633754", "(//div[@class=\'order-option-wrapper\'])", "This record is closed", "Submit FOI request", "Freedom of Information (FOI) Request", null)]
         public virtual void ClosedFOIReview(string iaId, string xPath, string message, string button, string title, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ClosedFOIReview", null, exampleTags);

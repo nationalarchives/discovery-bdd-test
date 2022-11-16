@@ -13,6 +13,7 @@ you need to clone the project
  - open the sln file with visual studio.
  - Ensure that the Chrome browser is available locally
  - Download and unzip chromedriver locally: https://chromedriver.chromium.org/downloads
+
 	- Download it locally in the path C:\\chromedriver-83.0\\  
 	- Update the 12 "appsettings.json" files to set "googleDriverPath": "C:\\chromedriver-83.0\\". Just do a find and replace.
 	
@@ -42,6 +43,7 @@ you need to clone the project
 		  $dotnet test  
 	
  - Then you can able to run your tests without opening visual studio
+
 
 ## Post test cleanup
 If running the tests leaves multiple Chrome windows open run these commands on an elevate command prompt to close the windows

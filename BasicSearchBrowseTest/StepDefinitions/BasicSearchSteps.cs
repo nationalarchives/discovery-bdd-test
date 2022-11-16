@@ -400,6 +400,16 @@ namespace Nunit_NetCore.StepDefinitions
             Assert.IsTrue(recordCreatorsFilters.Contains("Dates unknown"));
             _driver.Quit();
         }
+        [Then(@"click on export results and check the downloaded file manually")]
+        public void ThenClickOnExportResultsAndCheckTheDownloadedFileManually()
+        {
+            _driver.FindElement(By.LinkText("Export results")).Click();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollTo(0, 500)");
+            _driver.FindElement(By.Id("exp10")).Click();
+            _driver.FindElement(By.XPath("//input[@type='submit' and @value='Download']")).Click();
+            Thread.Sleep(2000);
+        }
 
 
     }

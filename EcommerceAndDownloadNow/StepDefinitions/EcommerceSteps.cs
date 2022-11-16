@@ -101,8 +101,7 @@ namespace Nunit_NetCore.StepDefinitions
             Assert.IsTrue(strPageTitle.Contains("Thank you for your order"));
             string recieptMsg = _driver.FindElement(By.Id("orderReference")).Text;
             Assert.IsTrue(recieptMsg.Contains("The order receipt has been sent to"));
-
-            //_driver.Close();
+            _driver.Quit();
         }
         [Then(@"sign in now")]
         public void ThenSignInNow()
@@ -126,10 +125,8 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.Id("miniBasketLink")).Click();
             // click view basket
             _driver.FindElement(By.XPath("//a[@class='discoverySecondaryCallToActionLink']")).Click();
-            js.ExecuteScript("window.scrollTo(0, 700)");
             _driver.FindElement(By.XPath("//input[@type='submit' and @value='Checkout'] ")).Click();
             _driver.FindElement(By.XPath("//input[@id='DeliveryEmail']")).SendKeys("tnadiscovery100@gmail.com");
-
         }
         [When(@"scroll down add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept")]
         public void WhenScrollDownAddToBasketGoToBasketViewbasketCheckoutEnterEmailAddressUnderSendAReciept()
@@ -155,9 +152,9 @@ namespace Nunit_NetCore.StepDefinitions
             Thread.Sleep(1000);
             _driver.FindElement(By.XPath("(//input[@type='submit'])[3]")).Click();
             Thread.Sleep(1000);
-            _driver.FindElement(By.XPath("(//input[@type='image'])[1]")).Click();
+           _driver.FindElement(By.XPath("(//input[@type='image'])[1]")).Click();
             Thread.Sleep(2000);
-            _driver.FindElement(By.CssSelector("#PMMakePayment")).Click();
+           _driver.FindElement(By.CssSelector("#PMMakePayment")).Click();
             
 
         }
@@ -325,7 +322,6 @@ namespace Nunit_NetCore.StepDefinitions
             _driver.FindElement(By.XPath("//input[@value='Add to basket']")).Click();
             Thread.Sleep(2000);
             js.ExecuteScript("window.scrollTo(0, 700)");
-
             _driver.FindElement(By.XPath("//input[@value='Checkout']")).Click();
             var webDriver = new PageNavigator();
             // _driver.FindElement(By.Id("signin")).Click();

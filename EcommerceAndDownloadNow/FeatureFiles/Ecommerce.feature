@@ -102,7 +102,6 @@ Scenario Outline: HG FOI Items
 	And scroll down add to basket, go to basket, viewbasket,checkout, enter email address under send a reciept
 	And T&C, Submit order pay through paypal
 	Then I should see Thank you for your order
-	And sign in now
 
 	Examples:
 		| iaId                             | searchFirstName | searchLastName | dOB        | category        | firstName | lastName | email                     | adress1 | townCity | postcode | country        |

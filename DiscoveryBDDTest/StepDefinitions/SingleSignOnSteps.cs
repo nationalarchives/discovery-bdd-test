@@ -49,7 +49,7 @@ namespace DiscoveryBDDTest.StepDefinitions
             _driver.FindElement(By.Id("ConfirmEmail")).SendKeys(confirmEmail);
             _driver.FindElement(By.Id("Password")).SendKeys(pswd);
             _driver.FindElement(By.Id("ConfirmPassword")).SendKeys(confirmPswd);
-            _driver.FindElement(By.Id("acceptTCs")).Click();
+            _driver.FindElement(By.Id("tcLabel")).Click();
             _driver.FindElement(By.XPath("//input[@value='Register']")).Click();
            
         }
